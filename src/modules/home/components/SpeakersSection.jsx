@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -162,12 +163,12 @@ const SpeakersSection = () => (
 
             {/* View More button */}
             <div className="flex justify-center mt-12">
-                <a
-                    href="#speakers"
+                <Link
+                    to="/speakers"
                     className="flex items-center gap-2 border border-white text-white text-xs font-bold uppercase px-8 py-3 hover:bg-white/10 transition-colors"
                 >
                     View More Speakers <FaArrowRight />
-                </a>
+                </Link>
             </div>
         </div>
     </section>

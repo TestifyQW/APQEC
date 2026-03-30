@@ -23,12 +23,12 @@ const Header = () => {
                 </a>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+                <nav className="hidden md:flex items-center gap-4 lg:gap-6">
                     {NAV_LINKS.map((link) => (
                         <a
                             key={link.label}
                             href={link.href}
-                            className="text-white hover:text-white text-md font-semibold uppercase tracking-widest transition-colors duration-200"
+                            className="text-white hover:text-white lg:text-md text-sm font-semibold uppercase transition-colors duration-200"
                         >
                             {link.label}
                         </a>

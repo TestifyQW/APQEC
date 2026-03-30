@@ -4,39 +4,39 @@ import React, { useState } from 'react';
 const FAQS = [
     {
         q: 'Where is the event happening?',
-        a: 'Africa',
+        a: 'The entire conference is 100% virtual. You can attend from anywhere in the world — all you need is a device and an internet connection. The link will be shared with you after registration.',
     },
     {
         q: 'How much does it cost to attend?',
-        a: 'It costs a sum of money to attend'
+        a: 'It’s completely FREE! Yep — access to all sessions, keynotes, and workshops is available at no cost. Just register and you’re in.'
     },
     {
         q: 'What Time Zone will the sessions follow?',
-        a: 'All sessions will follow the West African Time Zone (WAT)'
+        a: 'All sessions will run on West Africa Time (WAT). Once you register, you’ll receive calendar invites that adjust to your local time zone automatically.'
     },
     {
         q: 'What are the Dates again?',
-        a: 'June 4th, 9th and 10th, 2026',
+        a: "The event runs from June 5th to 7th, 2025. That’s Thursday to Saturday, so no weekday excuses",
     },
     {
         q: 'Who can attend this conference?',
-        a: 'Everybody can attend this conference'
+        a: 'Anyone interested in software quality, testing, product development, or building better digital products. Whether you’re a QA beginner, dev, PM, SDET, tech lead, or startup founder, you’ll find sessions tailored to your level.'
     },
     {
         q: 'Which countries are represented?',
-        a: 'We welcome partnerships with organisations that share our mission of elevating Africa\'s quality engineering ecosystem. Reach out through our Partner / Sponsor page or email our partnerships team directly. Various tiers are available to suit different budgets and goals.',
+        a: 'We’re hosting speakers and attendees from 19 African countries including Nigeria, Kenya, Ghana, South Africa, Egypt, Morocco, Uganda, Rwanda, and more. It’s pan-African, diverse, and deeply collaborative.',
     },
     {
         q: 'Will there be recordings of the sessions?',
-        a: 'Yes, there will be recordings of the sessions'
+        a: 'Yes! Registered participants will get access to session replays after the event. So even if you miss something live, you won’t miss out completely.'
     },
     {
         q: "I'm a business owner - What's in it for me?",
-        a: 'Lots of things'
+        a: 'This event will show you how quality impacts growth, brand perception, and long-term customer trust. We’re also offering sponsorship packages and B2B networking opportunities.'
     },
     {
         q: "Who i contact for more info?",
-        a: 'You can check our contact page'
+        a: 'You can email us at testarsquarter@gmail.com or Chat @testarsQuarter in Our Slack Community. We’re happy to help.'
     },
 ];
 
@@ -86,7 +86,6 @@ const FAQSection = () => {
                     >
                         Frequently Asked<br />APQEC Questions
                     </h2>
-                    <div className="w-16 h-1 rounded-full mt-4" style={{ background: '#F5C842' }} />
                 </div>
 
                 {/* FAQ list */}

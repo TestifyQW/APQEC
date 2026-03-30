@@ -28,7 +28,7 @@ const FooterSection = () => (
             <div className="max-w-7xl mx-auto px-6 md:px-12">
 
                 {/* 3-column grid */}
-                <div className="flex justify-between">
+                <div className="flex flex-col gap-10 md:flex-row justify-between">
 
                     {/* Column 1 — Brand + description + social */}
                     <div className="flex flex-col gap-6">
@@ -45,13 +45,13 @@ const FooterSection = () => (
                                 Social Links
                             </p>
                             <div className="flex items-center gap-4 text-white/60">
-                                <a href="#" aria-label="Instagram" className="hover:text-white transition-colors">
+                                <a href="https://www.instagram.com/testarsquarter?igsh=cXI0OGozcTJzdG02&utm_source=qr" aria-label="Instagram" className="hover:text-white transition-colors">
                                     <FaInstagram />
                                 </a>
-                                <a href="#" aria-label="LinkedIn" className="hover:text-white transition-colors">
+                                <a href="https://www.linkedin.com/company/testarsquarter/" aria-label="LinkedIn" className="hover:text-white transition-colors">
                                     <AiOutlineLinkedin />
                                 </a>
-                                <a href="#" aria-label="X / Twitter" className="hover:text-white transition-colors">
+                                <a href="https://x.com/testarsquarterr?s=21&t=iuzV7iaYXyNyF-BtdYEAuQ" aria-label="X / Twitter" className="hover:text-white transition-colors">
                                     <FaXTwitter />
                                 </a>
                             </div>
