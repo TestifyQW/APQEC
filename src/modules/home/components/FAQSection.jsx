@@ -55,7 +55,7 @@ const FAQItem = ({ q, a, isOpen, onToggle }) => (
                 {q}
             </span>
             <span
-                className="flex-shrink-0 text-5xl "
+                className="flex-shrink-0 text-5xl text-[#1352A1]"
             >
                 {isOpen ? '−' : '+'}
             </span>
@@ -84,13 +84,13 @@ const FAQSection = () => {
                         className="font-black uppercase leading-tight mb-2"
                         style={{ color: '#0A2540', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', letterSpacing: '0.03em' }}
                     >
-                        Frequently Asked<br />APQEC Questions
+                        Frequently Asked Questions
                     </h2>
                 </div>
 
                 {/* FAQ list */}
                 <div className="lg:w-4xl">
-                    <div className="border-t" style={{ borderColor: '#E5E7EB' }}>
+                    <div style={{ borderColor: '#E5E7EB' }}>
                         {FAQS.map((faq, i) => (
                             <FAQItem
                                 key={i}
