@@ -55,7 +55,7 @@ const FAQItem = ({ q, a, isOpen, onToggle }) => (
                 {q}
             </span>
             <span
-                className="flex-shrink-0 w-7 "
+                className="flex-shrink-0 text-5xl "
             >
                 {isOpen ? '−' : '+'}
             </span>
