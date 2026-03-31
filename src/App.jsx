@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './modules/home';
 import SpeakersModule from './modules/speakers';
+import PartnersModule from './modules/partners';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/speakers" element={<SpeakersModule />} />
+        <Route path="/partners" element={<PartnersModule />} />
       </Routes>
     </BrowserRouter>
   );

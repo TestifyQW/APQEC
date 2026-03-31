@@ -2,8 +2,7 @@ import React from 'react';
 import { FaInstagram } from "react-icons/fa";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
-import P2 from '../../../assets/P2.png'
-
+import logo from '../../../assets/apqec-logo.png'
 
 /* ─── Nav data ───────────────────────────────────────────────────────────── */
 const QUICK_LINKS = [
@@ -106,12 +105,8 @@ const FooterSection = () => (
         </div>
 
         {/* ── Large APQEC watermark — white background ── */}
-        <div className="bg-white w-full overflow-hidden leading-none select-none">
-            <p className="text-[#1352A1] font-black uppercase text-center w-full text-8xl lg:text-[380px] flex justify-center items-center">
-                <span>A</span>
-                <img src={P2} alt="" className='lg:w-50 lg:h-65 w-20 h-20' />
-                <span>QEC</span>
-            </p>
+        <div className="bg-white w-full overflow-hidden leading-none select-none my-5">
+            <img src={logo} alt="" className='w-[85%] mx-auto' />
         </div>
 
     </footer>

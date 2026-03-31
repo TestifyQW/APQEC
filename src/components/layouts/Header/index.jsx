@@ -1,12 +1,12 @@
 import React from 'react';
 import { MdArrowOutward } from "react-icons/md";
-import P from '../../../assets/P.png'
+import logo from '../../../assets/apqec-logo-white.png'
 
 const NAV_LINKS = [
     { label: 'Content Tracks', href: '/#tracks' },
     { label: 'Speakers', href: '/#speakers' },
     { label: 'Schedule', href: '/#schedule' },
-    { label: 'Partners', href: '/#partners' },
+    { label: 'Partners', href: '/partners' },
     { label: 'Company', href: '/#company' },
     { label: 'Our Crew', href: '/#ourcrew' },
 ];
@@ -17,9 +17,7 @@ const Header = () => {
             <div className="px-4 md:px-8 flex items-center justify-between h-16">
                 {/* Logo */}
                 <a href="/" className="flex items-center shrink-0">
-                    <span className="text-white flex items-center font-black text-2xl tracking-tight">
-                        <span>A</span> <img src={P} alt="" className='w-6' /> <span>QEC</span>
-                    </span>
+                    <img src={logo} alt="" className='w-30' />
                 </a>
 
                 {/* Desktop Nav */}
