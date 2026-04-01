@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdArrowOutward } from 'react-icons/md';
 import { FaArrowRight, FaCheck } from 'react-icons/fa6';
+import partnerBadge from '../../../assets/partnerBadge.svg';
 
 import ourPartners from '../../../assets/ourPartners.png';
 
@@ -36,105 +37,143 @@ const TitleUnderline = () => (
 const PARTNERSHIP_LANES = [
     {
         id: 'associate',
-        tier: 'Associate · Certificate',
-        price: null,
-        priceLabel: 'Free',
-        accentColor: '#1352A1',
-        highlight: false,
-        description: 'Perfect for individuals and early-stage startups seeking brand exposure.',
-        perks: [
-            'Logo on conference website',
-            'Social media mention (1 post)',
-            'Complimentary virtual pass (1)',
-            'Certificate of partnership',
-            'Email newsletter mention',
-        ],
-        cta: 'Start for Free',
-        ctaHref: '#apply',
-    },
-    {
-        id: 'community',
-        tier: 'APQEC Community',
-        price: '$20',
+        tier: 'AccessPass + Certificate',
+        price: '$5',
         priceLabel: null,
         accentColor: '#1352A1',
         highlight: false,
-        description: 'Grow your reach within our engaged QA & product engineering community.',
-        perks: [
-            'Everything in Associate',
-            'Dedicated social campaign (3 posts)',
-            'Banner in virtual event lobby',
-            'Mention in opening ceremony',
-            'Access to attendee insights report',
-            '2 complimentary virtual passes',
+        sections: [
+            {
+                title: 'This Includes: $5',
+                items: [
+                    'Full access to all APQEC sessions, panels, and activities',
+                    'Access to product demos and crowd testing labs',
+                    'Entry into networking rooms and community engagements',
+                    'Official Certificate of Participation (downloadable and verifiable)',
+                ],
+            },
+            {
+                title: 'Perfect For:',
+                items: [
+                    'QA professionals and engineers growing their credentials',
+                    'Students and interns needing industry exposure proof',
+                    "Anyone who wants to document their involvement in Africa's leading QA event",
+                ],
+            },
+            {
+                title: 'Why Choose This Ticket?',
+                items: [
+                    'Because learning is valuable — and proving it gives you a competitive edge.',
+                    'Add APQEC to your resume, LinkedIn, or training portfolio with a globally recognized participation certificate.',
+                ],
+            },
         ],
         cta: 'Become a Partner',
         ctaHref: '#apply',
     },
     {
-        id: 'trailblazer',
-        tier: 'APQEC Trailblazers',
+        id: 'community',
+        tier: 'APQEC Commune',
+        price: '$20',
+        priceLabel: null,
+        accentColor: '#1352A1',
+        highlight: false,
+        intro: [
+            'As part of our mission to elevate product quality and engineering standards across Africa.',
+            'This option is designed to give relevant communities greater visibility, access, and connection to our network of innovators and professionals\u2014at a highly subsidized rate.',
+        ],
+        sections: [
+            {
+                title: 'What You Get (Partner Benefits):',
+                items: [
+                    "Your community's logo will be featured on the APQEC website under the Partner Communities section",
+                    'Your brand will be included in a social media carousel highlighting all partner communities.',
+                    'Your community will be mentioned in one official APQEC pre-event newsletter.',
+                    'Bring all your community members for FREE to enjoy the APQEC Community Networking Mixer after the event.',
+                    'You will receive an official Certificate of Partnership from the APQEC team.',
+                ],
+            },
+            {
+                title: 'What APQEC Expects from Partners:',
+                items: [
+                    'You will promote the APQEC Conference to your community members using your active platforms',
+                    'You will share the registration link with your members for visibility',
+                    'You will make at least one post or story about APQEC on your community\'s social media handles',
+                    'You will encourage at least 5 of your community members to register for the APQEC Conference',
+                    'You will acknowledge APQEC as a partner community in at least one of your community communications',
+                ],
+            },
+        ],
+        cta: 'Become a Partner',
+        ctaHref: '#apply',
+    },
+    {
+        id: 'teststorm',
+        tier: 'APQEC TestStorm',
         price: '$950',
         priceLabel: null,
-        accentColor: '#00DEEE',
-        highlight: true,
-        description: "For brands that want to own the conversation in Africa's QA space.",
-        perks: [
-            'Everything in Community',
-            'Speaking slot (15 min lightning talk)',
-            'Branded workshop or roundtable',
-            'Logo on all event materials',
-            'Featured sponsor placement on site',
-            'Dedicated sponsor spotlight post',
-            '5 complimentary virtual passes',
-            'Post-event media recap inclusion',
+        accentColor: '#1352A1',
+        highlight: false,
+        sections: [
+            {
+                title: 'Our Value Proposition to APQEC TestStorm Partners:',
+                items: [
+                    'Diverse Testing Pool: Access a broad community of testers with various devices, skills, and real-world contexts.',
+                    'Insightful Feedback: Receive practical, unbiased feedback that reveals bugs, usability issues, and enhancement opportunities.',
+                    'Product Awareness: Drive engagement and visibility for your product among QA experts and tech professionals.',
+                    'Quality Improvement: Enhance product readiness and reliability before scaling to a larger audience.',
+                ],
+            },
         ],
-        cta: 'Become a Trailblazer',
+        cta: 'Become a Partner',
         ctaHref: '#apply',
     },
     {
-        id: 'launchpad',
-        tier: 'APQEC Launchpad',
-        price: '$1,800',
+        id: 'launchlight',
+        tier: 'APQEC LaunchLight',
+        price: '$1800',
         priceLabel: null,
         accentColor: '#1352A1',
         highlight: false,
-        description: 'Amplify your brand across every conference touchpoint and audience segment.',
-        perks: [
-            'Everything in Trailblazers',
-            'Co-branded conference track naming',
-            'Full-page ad in digital program',
-            'Mid-event brand spotlight segment',
-            '30-min sponsored session slot',
-            'Lead generation access (opt-in)',
-            '10 complimentary virtual passes',
+        sections: [
+            {
+                title: 'Our Value Proposition to APQEC LaunchLight Partners:',
+                items: [
+                    'Brand Visibility: Put your product in front of a concentrated, quality-focused audience at APQEC.',
+                    'Marketing Boost: Combine traditional ad exposure with the unique benefit of live user testing and real-time reactions.',
+                    'Data-Driven Promotion: Leverage feedback from LaunchLight viewers to refine positioning, messaging and product cit.',
+                    'Dual Advantage: Get both promotional spotlight and hands-on QA support from testers at the same time.',
+                ],
+            },
         ],
-        cta: 'Apply for Launchpad',
+        cta: 'Become a Partner',
         ctaHref: '#apply',
     },
     {
-        id: 'co-connect',
-        tier: 'APQEC Co-Connect',
+        id: 'certconnect',
+        tier: 'APQEC CertConnect',
         price: null,
-        priceLabel: 'Require Approval',
+        priceLabel: 'Require approval',
         accentColor: '#1352A1',
         highlight: false,
-        description: 'A strategic co-creation partnership for leading organisations shaping Africa\'s tech future.',
-        perks: [
-            'Everything in Launchpad',
-            'Co-presenter on keynote stage',
-            'Exclusive VIP networking session',
-            'Joint press release & PR coverage',
-            'Custom integration in conference app',
-            'Unlimited complimentary passes',
+        sections: [
+            {
+                title: "As a Certification Partner, you'll:",
+                items: [
+                    'Targeted Reach: Can direct exposure to over 3,000 aspiring and practicing QA professionals actively seeking certification.',
+                    'Market Penetration: Expand your certification footprint across Africa and other emerging markets.',
+                    'Brand Trust: Position your organisation as an official certification ally of APQEC, boosting credibility and recognition.',
+                    'Lead Generation: Capture qualified leads from attendees ready to invest in their professional growth.',
+                ],
+            },
         ],
-        cta: 'Apply for Co-Connect',
+        cta: 'Become a Partner',
         ctaHref: '#apply',
     },
 ];
 
 /* ─── Partnership Card ───────────────────────────────────────────────────── */
-const PartnershipCard = ({ tier, price, priceLabel, accentColor, highlight, description, perks, cta, ctaHref }) => (
+const PartnershipCard = ({ tier, price, priceLabel, accentColor, highlight, intro, sections, cta, ctaHref }) => (
     <div
         className={`relative flex flex-col rounded-2xl border transition-all duration-300 overflow-hidden
             ${highlight
@@ -157,55 +196,60 @@ const PartnershipCard = ({ tier, price, priceLabel, accentColor, highlight, desc
 
         <div className="p-6 flex flex-col flex-1">
             {/* Tier badge */}
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-3">
                 <div
-                    className="w-6 h-6 rounded flex items-center justify-center flex-shrink-0"
+                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
                     style={{ background: accentColor }}
                 >
-                    <span className="text-white text-[10px] font-black">A</span>
+                    <img src={partnerBadge} alt="" />
                 </div>
-                <p className="text-xs font-bold uppercase tracking-widest text-[#0A2540]">{tier}</p>
+                <p className="text-sm font-bold text-[#0A2540]">{tier}</p>
             </div>
 
             {/* Price */}
             <div className="mb-4">
-                {price ? (
-                    <p className="text-4xl font-black text-[#0A2540]">{price}</p>
-                ) : (
-                    <p className="text-2xl font-black text-[#0A2540]">{priceLabel}</p>
-                )}
+                <p className="text-3xl font-black text-[#0A2540]">
+                    {price ?? priceLabel}
+                </p>
             </div>
 
-            {/* Description */}
-            <p className="text-sm text-gray-500 leading-relaxed mb-5">{description}</p>
+            {/* Intro paragraphs (optional) */}
+            {intro && intro.length > 0 && (
+                <div className="flex flex-col gap-2 mb-4">
+                    {intro.map((para, i) => (
+                        <p key={i} className="text-sm text-gray-500 leading-relaxed">{para}</p>
+                    ))}
+                </div>
+            )}
 
-            {/* Divider */}
-            <div className="border-t border-gray-100 mb-5" />
-
-            {/* Perks */}
-            <ul className="flex flex-col gap-2.5 flex-1">
-                {perks.map((perk, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-sm text-[#0A2540]">
-                        <FaCheck
-                            className="mt-0.5 flex-shrink-0"
-                            style={{ color: accentColor === '#00DEEE' ? '#00DEEE' : '#1352A1' }}
-                        />
-                        <span>{perk}</span>
-                    </li>
+            {/* Sections */}
+            <div className="flex flex-col gap-4 flex-1">
+                {sections.map((section, si) => (
+                    <div key={si}>
+                        <p className="text-sm font-bold text-[#0A2540] mb-2">{section.title}</p>
+                        <ul className="flex flex-col gap-2">
+                            {section.items.map((item, ii) => (
+                                <li key={ii} className="flex items-start gap-2.5 text-sm text-gray-600 leading-snug">
+                                    <FaCheck
+                                        className="mt-0.5 flex-shrink-0 text-[#1352A1]"
+                                        size={12}
+                                    />
+                                    <span>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 ))}
-            </ul>
+            </div>
 
             {/* CTA */}
             <a
                 href={ctaHref}
                 onClick={e => e.preventDefault()}
-                className={`mt-6 inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-wider px-5 py-3 rounded-lg transition-all duration-200
-                    ${highlight
-                        ? 'bg-[#00DEEE] text-black hover:bg-cyan-300'
-                        : 'bg-[#0A2540] text-white hover:bg-[#1352A1]'
-                    }`}
+                className="mt-6 inline-flex items-center justify-center gap-2 text-sm font-bold text-black mx-auto p-4 w-full border border-gray-300 rounded-lg uppercase tracking-wider transition-all duration-200 hover:gap-3 group"
             >
-                {cta} <FaArrowRight />
+                <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-200" />
+                {cta}
             </a>
         </div>
     </div>
@@ -283,31 +327,30 @@ const PartnersPage = () => {
                     {/* Heading */}
                     <div className="text-center mb-14">
                         <p className="text-[#1352A1] text-xs font-bold uppercase tracking-[0.2em] mb-3">
-                            Partnership Tiers
+                            Partnership Plans
                         </p>
                         <div className="flex flex-col w-fit mx-auto">
                             <h2 className="text-[#0F2745] text-3xl md:text-4xl font-black uppercase mb-2">
                                 Choose Your Partnership Lane
                             </h2>
-                            <TitleUnderline />
                         </div>
-                        <p className="text-gray-500 text-sm max-w-xl mx-auto mt-2">
-                            Every tier is designed to align your brand with Africa&apos;s fastest-growing quality engineering community.
-                        </p>
                     </div>
 
-                    {/* Cards grid — top 3 */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                        {PARTNERSHIP_LANES.slice(0, 3).map(lane => (
-                            <PartnershipCard key={lane.id} {...lane} />
-                        ))}
-                    </div>
+                    {/* Cards */}
+                    <div className="max-w-5xl mx-auto">
+                        {/* Top 3 */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                            {PARTNERSHIP_LANES.slice(0, 3).map(lane => (
+                                <PartnershipCard key={lane.id} {...lane} />
+                            ))}
+                        </div>
 
-                    {/* Cards grid — bottom 2 centred */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                        {PARTNERSHIP_LANES.slice(3).map(lane => (
-                            <PartnershipCard key={lane.id} {...lane} />
-                        ))}
+                        {/* Bottom 2 centred */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+                            {PARTNERSHIP_LANES.slice(3).map(lane => (
+                                <PartnershipCard key={lane.id} {...lane} />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -321,15 +364,15 @@ const PartnersPage = () => {
                         </h2>
                         <TitleUnderline />
                     </div>
-                    <p className="text-[#0F2745]/70 text-sm md:text-base mb-8 max-w-2xl mx-auto leading-relaxed">
-                        If a tier feels right for you, fill in our quick form. We'll get back to you and confirm your slot at the conference.
+                    <p className="text-[#0F2745]/70 text-sm md:text-base mb-8 max-w-3xl mx-auto leading-relaxed">
+                        🚀 Limited partnership slots available. Secure your spot today and position your brand at the <br /> forefront of Africa&apos;s quality engineering movement.
                     </p>
                     <a
                         href="#apply"
                         onClick={e => e.preventDefault()}
                         className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-8 py-4 rounded hover:bg-cyan-300 transition-colors"
                     >
-                        <FaArrowRight /> Apply Now
+                        <FaArrowRight /> partner with us
                     </a>
                 </div>
             </section>

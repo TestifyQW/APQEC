@@ -3,9 +3,10 @@
 
 @theme {
   --font-sans: 'Raleway', sans-serif;
+  --default-font-family: 'Raleway', sans-serif;
 }
 
-body {
+html, body {
   font-family: 'Raleway', sans-serif;
 }
 

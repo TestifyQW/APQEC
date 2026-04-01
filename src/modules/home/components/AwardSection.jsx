@@ -50,7 +50,7 @@ const AwardSection = () => (
                     Nominate
                 </a>
                 <a
-                    href="#vote"
+                    href="/vote"
                     className="px-10 py-3 rounded border border-white/30 text-[#00D4FF] text-xs font-black uppercase tracking-widest hover:bg-white/10 transition-colors"
                 >
                     Vote

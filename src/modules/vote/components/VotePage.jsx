@@ -1,0 +1,459 @@
+import React, { useState } from 'react';
+import { FaCheck, FaArrowRight, FaTrophy, FaStar, FaLightbulb, FaUsers, FaRocket, FaGlobe, FaHeart, FaMedal } from 'react-icons/fa6';
+import { MdArrowOutward, MdClose } from 'react-icons/md';
+import logo from '../../../assets/apqec-logo-white.png';
+import SelectionProcessTab from './SelectionProcessTab';
+
+/* ─── Ticker ─────────────────────────────────────────────────────────────── */
+const TICKER_ITEMS = ['NOMINATE', '#APQEC26', 'VOTE FOR YOUR FAVOURITES', 'AWARDS NIGHT', '#APQEC26'];
+
+const Ticker = () => {
+    const repeated = [...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS];
+    return (
+        <div className="bg-[#0A2540] border-t border-white/10 py-3 overflow-hidden relative">
+            <div className="flex whitespace-nowrap animate-marquee">
+                {repeated.map((item, i) => (
+                    <span key={i} className="text-white text-xs font-bold uppercase tracking-widest mx-6 flex items-center gap-6">
+                        {item}
+                        <span className="text-[#FFD600]">●</span>
+                    </span>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+/* ─── Award Category Data ────────────────────────────────────────────────── */
+const AWARD_CATEGORIES = [
+    {
+        id: 'qe-professional',
+        icon: <FaTrophy size={22} />,
+        title: 'QE Professional of the Year',
+        description:
+            'This award highlights exceptional QA professionals who have demonstrated outstanding leadership, innovation, and community contributions in advancing quality engineering in Africa.',
+
+    },
+    {
+        id: 'rising-star',
+        icon: <FaStar size={22} />,
+        title: 'Rising Star of the Year',
+        description:
+            'This award aims to recognise a professional who is new to a QA or testing role. Must have a measurable result. Cannot have just learning or just demonstrating understanding without doing and testing innovation.',
+
+    },
+    {
+        id: 'qe-innovation',
+        icon: <FaLightbulb size={22} />,
+        title: 'QE Innovation Award',
+        description:
+            'For an individual or team that showed up with innovation, breaking new frameworks, tools, methodology, or process that will accelerate and sustain modern quality engineering results.',
+
+    },
+    {
+        id: 'women-in-qe',
+        icon: <FaUsers size={22} />,
+        title: 'Women in QE Excellence',
+        description:
+            "Celebrating a woman in tech / organisation who has broken barriers, illuminated followers, or achieved research and technical impact.",
+
+    },
+    {
+        id: 'best-qe-team',
+        icon: <FaRocket size={22} />,
+        title: 'Best QE Team of the Year',
+        description:
+            'This award celebrates the engineering teams of an African tech company that built an exceptional difference in quality.',
+
+    },
+    {
+        id: 'qe-educator',
+        icon: <FaMedal size={22} />,
+        title: 'QE Educator / Mentor Award',
+        description:
+            'This award honours the teachers, mentors, and educators who have grown the QE talent pipeline on the continent.',
+
+    },
+    {
+        id: 'pan-african',
+        icon: <FaGlobe size={22} />,
+        title: 'Pan-African Impact Award',
+        description:
+            'For an individual or organisation whose QA or QE focus has executable measurable impact on multiple African countries.',
+
+    },
+    {
+        id: 'best-qe-community',
+        icon: <FaUsers size={22} />,
+        title: 'Best QE Community of the Year',
+        description:
+            "This award recognises Whatsapp groups, slack communities, clubs etc (chapters) that advance your QE community's knowledge.",
+
+    },
+    {
+        id: 'apqec-community-choice',
+        icon: <FaHeart size={22} />,
+        title: 'APQEC Community Choice',
+        description:
+            'Voted directly by the community. This people decide who made the biggest positive difference in their QA journey this year.',
+
+    },
+];
+
+/* ─── Tab ─────────────────────────────────────────────────────────────────── */
+const TABS = ['Award Categories & Nominees', 'Selection Process', 'Judges'];
+
+/* ─── Selection Process Steps ───────────────────────────────────────────── */
+const PROCESS_STEPS = [
+    { step: '01', title: 'Nominations Open', desc: 'Anyone can submit a nominee via the official nomination form. Self-nominations are allowed.' },
+    { step: '02', title: 'Shortlisting', desc: 'A panel of judges reviews all nominations and shortlists the top 3 candidates per category.' },
+    { step: '03', title: 'Public Voting', desc: 'Shortlisted nominees are published and the APQEC community votes for their favourites online.' },
+    { step: '04', title: 'Judges Scoring', desc: 'Judges independently score each shortlisted nominee based on predefined criteria.' },
+    { step: '05', title: 'Final Decision', desc: 'Final winners are determined by a weighted combination of public votes and judges scores.' },
+    { step: '06', title: 'Awards Night', desc: "Winners are announced LIVE at the APQEC Awards Night — Africa's Grammy for quality engineers." },
+];
+
+/* ─── Judges ─────────────────────────────────────────────────────────────── */
+const JUDGES = [
+    { name: 'Judge TBA', role: 'Industry Expert', initials: 'J1', color: '#1352A1' },
+    { name: 'Judge TBA', role: 'QA Leader', initials: 'J2', color: '#0D8A6A' },
+    { name: 'Judge TBA', role: 'Tech Executive', initials: 'J3', color: '#B5451B' },
+    { name: 'Judge TBA', role: 'Community Leader', initials: 'J4', color: '#7B2D8B' },
+    { name: 'Judge TBA', role: 'Academic & Researcher', initials: 'J5', color: '#1352A1' },
+];
+
+/* ─── Vote Modal ─────────────────────────────────────────────────────────── */
+const VoteModal = ({ nominee, category, onClose, onConfirm }) => {
+    const [voted, setVoted] = useState(false);
+
+    const handleConfirm = () => {
+        setVoted(true);
+        setTimeout(() => {
+            onConfirm();
+            onClose();
+        }, 1800);
+    };
+
+    return (
+        <div
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+            style={{ background: 'rgba(10,26,58,0.85)', backdropFilter: 'blur(6px)' }}
+            onClick={onClose}
+        >
+            <div
+                className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative"
+                onClick={e => e.stopPropagation()}
+            >
+                {/* Close */}
+                <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors">
+                    <MdClose size={22} />
+                </button>
+
+                {!voted ? (
+                    <>
+                        <div className="flex flex-col items-center text-center gap-4">
+                            {/* Avatar */}
+                            <div
+                                className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-black text-white shadow-lg"
+                                style={{ background: nominee.color }}
+                            >
+                                {nominee.initials}
+                            </div>
+                            <div>
+                                <p className="text-xs font-bold uppercase tracking-widest text-[#1352A1] mb-1">{category}</p>
+                                <h3 className="text-xl font-black text-[#0A1A3A]">{nominee.name}</h3>
+                                <p className="text-sm text-gray-500 mt-1">{nominee.title}</p>
+                            </div>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                You are about to cast your vote for <strong>{nominee.name}</strong> in the <strong>{category}</strong> category. You can only vote once per category.
+                            </p>
+                        </div>
+                        <div className="flex gap-3 mt-6">
+                            <button
+                                onClick={onClose}
+                                className="flex-1 py-3 rounded-xl border border-gray-200 text-sm font-bold text-gray-500 uppercase tracking-wider hover:bg-gray-50 transition-colors"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={handleConfirm}
+                                className="flex-1 py-3 rounded-xl text-sm font-black text-white uppercase tracking-wider transition-all hover:opacity-90"
+                                style={{ background: 'linear-gradient(135deg, #1352A1, #00DEEE)' }}
+                            >
+                                Confirm Vote
+                            </button>
+                        </div>
+                    </>
+                ) : (
+                    <div className="flex flex-col items-center text-center gap-4 py-4">
+                        <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
+                            <FaCheck className="text-green-500" size={28} />
+                        </div>
+                        <h3 className="text-xl font-black text-[#0A1A3A]">Vote Confirmed!</h3>
+                        <p className="text-sm text-gray-500">
+                            Your vote for <strong>{nominee.name}</strong> has been recorded. Thank you for participating!
+                        </p>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
+
+/* ─── Award Category Card ────────────────────────────────────────────────── */
+const CategoryCard = ({ category, onVote }) => {
+    const [voted, setVoted] = useState(null);
+
+    const handleVote = (nominee) => {
+        if (voted) return;
+        onVote(nominee, category.title, () => setVoted(nominee.id));
+    };
+
+    return (
+        <div
+            className="relative rounded-sm overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+            style={{ background: 'linear-gradient(160deg, #0D1E45 0%, #0A1535 100%)', border: '1px solid rgba(255,255,255,0.08)' }}
+        >
+            {/* Gold top accent line */}
+            <div className="h-[3px] w-full" style={{ background: 'linear-gradient(90deg, #E6B73B, transparent)' }} />
+
+            {/* Header — icon + title */}
+            <div className="px-5 pt-5 pb-4 flex flex-col items-center text-center gap-3">
+                <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center text-white"
+                    style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
+                >
+                    {category.icon}
+                </div>
+                <h3 className="text-sm font-black text-white uppercase tracking-widest leading-snug">
+                    {category.title}
+                </h3>
+            </div>
+
+            {/* Divider */}
+            <div className="mx-5 h-px bg-white/10" />
+
+            {/* Description */}
+            <div className="px-5 py-4">
+                <p className="text-xs text-white/50 leading-relaxed text-center">{category.description}</p>
+            </div>
+        </div>
+    );
+};
+
+/* SelectionProcessTab is imported from ./SelectionProcessTab.jsx */
+
+/* ─── Judges Tab ─────────────────────────────────────────────────────────── */
+const JudgesTab = () => (
+    <div className="max-w-3xl mx-auto">
+        <p className="text-center text-gray-500 text-sm mb-12 max-w-xl mx-auto leading-relaxed">
+            Our panel of judges are distinguished leaders in quality engineering, technology, and innovation across Africa and beyond.
+        </p>
+        <div className="flex flex-wrap justify-center gap-6">
+            {JUDGES.map((j, i) => (
+                <div key={i} className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col items-center text-center gap-3 w-44 hover:shadow-lg hover:border-[#1352A1]/30 transition-all duration-200">
+                    <div
+                        className="w-16 h-16 rounded-full flex items-center justify-center text-xl font-black text-white"
+                        style={{ background: j.color }}
+                    >
+                        {j.initials}
+                    </div>
+                    <div>
+                        <p className="text-sm font-bold text-[#0A1A3A]">{j.name}</p>
+                        <p className="text-xs text-gray-400 mt-0.5">{j.role}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+        <p className="text-center text-xs text-gray-400 mt-10">
+            Judge announcements coming soon. Stay tuned on our social media channels.
+        </p>
+    </div>
+);
+
+/* ─── Main Vote Page ─────────────────────────────────────────────────────── */
+const VotePage = () => {
+    const [activeTab, setActiveTab] = useState(0);
+    const [modal, setModal] = useState(null); // { nominee, category, onConfirm }
+
+    const openModal = (nominee, category, onConfirm) => {
+        setModal({ nominee, category, onConfirm });
+    };
+
+    const closeModal = () => setModal(null);
+
+    return (
+        <main className="pt-16">
+            {/* ─── Hero Banner ─────────────────────────────────────── */}
+            <section className="w-full pt-20 relative overflow-hidden bg-[#124da0]">
+                {/* Dot grid */}
+                <div
+                    className="absolute inset-0 opacity-10"
+                    style={{
+                        backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+                        backgroundSize: '30px 30px',
+                    }}
+                />
+                {/* Decorative glow blobs */}
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#00DEEE]/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-[#FFD600]/10 rounded-full blur-3xl pointer-events-none" />
+
+                <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
+                    {/* Trophy icon */}
+                    <div className="flex justify-center mb-4">
+                        <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-[#FFD600]">
+                            <FaTrophy size={26} />
+                        </div>
+                    </div>
+
+                    {/* Badge */}
+                    <p className="text-[#00DEEE] border border-[#00DEEE] w-fit flex mx-auto rounded-full px-4 py-1.5 text-sm font-bold uppercase mb-4 tracking-wider">
+                        Awards Night
+                    </p>
+
+                    {/* Headline */}
+                    <div className="flex flex-col w-fit mx-auto">
+                        <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-black uppercase mb-2 leading-[1.05]">
+                            Celebrating Africa's Product<br className="hidden md:block" />
+                            <span className="text-[#E6B73B]">Quality Engineers</span>
+                        </h1>
+                        <section className="flex w-full h-1 mb-3">
+                            <div className="w-[34%] h-1 bg-[#E6B73B] rounded-full" />
+                            <div className="w-[34%] h-1 bg-transparent" />
+                            <div className="w-[34%] h-1 bg-[#E6B73B] rounded-full" />
+                        </section>
+                    </div>
+
+                    {/* Subtitle */}
+                    <p className="text-white/70 text-sm md:text-base max-w-2xl mx-auto mb-6 leading-relaxed">
+                        Join <span className="text-[#07EE9E] font-bold">4,000+</span> Innovators at Africa's Product Quality Engineering Conference 2.0
+                    </p>
+
+                    {/* CTAs */}
+                    <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
+                        <a
+                            href="#nominate"
+                            onClick={e => e.preventDefault()}
+                            className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors"
+                        >
+                            <MdArrowOutward className="text-lg" /> Register for Free
+                        </a>
+                        <a
+                            href="#categories"
+                            className="inline-flex items-center gap-2 border border-white/40 text-white text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-white/10 transition-colors"
+                        >
+                            View Categories
+                        </a>
+                    </div>
+                </div>
+
+                {/* Ticker */}
+                <div className="relative z-10">
+                    <Ticker />
+                </div>
+            </section>
+
+            {/* ─── Tabs + Content ───────────────────────────────── */}
+            <section className="w-full bg-white" id="categories">
+                {/* Sticky tab bar */}
+                <div className="sticky top-16 z-40 bg-white border-b border-gray-200 shadow-sm">
+                    <div className="max-w-7xl mx-auto px-6 md:px-12">
+                        <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide">
+                            {TABS.map((tab, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setActiveTab(i)}
+                                    className={`relative shrink-0 px-6 py-4 text-sm font-bold uppercase tracking-wider transition-colors duration-200
+                                        ${activeTab === i
+                                            ? 'text-[#0A1A3A]'
+                                            : 'text-gray-400 hover:text-gray-600'
+                                        }`}
+                                >
+                                    {tab}
+                                    {activeTab === i && (
+                                        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1352A1] rounded-full" />
+                                    )}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Nominate / Vote CTA strip */}
+                {activeTab === 0 && (
+                    <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8">
+                        <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
+                            <a
+                                href="#nominate"
+                                onClick={e => e.preventDefault()}
+                                className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl text-sm font-black uppercase tracking-wider text-[#0A1A3A] border-2 border-[#00DEEE] bg-[#00DEEE] hover:bg-cyan-300 transition-colors"
+                            >
+                                Click Here To Nominate
+                            </a>
+                            <a
+                                href="#vote"
+                                onClick={e => e.preventDefault()}
+                                className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl text-sm font-black uppercase tracking-wider text-[#0A1A3A] border-2 border-[#00DEEE] bg-[#00DEEE] hover:bg-cyan-300 transition-colors"
+                            >
+                                Click Here To Vote
+                            </a>
+                        </div>
+                    </div>
+                )}
+
+                {/* Tab panel */}
+                <div className="max-w-7xl mx-auto px-6 md:px-12 py-10" id="vote">
+                    {activeTab === 0 && (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {AWARD_CATEGORIES.map(cat => (
+                                <CategoryCard key={cat.id} category={cat} onVote={openModal} />
+                            ))}
+                        </div>
+                    )}
+                    {activeTab === 1 && <SelectionProcessTab />}
+                    {activeTab === 2 && <JudgesTab />}
+                </div>
+            </section>
+
+            {/* ─── Bottom CTA ───────────────────────────────────── */}
+            <section className="w-full py-20 bg-[#0A1A3A] relative overflow-hidden">
+                <div
+                    className="absolute inset-0 opacity-10"
+                    style={{
+                        backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+                        backgroundSize: '30px 30px',
+                    }}
+                />
+                <div className="max-w-2xl mx-auto px-6 text-center relative z-10 flex flex-col items-center gap-6">
+                    <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-[#FFD600]">
+                        <FaTrophy size={26} />
+                    </div>
+                    <h2 className="text-white text-3xl md:text-4xl font-black uppercase leading-tight">
+                        Africa Quality Engineers<br />Awards Night
+                    </h2>
+                    <p className="text-white/60 text-sm leading-relaxed">
+                        We're closing out APQEC 2026 with a much-needed celebration — think Africa's Grammy for quality engineers. Nominate, vote, and celebrate excellence.
+                    </p>
+                    <a
+                        href="#nominate"
+                        onClick={e => e.preventDefault()}
+                        className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-10 py-4 rounded hover:bg-cyan-300 transition-colors"
+                    >
+                        <MdArrowOutward className="text-lg" /> Nominate Someone
+                    </a>
+                </div>
+            </section>
+
+            {/* Vote Confirmation Modal */}
+            {modal && (
+                <VoteModal
+                    nominee={modal.nominee}
+                    category={modal.category}
+                    onClose={closeModal}
+                    onConfirm={modal.onConfirm}
+                />
+            )}
+        </main>
+    );
+};
+
+export default VotePage;

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './modules/home';
 import SpeakersModule from './modules/speakers';
 import PartnersModule from './modules/partners';
+import VoteModule from './modules/vote';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/speakers" element={<SpeakersModule />} />
         <Route path="/partners" element={<PartnersModule />} />
+        <Route path="/vote" element={<VoteModule />} />
       </Routes>
     </BrowserRouter>
   );
