@@ -188,12 +188,12 @@ const Ticker = () => {
     const repeated = [...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS];
 
     return (
-        <div className="bg-[#0A2540] border-t border-white/10 py-3 overflow-hidden relative">
+        <div className="bg-[#194d8d] border-t border-white/10 py-3 overflow-hidden relative">
             <div className="flex whitespace-nowrap animate-marquee">
                 {repeated.map((item, i) => (
                     <span key={i} className="text-white text-xs font-bold uppercase tracking-widest mx-6 flex items-center gap-6">
                         {item}
-                        <span className="text-[#FFD600]">●</span>
+                        <span className="text-white">●</span>
                     </span>
                 ))}
             </div>
@@ -241,7 +241,8 @@ const SpeakersPage = () => {
                         className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-6 py-3 rounded hover:bg-cyan-300 transition-colors"
                         onClick={e => e.preventDefault()}
                     >
-                        Apply to Speak <MdArrowOutward />
+                        <span className="text-black group-hover:translate-x-1 transition-transform duration-200">→</span>
+                        Apply to Speak
                     </a>
                 </div>
                 <div className="relative z-10 mt-25">

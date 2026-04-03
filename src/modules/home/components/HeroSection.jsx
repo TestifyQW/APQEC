@@ -36,7 +36,7 @@ const Ticker = () => {
     const repeated = [...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS];
 
     return (
-        <div className="bg-[#0A2540] border-t border-white/10 py-3 overflow-hidden relative">
+        <div className="bg-[#194d8d] border-t border-white/10 py-3 overflow-hidden relative">
             <div className="flex whitespace-nowrap animate-marquee">
                 {repeated.map((item, i) => (
                     <span key={i} className="text-white text-xs font-bold uppercase tracking-widest mx-6 flex items-center gap-6">
@@ -94,9 +94,9 @@ const HeroSection = () => {
                 {/* CTA */}
                 <a
                     href="#register"
-                    className="mt-10 inline-flex items-center gap-3 bg-[#00D4FF]/20 hover:bg-[#00D4FF]/30 border border-[#00D4FF] text-white text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group"
+                    className="mt-10 inline-flex items-center gap-3 bg-[#00deee] hover:bg-[#00D4FF]/30 text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group"
                 >
-                    <span className="text-[#00D4FF] group-hover:translate-x-1 transition-transform duration-200">→</span>
+                    <span className="text-black group-hover:translate-x-1 transition-transform duration-200">→</span>
                     Claim Your Free Pass—Limited Spots for the Live Interactive Sessions.
                 </a>
             </div>

@@ -68,9 +68,9 @@ const SessionTable = ({ sessions }) => (
                         className="border-t border-white/5 hover:bg-white/5 transition-colors"
                         style={{ background: 'transparent' }}
                     >
-                        <td className="py-3 px-4 text-white/60 whitespace-nowrap">{s.time}</td>
-                        <td className="py-3 px-4 text-[#00D4FF] font-semibold whitespace-nowrap">{s.speaker}</td>
-                        <td className="py-3 px-4 text-white/70 whitespace-nowrap">{s.section}</td>
+                        <td className="py-3 px-4 text-white whitespace-nowrap">{s.time}</td>
+                        <td className="py-3 px-4 text-white font-semibold whitespace-nowrap">{s.speaker}</td>
+                        <td className="py-3 px-4 text-white whitespace-nowrap">{s.section}</td>
                         <td className="py-3 px-4 text-white uppercase font-medium tracking-wide">{s.topic}</td>
                     </tr>
                 ))}
@@ -99,7 +99,7 @@ const DayRow = ({ day, date, track, theme, sessions, isOpen, onToggle }) => (
                 onClick={onToggle}
                 className="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none"
             >
-                <span className="font-black text-white uppercase tracking-wide text-sm">{track}</span>
+                <span className="text-white uppercase tracking-wide text-sm">{track}</span>
                 <div className="flex items-center gap-3 flex-shrink-0">
                     <span className="text-white/50 text-sm hidden md:block">{theme}</span>
                     <span

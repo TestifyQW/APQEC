@@ -8,7 +8,7 @@ const NAV_LINKS = [
     { label: 'Schedule', href: '/#schedule' },
     { label: 'Partners', href: '/partners' },
     { label: 'Company', href: '/#company' },
-    { label: 'Our Crew', href: '/#ourcrew' },
+    { label: 'Our Crew', href: '/ourcrew' },
 ];
 
 const Header = () => {

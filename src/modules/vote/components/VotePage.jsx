@@ -3,6 +3,7 @@ import { FaCheck, FaArrowRight, FaTrophy, FaStar, FaLightbulb, FaUsers, FaRocket
 import { MdArrowOutward, MdClose } from 'react-icons/md';
 import logo from '../../../assets/apqec-logo-white.png';
 import SelectionProcessTab from './SelectionProcessTab';
+import JudgesTab from './JudgesTab';
 
 /* ─── Ticker ─────────────────────────────────────────────────────────────── */
 const TICKER_ITEMS = ['NOMINATE', '#APQEC26', 'VOTE FOR YOUR FAVOURITES', 'AWARDS NIGHT', '#APQEC26'];
@@ -10,7 +11,7 @@ const TICKER_ITEMS = ['NOMINATE', '#APQEC26', 'VOTE FOR YOUR FAVOURITES', 'AWARD
 const Ticker = () => {
     const repeated = [...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS];
     return (
-        <div className="bg-[#0A2540] border-t border-white/10 py-3 overflow-hidden relative">
+        <div className="bg-[#194d8d] border-t border-white/10 py-3 overflow-hidden relative">
             <div className="flex whitespace-nowrap animate-marquee">
                 {repeated.map((item, i) => (
                     <span key={i} className="text-white text-xs font-bold uppercase tracking-widest mx-6 flex items-center gap-6">
@@ -112,14 +113,7 @@ const PROCESS_STEPS = [
     { step: '06', title: 'Awards Night', desc: "Winners are announced LIVE at the APQEC Awards Night — Africa's Grammy for quality engineers." },
 ];
 
-/* ─── Judges ─────────────────────────────────────────────────────────────── */
-const JUDGES = [
-    { name: 'Judge TBA', role: 'Industry Expert', initials: 'J1', color: '#1352A1' },
-    { name: 'Judge TBA', role: 'QA Leader', initials: 'J2', color: '#0D8A6A' },
-    { name: 'Judge TBA', role: 'Tech Executive', initials: 'J3', color: '#B5451B' },
-    { name: 'Judge TBA', role: 'Community Leader', initials: 'J4', color: '#7B2D8B' },
-    { name: 'Judge TBA', role: 'Academic & Researcher', initials: 'J5', color: '#1352A1' },
-];
+
 
 /* ─── Vote Modal ─────────────────────────────────────────────────────────── */
 const VoteModal = ({ nominee, category, onClose, onConfirm }) => {
@@ -242,33 +236,7 @@ const CategoryCard = ({ category, onVote }) => {
 
 /* SelectionProcessTab is imported from ./SelectionProcessTab.jsx */
 
-/* ─── Judges Tab ─────────────────────────────────────────────────────────── */
-const JudgesTab = () => (
-    <div className="max-w-3xl mx-auto">
-        <p className="text-center text-gray-500 text-sm mb-12 max-w-xl mx-auto leading-relaxed">
-            Our panel of judges are distinguished leaders in quality engineering, technology, and innovation across Africa and beyond.
-        </p>
-        <div className="flex flex-wrap justify-center gap-6">
-            {JUDGES.map((j, i) => (
-                <div key={i} className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col items-center text-center gap-3 w-44 hover:shadow-lg hover:border-[#1352A1]/30 transition-all duration-200">
-                    <div
-                        className="w-16 h-16 rounded-full flex items-center justify-center text-xl font-black text-white"
-                        style={{ background: j.color }}
-                    >
-                        {j.initials}
-                    </div>
-                    <div>
-                        <p className="text-sm font-bold text-[#0A1A3A]">{j.name}</p>
-                        <p className="text-xs text-gray-400 mt-0.5">{j.role}</p>
-                    </div>
-                </div>
-            ))}
-        </div>
-        <p className="text-center text-xs text-gray-400 mt-10">
-            Judge announcements coming soon. Stay tuned on our social media channels.
-        </p>
-    </div>
-);
+/* JudgesTab is imported from ./JudgesTab.jsx */
 
 /* ─── Main Vote Page ─────────────────────────────────────────────────────── */
 const VotePage = () => {
@@ -314,7 +282,7 @@ const VotePage = () => {
                     <div className="flex flex-col w-fit mx-auto">
                         <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-black uppercase mb-2 leading-[1.05]">
                             Celebrating Africa's Product<br className="hidden md:block" />
-                            <span className="text-[#E6B73B]">Quality Engineers</span>
+                            <span>Quality Engineers</span>
                         </h1>
                         <section className="flex w-full h-1 mb-3">
                             <div className="w-[34%] h-1 bg-[#E6B73B] rounded-full" />

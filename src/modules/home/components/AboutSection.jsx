@@ -8,14 +8,14 @@ const CARDS = [
         heading: 'About',
         name: 'Testify Limited',
         body: 'We are a creative, interactive, and reputable software testing and QA agency, with a proven record of working and delivering different projects. Our track record of performance and excellence is greatly displayed through testimonials from clients we have worked with in the past who can ascertain of our capabilities. We specialize in the delivery of full-cycle QA and strongly believe that the core of our company\'s growth is built on trust and quality relationships with our clients.',
-        href: '#testify',
+        href: 'https://www.testifyltd.com/',
     },
     {
         id: 'testarsquarter',
         heading: 'About',
         name: 'TestarsQuarter',
         body: 'TestarsQuarter is Africa\'s top software testing community, with over 2,000 professionals helping both new and experienced testers grow. We focus on learning, teamwork, and career development in Quality Assurance, offering support and opportunities for everyone. TestarsQuarter is Africa\'s most active software testing community, with over 2,000 professionals empowering both aspiring and experienced testers.',
-        href: '#testarsquarter',
+        href: 'https://testarsquarter.org/',
     },
 ];
 

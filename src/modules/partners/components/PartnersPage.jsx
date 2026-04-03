@@ -11,7 +11,7 @@ const TICKER_ITEMS = ['BECOME A PARTNER', '#APQEC26', 'SHOWCASE. GROW. LEAD.'];
 const Ticker = () => {
     const repeated = [...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS];
     return (
-        <div className="bg-[#0A2540] border-t border-white/10 py-3 overflow-hidden relative">
+        <div className="bg-[#194d8d] border-t border-white/10 py-3 overflow-hidden relative">
             <div className="flex whitespace-nowrap animate-marquee">
                 {repeated.map((item, i) => (
                     <span key={i} className="text-white text-xs font-bold uppercase tracking-widest mx-6 flex items-center gap-6">
