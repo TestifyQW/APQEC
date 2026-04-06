@@ -154,7 +154,7 @@ const ScheduleSection = () => {
                             <FaArrowRight /> <span>Register for Free</span>
                         </a>
                         <a
-                            href="#sponsor"
+                            href="https://luma.com/1m7455h8"
                             className="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded transition-colors"
                             style={{ background: '#0A2540' }}
                             onMouseOver={e => (e.currentTarget.style.background = '#162F5A')}

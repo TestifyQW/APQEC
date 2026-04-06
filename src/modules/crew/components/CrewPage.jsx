@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MdArrowOutward } from 'react-icons/md';
+import { FaArrowRight } from 'react-icons/fa6';
 
 /* ─── Crew images ────────────────────────────────────────────────────────── */
 import ibironkeImg from '../../../assets/ibironkeImg.png';
@@ -37,6 +38,13 @@ const CREW = [
     rowTemplate[0], // Last row has 2 columns
     rowTemplate[1],
 ];
+const TitleUnderline = () => (
+    <section className="flex w-full h-1 mb-3">
+        <div className="w-[34%] h-1 bg-[#E6B73B] rounded-full">.</div>
+        <div className="w-[34%] h-1 bg-transparent" />
+        <div className="w-[34%] h-1 bg-[#E6B73B] rounded-full" />
+    </section>
+);
 
 const TICKER_ITEMS = [
     '#APQEC26',
@@ -101,16 +109,10 @@ const CrewPage = () => {
     return (
         <main className="pt-16">
             {/* ─── Hero ───────────────────────────────────────────────────── */}
-            <section className="w-full pt-20 relative overflow-hidden bg-[#154b8a]">
+            <section className="w-full pt-20 relative overflow-hidden bg-[#114ca0]">
                 {/* Cross Grid Pattern */}
                 <div
                     className="absolute inset-0 opacity-15"
-                    style={{
-                        backgroundImage: `linear-gradient(to right, #00DEEE 1px, transparent 1px), linear-gradient(to bottom, #00DEEE 1px, transparent 1px)`,
-                        backgroundSize: '40px 40px',
-                        maskImage: 'radial-gradient(circle at center, black 0%, transparent 70%)',
-                        WebkitMaskImage: 'radial-gradient(circle at center, black 0%, transparent 70%)'
-                    }}
                 />
 
                 {/* Glow blobs to match original aesthetics but fit the image */}
@@ -118,7 +120,7 @@ const CrewPage = () => {
 
                 <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
                     <p className="text-[#00DEEE] border border-[#00DEEE]/50 bg-[#00DEEE]/10 w-fit flex mx-auto rounded-full px-5 py-1.5 text-xs font-bold uppercase mb-6 tracking-widest backdrop-blur-sm">
-                        MEET THE APQEC CREW
+                        MEET THE CREW
                     </p>
 
                     <div className="flex flex-col w-fit mx-auto">
@@ -126,6 +128,11 @@ const CrewPage = () => {
                             MEET THE AMAZING CREW<br className="hidden md:block" />
                             BEHIND APQEC 2026
                         </h1>
+                        <section className='flex w-full h-1 mb-3'>
+                            <div className='w-[34%] h-1 bg-[#E6B73B] text-[#E6B73B] rounded-full'>.</div>
+                            <div className='w-[34%] h-1 bg-[rgba(255,0,0,0)]'></div>
+                            <div className='w-[34%] h-1 bg-[#E6B73B] rounded-full'></div>
+                        </section>
                     </div>
 
                     <p className="text-white/90 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed font-light">
@@ -136,9 +143,9 @@ const CrewPage = () => {
                     <a
                         href="#register"
                         onClick={e => e.preventDefault()}
-                        className="inline-flex items-center gap-2 bg-[#00DEEE] text-[#0F2745] text-sm font-black uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors mb-20 shadow-lg shadow-[#00DEEE]/20"
+                        className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors mb-20 shadow-lg shadow-[#00DEEE]/20"
                     >
-                        <span className="text-lg leading-none">&gt;</span> REGISTER FOR FREE NOW
+                        <FaArrowRight /> REGISTER FOR FREE NOW
                     </a>
                 </div>
 
@@ -150,7 +157,7 @@ const CrewPage = () => {
 
             {/* ─── Crew Grid ─────────────────────────────────────────────── */}
             <section className="w-full bg-white py-14">
-                <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <div className="max-w-[1800px] mx-auto px-6 md:px-12">
                     {/* Section title */}
                     <h2 className="text-[#0F2745] text-3xl md:text-4xl font-black uppercase text-center mb-8">
                         Our Crew
@@ -182,33 +189,23 @@ const CrewPage = () => {
             </section>
 
             {/* ─── Ready to Partner CTA ──────────────────────────────────── */}
-            <section className="w-full py-24 bg-[#EAF2F8] relative overflow-hidden">
-                {/* Subtle Grid Background for CTA */}
-                <div
-                    className="absolute inset-0 opacity-20"
-                    style={{
-                        backgroundImage: `linear-gradient(to right, #ccc 1px, transparent 1px), linear-gradient(to bottom, #ccc 1px, transparent 1px)`,
-                        backgroundSize: '40px 40px',
-                        maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
-                        WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)'
-                    }}
-                />
-
-                <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
-                    <h2 className="text-[#0F2745] text-2xl md:text-3xl font-black uppercase mb-6 tracking-wide">
-                        READY TO PARTNER WITH APQEC?
-                    </h2>
-
-                    <p className="text-[#0F2745]/80 text-sm md:text-base mb-10 leading-relaxed font-medium">
-                        🚀 Limited partnership slots are now available. Secure yours today and position your brand at the
-                        forefront of the Africa Product Quality Engineering community!
+            <section className="w-full py-20 bg-[#e1ecf4]">
+                <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
+                    <div className="flex flex-col w-fit mx-auto">
+                        <h2 className="text-[#0F2745] text-3xl md:text-4xl font-black uppercase mb-2">
+                            Ready to Partner With APQEC?
+                        </h2>
+                        <TitleUnderline />
+                    </div>
+                    <p className="text-[#0F2745]/70 text-sm md:text-base mb-8 max-w-3xl mx-auto leading-relaxed">
+                        🚀 Limited partnership slots available. Secure your spot today and position your brand at the <br /> forefront of Africa&apos;s quality engineering movement.
                     </p>
-
                     <a
-                        href="/partners"
-                        className="inline-flex items-center gap-2 bg-[#00DEEE] text-[#0F2745] text-sm font-black uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-transform hover:-translate-y-1 duration-300 shadow-md"
+                        href="#apply"
+                        onClick={e => e.preventDefault()}
+                        className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-8 py-4 rounded hover:bg-cyan-300 transition-colors"
                     >
-                        <span className="text-lg leading-none">&gt;</span> PARTNER WITH US
+                        <FaArrowRight /> partner with us
                     </a>
                 </div>
             </section>

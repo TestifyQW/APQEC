@@ -2,21 +2,22 @@ import React, { useState } from 'react';
 import { FaCheck, FaArrowRight, FaTrophy, FaStar, FaLightbulb, FaUsers, FaRocket, FaGlobe, FaHeart, FaMedal } from 'react-icons/fa6';
 import { MdArrowOutward, MdClose } from 'react-icons/md';
 import logo from '../../../assets/apqec-logo-white.png';
+import voteBgImg from '../../../assets/voteBgImg.png';
 import SelectionProcessTab from './SelectionProcessTab';
 import JudgesTab from './JudgesTab';
 
 /* ─── Ticker ─────────────────────────────────────────────────────────────── */
-const TICKER_ITEMS = ['NOMINATE', '#APQEC26', 'VOTE FOR YOUR FAVOURITES', 'AWARDS NIGHT', '#APQEC26'];
+const TICKER_ITEMS = ['ONLINE CONFERENCE', 'JUNE 4TH - 7TH, 2026', '#APQEC26'];
 
 const Ticker = () => {
     const repeated = [...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS];
     return (
-        <div className="bg-[#194d8d] border-t border-white/10 py-3 overflow-hidden relative">
+        <div className="bg-[#194d8d] border-t py-5 border-white/10 py-3 overflow-hidden relative">
             <div className="flex whitespace-nowrap animate-marquee">
                 {repeated.map((item, i) => (
                     <span key={i} className="text-white text-xs font-bold uppercase tracking-widest mx-6 flex items-center gap-6">
                         {item}
-                        <span className="text-[#FFD600]">●</span>
+                        <span className="text-white">●</span>
                     </span>
                 ))}
             </div>
@@ -28,7 +29,7 @@ const Ticker = () => {
 const AWARD_CATEGORIES = [
     {
         id: 'qe-professional',
-        icon: <FaTrophy size={22} />,
+        icon: '🏆',
         title: 'QE Professional of the Year',
         description:
             'This award highlights exceptional QA professionals who have demonstrated outstanding leadership, innovation, and community contributions in advancing quality engineering in Africa.',
@@ -36,7 +37,7 @@ const AWARD_CATEGORIES = [
     },
     {
         id: 'rising-star',
-        icon: <FaStar size={22} />,
+        icon: '⭐',
         title: 'Rising Star of the Year',
         description:
             'This award aims to recognise a professional who is new to a QA or testing role. Must have a measurable result. Cannot have just learning or just demonstrating understanding without doing and testing innovation.',
@@ -44,7 +45,7 @@ const AWARD_CATEGORIES = [
     },
     {
         id: 'qe-innovation',
-        icon: <FaLightbulb size={22} />,
+        icon: '🔬',
         title: 'QE Innovation Award',
         description:
             'For an individual or team that showed up with innovation, breaking new frameworks, tools, methodology, or process that will accelerate and sustain modern quality engineering results.',
@@ -52,7 +53,7 @@ const AWARD_CATEGORIES = [
     },
     {
         id: 'women-in-qe',
-        icon: <FaUsers size={22} />,
+        icon: '👩‍💻',
         title: 'Women in QE Excellence',
         description:
             "Celebrating a woman in tech / organisation who has broken barriers, illuminated followers, or achieved research and technical impact.",
@@ -60,7 +61,7 @@ const AWARD_CATEGORIES = [
     },
     {
         id: 'best-qe-team',
-        icon: <FaRocket size={22} />,
+        icon: '🏥',
         title: 'Best QE Team of the Year',
         description:
             'This award celebrates the engineering teams of an African tech company that built an exceptional difference in quality.',
@@ -68,7 +69,7 @@ const AWARD_CATEGORIES = [
     },
     {
         id: 'qe-educator',
-        icon: <FaMedal size={22} />,
+        icon: '📚',
         title: 'QE Educator / Mentor Award',
         description:
             'This award honours the teachers, mentors, and educators who have grown the QE talent pipeline on the continent.',
@@ -76,7 +77,7 @@ const AWARD_CATEGORIES = [
     },
     {
         id: 'pan-african',
-        icon: <FaGlobe size={22} />,
+        icon: '🌍',
         title: 'Pan-African Impact Award',
         description:
             'For an individual or organisation whose QA or QE focus has executable measurable impact on multiple African countries.',
@@ -84,7 +85,7 @@ const AWARD_CATEGORIES = [
     },
     {
         id: 'best-qe-community',
-        icon: <FaUsers size={22} />,
+        icon: '🚀',
         title: 'Best QE Community of the Year',
         description:
             "This award recognises Whatsapp groups, slack communities, clubs etc (chapters) that advance your QE community's knowledge.",
@@ -92,7 +93,7 @@ const AWARD_CATEGORIES = [
     },
     {
         id: 'apqec-community-choice',
-        icon: <FaHeart size={22} />,
+        icon: '💖',
         title: 'APQEC Community Choice',
         description:
             'Voted directly by the community. This people decide who made the biggest positive difference in their QA journey this year.',
@@ -213,8 +214,7 @@ const CategoryCard = ({ category, onVote }) => {
             {/* Header — icon + title */}
             <div className="px-5 pt-5 pb-4 flex flex-col items-center text-center gap-3">
                 <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center text-white"
-                    style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
+                    className="w-12 h-12 rounded-full flex items-center justify-center bg-white"
                 >
                     {category.icon}
                 </div>
@@ -252,62 +252,47 @@ const VotePage = () => {
     return (
         <main className="pt-16">
             {/* ─── Hero Banner ─────────────────────────────────────── */}
-            <section className="w-full pt-20 relative overflow-hidden bg-[#124da0]">
-                {/* Dot grid */}
-                <div
-                    className="absolute inset-0 opacity-10"
-                    style={{
-                        backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
-                        backgroundSize: '30px 30px',
-                    }}
-                />
+            <section className="w-full pt-20 pb-0 relative overflow-hidden bg-[#114ca0]">
+                {/* Center Background Image */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <img src={voteBgImg} alt="Awards Trophy" className="w-[230px] md:w-[380px] lg:w-[470px] object-contain opacity-40 mix-blend-luminosity" />
+                </div>
+
                 {/* Decorative glow blobs */}
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#00DEEE]/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-[#FFD600]/10 rounded-full blur-3xl pointer-events-none" />
 
-                <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
-                    {/* Trophy icon */}
-                    <div className="flex justify-center mb-4">
-                        <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-[#FFD600]">
-                            <FaTrophy size={26} />
-                        </div>
-                    </div>
-
-                    {/* Badge */}
-                    <p className="text-[#00DEEE] border border-[#00DEEE] w-fit flex mx-auto rounded-full px-4 py-1.5 text-sm font-bold uppercase mb-4 tracking-wider">
-                        Awards Night
-                    </p>
-
+                <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10 pt-16">
                     {/* Headline */}
                     <div className="flex flex-col w-fit mx-auto">
-                        <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-black uppercase mb-2 leading-[1.05]">
+                        <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-2 leading-[1.1]">
                             Celebrating Africa's Product<br className="hidden md:block" />
                             <span>Quality Engineers</span>
                         </h1>
-                        <section className="flex w-full h-1 mb-3">
-                            <div className="w-[34%] h-1 bg-[#E6B73B] rounded-full" />
-                            <div className="w-[34%] h-1 bg-transparent" />
-                            <div className="w-[34%] h-1 bg-[#E6B73B] rounded-full" />
+                        <section className="flex w-full h-1 mb-6 mt-4">
+                            <div className="w-[34%] h-[3px] bg-[#E6B73B] rounded-full" />
+                            <div className="w-[34%] h-[3px] bg-transparent" />
+                            <div className="w-[34%] h-[3px] bg-[#E6B73B] rounded-full" />
                         </section>
                     </div>
 
                     {/* Subtitle */}
-                    <p className="text-white/70 text-sm md:text-base max-w-2xl mx-auto mb-6 leading-relaxed">
+                    <p className="text-white/90 text-sm md:text-lg max-w-3xl mx-auto mb-10 leading-relaxed font-light">
                         Join <span className="text-[#07EE9E] font-bold">4,000+</span> Innovators at Africa's Product Quality Engineering Conference 2.0
                     </p>
 
                     {/* CTAs */}
                     <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
                         <a
-                            href="#nominate"
+                            href="#register"
                             onClick={e => e.preventDefault()}
-                            className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors"
+                            className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-xs md:text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors shadow-lg"
                         >
-                            <MdArrowOutward className="text-lg" /> Register for Free
+                            <FaArrowRight className="text-sm" /> Register for Free
                         </a>
                         <a
                             href="#categories"
-                            className="inline-flex items-center gap-2 border border-white/40 text-white text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-white/10 transition-colors"
+                            className="inline-flex items-center gap-2 border border-white/60 text-white text-xs md:text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-white/10 transition-colors"
                         >
                             View Categories
                         </a>

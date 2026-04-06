@@ -6,7 +6,7 @@ import partnerBadge from '../../../assets/partnerBadge.svg';
 import ourPartners from '../../../assets/ourPartners.png';
 
 /* ─── Ticker ─────────────────────────────────────────────────────────────── */
-const TICKER_ITEMS = ['BECOME A PARTNER', '#APQEC26', 'SHOWCASE. GROW. LEAD.'];
+const TICKER_ITEMS = ['PARTNER WITH US', '#APQEC26'];
 
 const Ticker = () => {
     const repeated = [...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS];
@@ -16,7 +16,7 @@ const Ticker = () => {
                 {repeated.map((item, i) => (
                     <span key={i} className="text-white text-xs font-bold uppercase tracking-widest mx-6 flex items-center gap-6">
                         {item}
-                        <span className="text-[#FFD600]">●</span>
+                        <span className="text-white">●</span>
                     </span>
                 ))}
             </div>
@@ -44,7 +44,7 @@ const PARTNERSHIP_LANES = [
         highlight: false,
         sections: [
             {
-                title: 'This Includes: $5',
+                title: 'This Includes:',
                 items: [
                     'Full access to all APQEC sessions, panels, and activities',
                     'Access to product demos and crowd testing labs',
@@ -114,6 +114,9 @@ const PARTNERSHIP_LANES = [
         priceLabel: null,
         accentColor: '#1352A1',
         highlight: false,
+        intro: [
+            'Get honest feedback. Fuel real improvement.'
+        ],
         sections: [
             {
                 title: 'Our Value Proposition to APQEC TestStorm Partners:',
@@ -135,6 +138,9 @@ const PARTNERSHIP_LANES = [
         priceLabel: null,
         accentColor: '#1352A1',
         highlight: false,
+        intro: [
+            'Our Value Proposition to APQEC LaunchLight Partners:'
+        ],
         sections: [
             {
                 title: 'Our Value Proposition to APQEC LaunchLight Partners:',
@@ -156,6 +162,9 @@ const PARTNERSHIP_LANES = [
         priceLabel: 'Require approval',
         accentColor: '#1352A1',
         highlight: false,
+        intro: [
+            'Our Value Proposition to APQEC CertConnect Partners:'
+        ],
         sections: [
             {
                 title: "As a Certification Partner, you'll:",
@@ -217,7 +226,7 @@ const PartnershipCard = ({ tier, price, priceLabel, accentColor, highlight, intr
             {intro && intro.length > 0 && (
                 <div className="flex flex-col gap-2 mb-4">
                     {intro.map((para, i) => (
-                        <p key={i} className="text-sm text-gray-500 leading-relaxed">{para}</p>
+                        <p key={i} className="text-sm text-gray-800">{para}</p>
                     ))}
                 </div>
             )}
@@ -229,10 +238,10 @@ const PartnershipCard = ({ tier, price, priceLabel, accentColor, highlight, intr
                         <p className="text-sm font-bold text-[#0A2540] mb-2">{section.title}</p>
                         <ul className="flex flex-col gap-2">
                             {section.items.map((item, ii) => (
-                                <li key={ii} className="flex items-start gap-2.5 text-sm text-gray-600 leading-snug">
+                                <li key={ii} className="flex items-center gap-2.5 text-sm text-gray-600 leading-snug">
                                     <FaCheck
-                                        className="mt-0.5 flex-shrink-0 text-[#1352A1]"
-                                        size={12}
+                                        className="mt-0.5 flex-shrink-0 text-white bg-[#1352A1] rounded-full p-1"
+                                        size={16}
                                     />
                                     <span>{item}</span>
                                 </li>
@@ -286,9 +295,8 @@ const PartnersPage = () => {
                     </div>
 
                     {/* Subtitle */}
-                    <p className="text-white/70 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
-                        At the Africa Product Quality Engineering Conference (APQEC), we bring together the people and
-                        brands driving the future of software quality and product excellence.
+                    <p className="text-white text-sm md:text-base max-w-3xl mx-auto mb-10 leading-relaxed">
+                        At the Africa Product Quality Engineering Conference (APQEC), we're building more than just an <br /> event, we're shaping the future of software excellence across Africa.
                     </p>
 
                     {/* CTA */}
@@ -297,8 +305,8 @@ const PartnersPage = () => {
                         onClick={e => e.preventDefault()}
                         className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-8 py-4 rounded hover:bg-cyan-300 transition-colors mb-20"
                     >
-                        <MdArrowOutward className="text-lg" />
-                        View Partnership Plans
+                        <FaArrowRight />
+                        Partner with us today
                     </a>
                 </div>
 
@@ -326,7 +334,7 @@ const PartnersPage = () => {
 
                     {/* Heading */}
                     <div className="text-center mb-14">
-                        <p className="text-[#1352A1] text-xs font-bold uppercase tracking-[0.2em] mb-3">
+                        <p className="text-[#1352A1] text-md font-bold uppercase tracking-[0.2em] mb-3">
                             Partnership Plans
                         </p>
                         <div className="flex flex-col w-fit mx-auto">
@@ -337,7 +345,7 @@ const PartnersPage = () => {
                     </div>
 
                     {/* Cards */}
-                    <div className="max-w-5xl mx-auto">
+                    <div className="w-full mx-auto">
                         {/* Top 3 */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
                             {PARTNERSHIP_LANES.slice(0, 3).map(lane => (

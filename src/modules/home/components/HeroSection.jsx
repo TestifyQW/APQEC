@@ -26,7 +26,7 @@ const TICKER_ITEMS = [
 
 const FloatingTag = ({ label, color, rotate, position }) => (
     <div className={`absolute ${position} ${rotate} z-10 hidden md:block`}>
-        <span className={`${color} text-xl font-black uppercase tracking-wider px-4 py-2.5 rounded-full shadow-lg whitespace-nowrap`}>
+        <span className={`${color} text-xl font-medium uppercase tracking-wider px-4 py-2.5 rounded-full shadow-lg whitespace-nowrap`}>
             {label}
         </span>
     </div>
@@ -94,9 +94,9 @@ const HeroSection = () => {
                 {/* CTA */}
                 <a
                     href="#register"
-                    className="mt-10 inline-flex items-center gap-3 bg-[#00deee] hover:bg-[#00D4FF]/30 text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group"
+                    className="mt-10 inline-flex items-center gap-3 border border-[#00deee] hover:bg-[#00D4FF]/30 text-white text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group"
                 >
-                    <span className="text-black group-hover:translate-x-1 transition-transform duration-200">→</span>
+                    <span className="text-white group-hover:translate-x-1 transition-transform duration-200">→</span>
                     Claim Your Free Pass—Limited Spots for the Live Interactive Sessions.
                 </a>
             </div>
@@ -109,7 +109,7 @@ const HeroSection = () => {
             {/* Mobile tags strip */}
             <div className="md:hidden flex flex-wrap justify-center gap-2 px-4 pb-6 relative z-10">
                 {[...TAGS_TOP, ...TAGS_BOTTOM].map((tag) => (
-                    <span key={tag.label} className={`${tag.color} text-[10px] font-black uppercase tracking-wide px-3 py-1.5 rounded-full`}>
+                    <span key={tag.label} className={`${tag.color} text-[10px] font-medium uppercase tracking-wide px-3 py-1.5 rounded-full`}>
                         {tag.label}
                     </span>
                 ))}
