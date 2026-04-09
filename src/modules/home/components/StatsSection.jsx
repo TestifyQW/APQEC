@@ -10,8 +10,7 @@ const STATS = [
 
 const StatsSection = () => (
     <section
-        className="w-full py-14"
-        style={{ background: 'linear-gradient(180deg, #f0f8ff 0%, #ffffff 100%)' }}
+        className="w-full py-14 bg-white"
     >
         <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="flex flex-wrap justify-center md:justify-between items-end gap-y-10 gap-x-6">

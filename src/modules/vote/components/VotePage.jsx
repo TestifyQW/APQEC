@@ -368,7 +368,7 @@ const VotePage = () => {
             </section>
 
             {/* ─── Bottom CTA ───────────────────────────────────── */}
-            <section className="w-full py-20 bg-[#0A1A3A] relative overflow-hidden">
+            {/* <section className="w-full py-20 bg-[#0A1A3A] relative overflow-hidden">
                 <div
                     className="absolute inset-0 opacity-10"
                     style={{
@@ -394,7 +394,7 @@ const VotePage = () => {
                         <MdArrowOutward className="text-lg" /> Nominate Someone
                     </a>
                 </div>
-            </section>
+            </section> */}
 
             {/* Vote Confirmation Modal */}
             {modal && (
