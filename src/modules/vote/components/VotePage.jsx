@@ -336,7 +336,7 @@ const VotePage = () => {
                     <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8">
                         <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
                             <a
-                                href="#nominate"
+                                href="https://form.typeform.com/to/brfoNQ1I"
                                 onClick={e => e.preventDefault()}
                                 className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl text-sm font-black uppercase tracking-wider text-[#0A1A3A] border-2 border-[#00DEEE] bg-[#00DEEE] hover:bg-cyan-300 transition-colors"
                             >
