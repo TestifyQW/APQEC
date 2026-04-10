@@ -6,9 +6,9 @@ const NAV_LINKS = [
     { label: 'Content Tracks', href: '/#tracks' },
     { label: 'Speakers', href: '/#speakers' },
     { label: 'Schedule', href: '/#schedule' },
-    { label: 'Partners', href: '../../../partners' },
+    { label: 'Partners', href: '/partners' },
     { label: 'Company', href: '/#company' },
-    { label: 'Our Crew', href: '../../../crew' },
+    { label: 'Our Crew', href: '/ourcrew' },
 ];
 
 const Header = () => {
