@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa6';
 import { MdArrowOutward } from 'react-icons/md';
+import Flag from 'react-world-flags';
 
 /* ─── Speaker images ────────────────────────────────────────────────────────── */
 import ibironkeImg from '../../../assets/ibironkeImg.png';
@@ -94,39 +95,39 @@ const TICKER_ITEMS = [
 
 /* ─── Session Speakers data ──────────────────────────────────────────────── */
 const SESSION_SPEAKERS = [
-    { id: 1, name: 'Safaa Ismail', image: safaaIsmail },
-    { id: 2, name: 'Mariem Safi', image: mariemSafi },
-    { id: 3, name: 'Syrine Hali', image: syrineHali },
-    { id: 4, name: 'Olaoluwa Oladokun', image: olaoluwaOladokun },
-    { id: 5, name: 'Simiso Kheswa', image: simisoKheswa },
-    { id: 6, name: 'Unyime Tommy', image: UnyimeTommy },
-    { id: 7, name: 'Temitope Onakoya', image: temitopeOnakoya },
-    { id: 8, name: 'Chibuzor Obilom', image: chibuzorObilom },
-    { id: 9, name: 'Dipti Joshi', image: diptiJoshi },
-    { id: 10, name: 'Cherinet Hailu', image: cherinetHailu },
-    { id: 11, name: 'Joan Maina', image: joanMaina },
-    { id: 12, name: 'Abimbola Babalola', image: abimbolaBabalola },
-    { id: 13, name: 'Louis Takow', image: louisTakow },
-    { id: 14, name: 'Sabine Joyce', image: sabineJoyce },
-    { id: 15, name: 'Shey Camille', image: sheyCamille },
-    { id: 16, name: 'Merewa Salh', image: merewaSalh },
-    { id: 17, name: 'Akram Mukasa', image: akramMukasa },
-    { id: 18, name: 'Korkor Mensah', image: korkorMensah },
-    { id: 19, name: 'Moses Muenma', image: mosesMuenma },
-    { id: 20, name: 'George Kibe', image: georgeKibe },
-    { id: 21, name: 'Selpha Atemba', image: selphaAtemba },
-    { id: 22, name: 'Jaqueline Kavula', image: jaquelineKavula },
-    { id: 23, name: 'Patrick Migot', image: patrickMigot },
-    { id: 24, name: 'Christiana Ajalah', image: christianaAjalah },
-    { id: 25, name: 'Muhammed Burahaba', image: muhammedBurahaba },
-    { id: 26, name: 'Atwine Nickson', image: atwineNickson },
-    { id: 27, name: 'Omolara Osiyemi', image: omolaraOsiyemi },
-    { id: 28, name: 'Luckson Makatu', image: lucksonMakatu },
-    { id: 29, name: 'Demola Adesina', image: demolaAdesina },
-    { id: 30, name: 'Rekik Kidane', image: rekikKidane },
-    { id: 31, name: 'Emmanuel Ani', image: emmanuelAni },
-    { id: 32, name: 'Mike Atara', image: mikeAtara },
-    { id: 33, name: 'Lilian Anyango', image: lilianAnyango },
+    { id: 1, name: 'Safaa Ismail', image: safaaIsmail, flag: 'EG', role: 'SENIOR QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 2, name: 'Mariem Safi', image: mariemSafi, flag: 'TN', role: 'QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 3, name: 'Syrine Hali', image: syrineHali, flag: 'TN', role: 'QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 4, name: 'Olaoluwa Oladokun', image: olaoluwaOladokun, flag: 'NG', role: 'SENIOR TESTOPS ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 5, name: 'Simiso Kheswa', image: simisoKheswa, flag: 'ZA', role: 'QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 6, name: 'Unyime Tommy', image: UnyimeTommy, flag: 'NG', role: 'MANAGING PARTNER AT ASSURDLY', ig: '#', x: '#', linkedin: '#' },
+    { id: 7, name: 'Temitope Onakoya', image: temitopeOnakoya, flag: 'NG', role: 'MANAGER, IT TESTING SHIVICKS', ig: '#', x: '#', linkedin: '#' },
+    { id: 8, name: 'Chibuzor Obilom', image: chibuzorObilom, flag: 'NG', role: 'SOFTWARE QUALITY LEAD', ig: '#', x: '#', linkedin: '#' },
+    { id: 9, name: 'Dipti Joshi', image: diptiJoshi, flag: 'ZA', role: 'SENIOR AUTOMATION TEST ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 10, name: 'Cherinet Hailu', image: cherinetHailu, flag: 'ET', role: 'BACKEND ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 11, name: 'Joan Maina', image: joanMaina, flag: 'KE', role: 'QUALITY ASSURANCE ENGINEER LEAD', ig: '#', x: '#', linkedin: '#' },
+    { id: 12, name: 'Abimbola Babalola', image: abimbolaBabalola, flag: 'NG', role: 'HEAD, AGILE SOLUTIONS PRACTICE CENTRE', ig: '#', x: '#', linkedin: '#' },
+    { id: 13, name: 'Louis Takow', image: louisTakow, flag: 'CM', role: 'SENIOR QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 14, name: 'Sabine Joyce', image: sabineJoyce, flag: 'CM', role: 'QUALITY ASSURANCE ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 15, name: 'Shey Camille', image: sheyCamille, flag: 'CM', role: 'QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 16, name: 'Merewa Salh', image: merewaSalh, flag: 'ET', role: 'QUALITY ASSURANCE ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 17, name: 'Akram Mukasa', image: akramMukasa, flag: 'UG', role: 'QUALITY ASSURANCE ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 18, name: 'Korkor Mensah', image: korkorMensah, flag: 'GH', role: 'QUALITY ASSURANCE MANAGER', ig: '#', x: '#', linkedin: '#' },
+    { id: 19, name: 'Moses Muenma', image: mosesMuenma, flag: 'KE', role: 'QUALITY ASSURANCE AND TESTING TEAM LEAD', ig: '#', x: '#', linkedin: '#' },
+    { id: 20, name: 'George Kibe', image: georgeKibe, flag: 'KE', role: 'SENIOR SOFTWARE QA', ig: '#', x: '#', linkedin: '#' },
+    { id: 21, name: 'Selpha Atemba', image: selphaAtemba, flag: 'KE', role: 'QUALITY ENGINEERING MANAGER', ig: '#', x: '#', linkedin: '#' },
+    { id: 22, name: 'Jaqueline Kavula', image: jaquelineKavula, flag: 'KE', role: 'BUSINESS DEVELOPMENT MANAGER AND CO-FOUNDER', ig: '#', x: '#', linkedin: '#' },
+    { id: 23, name: 'Patrick Migot', image: patrickMigot, flag: 'KE', role: 'LEAD QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 24, name: 'Christiana Ajalah', image: christianaAjalah, flag: 'GB', role: 'SENIOR QA ANALYST', ig: '#', x: '#', linkedin: '#' },
+    { id: 25, name: 'Muhammed Burahaba', image: muhammedBurahaba, flag: 'ET', role: 'SENIOR QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 26, name: 'Atwine Nickson', image: atwineNickson, flag: 'UG', role: 'QUALITY ASSURANCE ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 27, name: 'Omolara Osiyemi', image: omolaraOsiyemi, flag: 'RW', role: 'FOUNDER, THE PRODUCT MUSE', ig: '#', x: '#', linkedin: '#' },
+    { id: 28, name: 'Luckson Makatu', image: lucksonMakatu, flag: 'ZA', role: 'SOFTWARE QUALITY ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 29, name: 'Demola Adesina', image: demolaAdesina, flag: 'NG', role: 'PRESIDENT, ASSOCIATION OF NIGERIA SOFTWARE TESTERS', ig: '#', x: '#', linkedin: '#' },
+    { id: 30, name: 'Rekik Kidane', image: rekikKidane, flag: 'ET', role: 'SOFTWARE ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 31, name: 'Emmanuel Ani', image: emmanuelAni, flag: 'GH', role: 'HEAD OF PAYMENTS AND VAS OPERATIONS', ig: '#', x: '#', linkedin: '#' },
+    { id: 32, name: 'Mike Atara', image: mikeAtara, flag: 'GH', role: 'SOFTWARE ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 33, name: 'Lilian Anyango', image: lilianAnyango, flag: 'KE', role: 'CHAIRPERSON', ig: '#', x: '#', linkedin: '#' },
 ];
 
 /* ─── Keynote Speaker Card ────────────────────────────────────────────────── */
@@ -150,13 +151,13 @@ const KeynoteSpeakerCard = ({ name, role, image, ig, x, linkedin }) => (
                 <p className="text-white text-xs tracking-widest mt-1">{role}</p>
             </div>
             <div className="flex items-center gap-2.5 text-white/70">
-                <a href={ig} className="hover:text-white transition-colors" onClick={e => e.preventDefault()}>
+                <a href={ig} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
                     <IGIcon />
                 </a>
-                <a href={x} className="hover:text-white transition-colors" onClick={e => e.preventDefault()}>
+                <a href={x} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
                     <XIcon />
                 </a>
-                <a href={linkedin} className="hover:text-white transition-colors" onClick={e => e.preventDefault()}>
+                <a href={linkedin} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
                     <LinkedInIcon />
                 </a>
             </div>
@@ -165,7 +166,7 @@ const KeynoteSpeakerCard = ({ name, role, image, ig, x, linkedin }) => (
 );
 
 /* ─── Session Speaker Card ────────────────────────────────────────────────── */
-const SessionSpeakerCard = ({ name, role, image }) => (
+const SessionSpeakerCard = ({ name, role, image, flag, ig = '#', x = '#', linkedin = '#' }) => (
     <div className="relative rounded-xl overflow-hidden group cursor-pointer" style={{ aspectRatio: '1/1.2' }}>
         <img
             src={image}
@@ -175,12 +176,36 @@ const SessionSpeakerCard = ({ name, role, image }) => (
         <div
             className="absolute inset-0"
             style={{
-                background: 'linear-gradient(to top, rgba(5,20,60,0.95) 0%, rgba(5,20,60,0.2) 50%, transparent 70%)',
+                background: 'linear-gradient(to top, rgba(5,20,60,0.95) 0%, rgba(5,20,60,0.1) 40%, rgba(5,20,60,0.5) 100%)',
             }}
         />
+        
+        {/* Role at top left */}
+        <div className="absolute top-0 left-0 px-3 py-3 w-full">
+            <p className="text-white text-[8px] sm:text-[9px] uppercase font-bold leading-tight line-clamp-2 pr-4 tracking-wider">
+                {role}
+            </p>
+        </div>
+
+        {/* Bottom content: Name, Flag, Socials */}
         <div className="absolute bottom-0 left-0 right-0 px-3 py-3">
-            <p className="text-white font-bold text-xs uppercase tracking-wide leading-tight truncate">{name}</p>
-            <p className="text-[#00DEEE] text-[10px] uppercase tracking-wider mt-0.5 truncate">{role}</p>
+            <p className="text-white font-bold text-xs sm:text-[13px] tracking-wide leading-tight mb-2 truncate">{name}</p>
+            <div className="flex items-center justify-between">
+                <div className="flex-shrink-0 w-5 h-3.5 sm:w-6 sm:h-4 overflow-hidden rounded-[2px] border border-white/20">
+                    <Flag code={flag || 'NG'} className="w-full h-full object-cover" />
+                </div>
+                <div className="flex items-center gap-1.5 text-white/70">
+                    <a href={ig} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
+                        <IGIcon />
+                    </a>
+                    <a href={x} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
+                        <XIcon />
+                    </a>
+                    <a href={linkedin} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
+                        <LinkedInIcon />
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 );

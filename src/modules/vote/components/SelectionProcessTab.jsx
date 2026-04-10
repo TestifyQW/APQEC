@@ -61,15 +61,15 @@ const EVAL_CRITERIA = [
 const TIMELINE = [
     {
         month: 'MAR 2026',
-        events: ['Nominations Launch'],
+        events: ['Nominees Curation'],
     },
     {
         month: 'APR 2026',
         events: ['Finalist Shortlisted'],
     },
     {
-        month: 'MAY 2026',
-        events: ['Public Voting Live (on this website!)', 'Awards Night Finalisation'],
+        month: 'MAY, 2026',
+        events: ['Public Voting starts & Winners revealed live at the Moment Awards on June 6th.'],
     },
 ];
 
@@ -146,32 +146,58 @@ const SelectionProcessTab = () => (
         <div>
             <SectionHeading title="Timeline" />
 
-            {/* Timeline track */}
-            <div className="relative mt-6">
-                {/* Horizontal line */}
-                <div className="hidden sm:block absolute top-3 left-0 right-0 h-px bg-gray-300 z-0" />
+            {/* Desktop Timeline - Matches requested UI */}
+            <div className="relative mt-8 mb-4 hidden sm:block h-[180px]">
+                {/* Horizontal bottom line */}
+                <div className="absolute bottom-0 left-4 right-4 h-px bg-[#a1a1aa] z-0" />
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 relative z-10">
+                <div className="grid grid-cols-3 w-full h-full relative z-10 pl-8 pr-4">
                     {TIMELINE.map((item, i) => (
-                        <div key={i} className="flex flex-col gap-3">
-                            {/* Dot + month */}
-                            <div className="flex items-center gap-3 sm:flex-col sm:items-start">
-                                <div className="w-6 h-6 rounded-full bg-[#E6B73B] border-4 border-white shadow-md flex-shrink-0" />
-                                <p className="text-xs font-black text-[#0A1A3A] uppercase tracking-widest">
+                        <div key={i} className="relative flex flex-col items-start h-full">
+                            {/* Vertical line and dot */}
+                            <div className="absolute top-[6px] bottom-0 left-0 flex flex-col items-center">
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#18181b] shrink-0" />
+                                <div className="w-[1px] h-full bg-[#a1a1aa]" />
+                            </div>
+                            
+                            {/* Text content aligned right next to the dot */}
+                            <div className="pl-5 pt-0">
+                                <p className="text-[13px] sm:text-sm font-black text-[#0A1A3A] uppercase tracking-wider leading-none mb-2">
                                     {item.month}
                                 </p>
-                            </div>
-                            {/* Events */}
-                            <div className="flex flex-col gap-1.5 pl-0 sm:pl-0">
                                 {item.events.map((ev, j) => (
-                                    <p key={j} className="text-xs text-gray-500 leading-relaxed">
-                                        • {ev}
+                                    <p key={j} className="text-[11px] sm:text-xs text-slate-600 leading-relaxed pr-6 max-w-[260px]">
+                                        {ev}
                                     </p>
                                 ))}
                             </div>
                         </div>
                     ))}
                 </div>
+            </div>
+
+            {/* Mobile Timeline */}
+            <div className="sm:hidden flex flex-col gap-6 mt-6 ml-2">
+                {TIMELINE.map((item, i) => (
+                    <div key={i} className="flex gap-4">
+                        {/* Dot and vertical line */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-2 h-2 rounded-full bg-[#18181b] shrink-0 mt-1" />
+                            {i !== TIMELINE.length - 1 && <div className="w-px h-full bg-[#a1a1aa] my-1" />}
+                        </div>
+                        {/* Mobile Text Content */}
+                        <div className="pb-4">
+                            <p className="text-sm font-black text-[#0A1A3A] uppercase tracking-wider mb-1">
+                                {item.month}
+                            </p>
+                            {item.events.map((ev, j) => (
+                                <p key={j} className="text-xs text-slate-600 leading-relaxed">
+                                    {ev}
+                                </p>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
 
