@@ -44,7 +44,7 @@ const AwardSection = () => (
             {/* CTA buttons */}
             <div className="flex items-center gap-4 mt-2">
                 <a
-                    href="#nominate"
+                    href="https://form.typeform.com/to/brfoNQ1I"
                     className="px-10 py-3 rounded border border-white/30 text-[#00D4FF] text-xs font-black uppercase tracking-widest hover:bg-white/10 transition-colors"
                 >
                     Nominate

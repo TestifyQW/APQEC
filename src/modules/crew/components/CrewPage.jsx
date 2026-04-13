@@ -141,8 +141,7 @@ const CrewPage = () => {
                     </p>
 
                     <a
-                        href="#register"
-                        onClick={e => e.preventDefault()}
+                        href="https://luma.com/1m7455h8"
                         className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors mb-20 shadow-lg shadow-[#00DEEE]/20"
                     >
                         <FaArrowRight /> REGISTER FOR FREE NOW

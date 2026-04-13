@@ -354,7 +354,7 @@ const PartnersPage = () => {
                         </div>
 
                         {/* Bottom 2 centred */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {PARTNERSHIP_LANES.slice(3).map(lane => (
                                 <PartnershipCard key={lane.id} {...lane} />
                             ))}

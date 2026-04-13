@@ -140,7 +140,7 @@ const SpeakersSection = () => (
                 {/* Right — CTA buttons */}
                 <div className="flex items-center gap-3 flex-shrink-0">
                     <a
-                        href="#register"
+                        href="https://luma.com/1m7455h8"
                         className="flex items-center gap-2 bg-[#00DEEE] text-black text-xs font-bold uppercase px-3 py-2.5 rounded hover:bg-[#00D4FF]/10 transition-colors"
                     >
                         <FaArrowRight /> <span>Register for Free</span>

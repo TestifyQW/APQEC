@@ -35,7 +35,7 @@ const Header = () => {
 
                 {/* CTA */}
                 <a
-                    href="https://luma.com/1m7455h8"
+                    href=""
                     className="hidden md:flex items-center gap-2 border border-white/60 hover:border-white text-white text-xs font-bold uppercase tracking-widest px-2 py-2 rounded transition-all duration-200 hover:bg-white/10"
                 >
                     <MdArrowOutward className='text-lg' />
