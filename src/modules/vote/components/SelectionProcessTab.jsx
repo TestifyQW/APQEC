@@ -24,29 +24,25 @@ const HOW_IT_WORKS = [
         id: 'curation',
         label: 'CURATION',
         color: '#E6B73B',
-        textColor: '#0A1A3A',
-        desc: 'Our team reviews the nominations that come in. Category entries are vetted based on location, impact, transparency, and evidence. We check work on communities.',
+        desc: 'Our research-driven Selection Committee nominates leaders based on Excellence, Impact, Innovation, and Consistency.',
     },
     {
         id: 'shortlisting',
         label: 'SHORTLISTING',
         color: '#FF6B35',
-        textColor: '#fff',
-        desc: 'After curation, our judges shortlist the top 3 nominees in the final category.',
+        desc: 'Independent judges review nominations to determine 5 finalists per category.',
     },
     {
         id: 'public-voting',
         label: 'PUBLIC VOTING',
         color: '#1352A1',
-        textColor: '#fff',
-        desc: 'The community votes for their APQEC 2026 picks at this site. Votes are transparent and the results can be traced and confirmed by anyone who votes.',
+        desc: 'The community votes for their winners via our transparent channel. One vote per person per category.',
     },
     {
         id: 'validation',
         label: 'VALIDATION',
         color: '#07C983',
-        textColor: '#fff',
-        desc: 'Our team will validate all scores to ensure integrity before results come in.',
+        desc: 'Judges validate final counts to ensure integrity before the ceremony.',
     },
 ];
 
@@ -99,23 +95,18 @@ const SelectionProcessTab = () => (
         {/* ── 2. How It Works ── */}
         <div>
             <SectionHeading title="How It Works" />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {HOW_IT_WORKS.map(card => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-x-0 sm:gap-y-2">
+                {HOW_IT_WORKS.map((card, idx) => (
                     <div
                         key={card.id}
-                        className="rounded-sm p-6 flex flex-col gap-3 min-h-[160px]"
+                        className={`rounded-xl p-8 sm:p-10 flex flex-col gap-3 min-h-[180px] sm:min-h-[200px] ${idx % 2 === 0 ? 'sm:rounded-none sm:rounded-l-xl' : 'sm:rounded-lg -ml-2 sm:rounded-r-xl'
+                            }`}
                         style={{ background: card.color }}
                     >
-                        <p
-                            className="text-sm font-black uppercase tracking-widest"
-                            style={{ color: card.textColor }}
-                        >
+                        <p className="text-xl font-bold uppercase tracking-wide text-white">
                             {card.label}
                         </p>
-                        <p
-                            className="text-sm leading-relaxed"
-                            style={{ color: card.textColor, opacity: card.textColor === '#fff' ? 0.85 : 0.75 }}
-                        >
+                        <p className="text-[15px] leading-relaxed text-white/95 max-w-[95%]">
                             {card.desc}
                         </p>
                     </div>
@@ -159,7 +150,7 @@ const SelectionProcessTab = () => (
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#18181b] shrink-0" />
                                 <div className="w-[1px] h-full bg-[#a1a1aa]" />
                             </div>
-                            
+
                             {/* Text content aligned right next to the dot */}
                             <div className="pl-5 pt-0">
                                 <p className="text-[13px] sm:text-sm font-black text-[#0A1A3A] uppercase tracking-wider leading-none mb-2">

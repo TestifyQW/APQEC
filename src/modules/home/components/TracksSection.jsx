@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TbTool, TbBulb } from "react-icons/tb";
 import { BiCrown } from "react-icons/bi";
 
@@ -32,40 +32,51 @@ const TRACKS = [
     {
         num: '01',
         title: 'The Quality Leadership and Culture Lab',
-        body: 'This track focuses on storytelling formats, distribution strategies, and monetisation with content creators, filmmakers, podcasters, and influencers redefining digital media across Africa. This track focuses on storytelling formats, distribution strategies.',
+        body: 'This track focuses on storytelling formats, distribution strategies, and monetisation with content creators, filmmakers, podcasters, and influencers redefining digital media across Africa.',
         bg: '#F5C842',
-        textColor: 'white',
+        textColor: '#0A2540',
+        hoverBg: '#D80027',
         featured: true,
     },
     {
         num: '02',
         title: 'The Quality Bottom Line',
+        body: 'Learn how software quality impacts revenue, user retention, and the overall business bottom line.',
         bg: '#F0F0F0',
         textColor: '#0A2540',
+        hoverBg: '#0635C9',
     },
     {
         num: '03',
         title: 'Cyber-Resilient Quality (DevSecOps)',
+        body: 'Integrate security protocols smoothly into your testing pipelines to prevent modern cyber threats.',
         bg: '#D6F0EE',
         textColor: '#0A2540',
+        hoverBg: '#1352A1',
     },
     {
         num: '04',
         title: 'The AI Frontier',
+        body: 'Explore how Artificial Intelligence and Machine Learning are shaping the next generation of product quality.',
         bg: '#D6F0EE',
         textColor: '#0A2540',
+        hoverBg: '#07C983',
     },
     {
         num: '05',
         title: 'Platform Engineering and Elastic Infrastructure',
+        body: 'Build scalable platforms that enhance developer productivity and reduce time-to-market.',
         bg: '#FFF9E6',
         textColor: '#0A2540',
+        hoverBg: '#FF6B35',
     },
     {
         num: '06',
         title: 'CX Engineering',
+        body: 'Engineer delightful customer experiences by correlating user behavior with technical quality metrics.',
         bg: '#F0F0F0',
         textColor: '#0A2540',
+        hoverBg: '#0A2540',
     },
 ];
 
@@ -88,22 +99,45 @@ const FeatureCard = ({ icon, title, body }) => (
     </div>
 );
 
-const TrackCard = ({ num, title, body, bg, textColor, featured }) => (
-    <div
-        className="rounded-2xl p-6 flex flex-col justify-between min-h-[220px]"
-        style={{ background: bg, color: textColor }}
-    >
-        <span className="text-sm font-semibold opacity-60">{num}</span>
-        <div>
-            <h4 className={`font-semibold uppercase leading-snug ${featured ? 'text-lg mb-3' : 'text-sm mt-auto'}`}>
-                {title}
-            </h4>
-            {body && (
-                <p className="text-xs leading-relaxed mt-2 opacity-80">{body}</p>
-            )}
+const TrackCard = ({ num, title, body, bg, textColor, featured, hoverBg }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+        <div
+            className="rounded-2xl p-6 flex flex-col min-h-[220px] overflow-hidden cursor-pointer"
+            style={{
+                background: isHovered ? hoverBg : bg,
+                color: isHovered ? 'white' : textColor,
+                transition: 'all 1s ease'
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <span className="text-sm font-semibold opacity-60 mb-auto">{num}</span>
+            <div className="flex flex-col justify-end mt-4">
+                <h4
+                    className={`font-semibold uppercase leading-snug ${featured ? 'text-lg' : 'text-sm'}`}
+                    style={{ transition: 'all 1s ease' }}
+                >
+                    {title}
+                </h4>
+                <div
+                    className="overflow-hidden"
+                    style={{
+                        maxHeight: isHovered ? '300px' : '0px',
+                        opacity: isHovered ? 1 : 0,
+                        transition: 'all 1s ease',
+                        marginTop: isHovered && body ? '12px' : '0px'
+                    }}
+                >
+                    {body && (
+                        <p className="text-xs leading-relaxed opacity-80">{body}</p>
+                    )}
+                </div>
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 /* ─── Main Section ───────────────────────────────────────────────────────── */
 const TracksSection = () => (

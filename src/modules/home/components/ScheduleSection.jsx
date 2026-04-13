@@ -85,7 +85,7 @@ const DayRow = ({ day, date, track, theme, sessions, isOpen, onToggle }) => (
 
         {/* ── Left: day label box ── */}
         <div
-            className="flex items-center gap-4 px-6 py-5 rounded-xl flex-shrink-0 md:w-72"
+            className="flex items-center gap-4 px-6 py-5 rounded-xl flex-shrink-0 md:w-72 max-h-fit"
             style={{ background: '#0A2540' }}
         >
             <span className="font-black text-white text-sm uppercase tracking-widest whitespace-nowrap">{day}</span>

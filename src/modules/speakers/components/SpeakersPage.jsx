@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa6';
 import { MdArrowOutward } from 'react-icons/md';
@@ -166,8 +166,8 @@ const KeynoteSpeakerCard = ({ name, role, image, ig, x, linkedin }) => (
 );
 
 /* ─── Session Speaker Card ────────────────────────────────────────────────── */
-const SessionSpeakerCard = ({ name, role, image, flag, ig = '#', x = '#', linkedin = '#' }) => (
-    <div className="relative rounded-xl overflow-hidden group cursor-pointer" style={{ aspectRatio: '1/1.2' }}>
+const SessionSpeakerCard = ({ name, role, image, flag, ig = '#', x = '#', linkedin = '#', onClick }) => (
+    <div className="relative rounded-xl overflow-hidden group cursor-pointer" style={{ aspectRatio: '1/1.2' }} onClick={onClick}>
         <img
             src={image}
             alt={name}
@@ -228,6 +228,17 @@ const Ticker = () => {
 
 /* ─── Main Speakers Page ──────────────────────────────────────────────────── */
 const SpeakersPage = () => {
+    const [selectedSpeaker, setSelectedSpeaker] = useState(null);
+
+    const getCountryName = (code) => {
+        const map = {
+            'ZA': 'SOUTH AFRICA', 'KE': 'KENYA', 'CM': 'CAMEROON', 'GH': 'GHANA',
+            'UG': 'UGANDA', 'TN': 'TUNISIA', 'ET': 'ETHIOPIA', 'RW': 'RWANDA',
+            'GB': 'UNITED KINGDOM', 'EG': 'EGYPT', 'NG': 'NIGERIA'
+        };
+        return map[code] || 'NIGERIA';
+    };
+
     return (
         <main className="pt-16">
             {/* ─── Hero Banner ─────────────────────────────────────────────── */}
@@ -293,7 +304,7 @@ const SpeakersPage = () => {
                     </h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                         {SESSION_SPEAKERS.map(speaker => (
-                            <SessionSpeakerCard key={speaker.id} {...speaker} />
+                            <SessionSpeakerCard key={speaker.id} {...speaker} onClick={() => setSelectedSpeaker(speaker)} />
                         ))}
                     </div>
                 </div>
@@ -328,6 +339,50 @@ const SpeakersPage = () => {
                 </div>
             </section>
 
+            {/* ─── Speaker Modal ──────────────────────────────────────────────── */}
+            {selectedSpeaker && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedSpeaker(null)}>
+                    <div 
+                        className="w-full max-w-4xl bg-[#00DEEE] flex flex-col md:flex-row overflow-hidden relative shadow-2xl" 
+                        onClick={e => e.stopPropagation()}
+                    >
+                        {/* Close Button */}
+                        <button 
+                            className="absolute top-4 right-4 text-white z-10 hover:opacity-75 transition-opacity"
+                            onClick={() => setSelectedSpeaker(null)}
+                        >
+                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        
+                        {/* Left Image */}
+                        <div className="w-full md:w-[42%] h-[300px] md:h-[480px]">
+                            <img src={selectedSpeaker.image} alt={selectedSpeaker.name} className="w-full h-full object-cover" />
+                        </div>
+
+                        {/* Right Content */}
+                        <div className="w-full md:w-[58%] p-8 md:p-12 flex flex-col justify-center">
+                            <h2 className="text-3xl font-black text-white uppercase mb-2 tracking-wide">
+                                {selectedSpeaker.name}
+                            </h2>
+                            <h3 className="text-white font-bold uppercase tracking-wider mb-6 text-sm">
+                                {getCountryName(selectedSpeaker.flag)} | {selectedSpeaker.role}
+                            </h3>
+                            
+                            <p className="text-white/95 leading-relaxed mb-8 font-medium">
+                                {selectedSpeaker.bio || `Join ${selectedSpeaker.name} at APQEC 2026. Bringing extensive experience as ${selectedSpeaker.role}, they will be sharing deep insights into product quality engineering, innovative testing frameworks, and scalable strategies to elevate quality practices across the continent.`}
+                            </p>
+                            
+                            <div className="flex flex-wrap items-center gap-5 text-white font-bold text-sm">
+                                <a href={selectedSpeaker.linkedin || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">LinkedIn</a>
+                                <a href={selectedSpeaker.x || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">Twitter</a>
+                                <span className="italic sm:ml-auto font-medium text-white/90">The Future of Product Quality Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </main>
     );
 };
