@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
@@ -76,8 +76,12 @@ const SPEAKERS = [
 ];
 
 /* ─── Speaker Card ────────────────────────────────────────────────────────── */
-const SpeakerCard = ({ name, role, image, ig, x, linkedin }) => (
-    <div className="relative rounded-2xl overflow-hidden group cursor-pointer" style={{ aspectRatio: '4/4.5' }}>
+const SpeakerCard = ({ name, role, image, ig, x, linkedin, onClick }) => (
+    <div
+        className="relative rounded-2xl overflow-hidden group cursor-pointer"
+        style={{ aspectRatio: '4/4.5' }}
+        onClick={onClick}
+    >
         {/* Photo */}
         <img
             src={image}
@@ -100,15 +104,15 @@ const SpeakerCard = ({ name, role, image, ig, x, linkedin }) => (
                 <p className="text-white/60 text-xs uppercase tracking-widest mt-0.5">{role}</p>
             </div>
 
-            {/* Social icons */}
+            {/* Social icons — stop propagation so clicks don't trigger the modal */}
             <div className="flex items-center gap-2 text-white/70">
-                <a href={ig} className="hover:text-white transition-colors" onClick={e => e.preventDefault()}>
+                <a href={ig} className="hover:text-white transition-colors" onClick={e => e.stopPropagation()}>
                     <IGIcon />
                 </a>
-                <a href={x} className="hover:text-white transition-colors" onClick={e => e.preventDefault()}>
+                <a href={x} className="hover:text-white transition-colors" onClick={e => e.stopPropagation()}>
                     <XIcon />
                 </a>
-                <a href={linkedin} className="hover:text-white transition-colors" onClick={e => e.preventDefault()}>
+                <a href={linkedin} className="hover:text-white transition-colors" onClick={e => e.stopPropagation()}>
                     <LinkedInIcon />
                 </a>
             </div>
@@ -117,61 +121,119 @@ const SpeakerCard = ({ name, role, image, ig, x, linkedin }) => (
 );
 
 /* ─── Main Section ────────────────────────────────────────────────────────── */
-const SpeakersSection = () => (
-    <section id='speakers'
-        className="w-full py-16"
-        style={{ background: '#071330' }}
-    >
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-            {/* Header row */}
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-10">
-                {/* Left — heading + subtitle */}
-                <div>
-                    <h2
-                        className="text-[#00DEEE] text-4xl font-bold uppercase"
-                    >
-                        Meet Our Speakers
-                    </h2>
-                    <p className="text-white text-sm mt-2">
-                        We are announcing speakers gradually, stay tuned for more
-                    </p>
+const SpeakersSection = () => {
+    const [selectedSpeaker, setSelectedSpeaker] = useState(null);
+
+    return (
+        <section id='speakers'
+            className="w-full py-16"
+            style={{ background: '#071330' }}
+        >
+            <div className="max-w-7xl mx-auto px-6 md:px-12">
+                {/* Header row */}
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-10">
+                    {/* Left — heading + subtitle */}
+                    <div>
+                        <h2 className="text-[#00DEEE] text-4xl font-bold uppercase">
+                            Meet Our Speakers
+                        </h2>
+                        <p className="text-white text-sm mt-2">
+                            We are announcing speakers gradually, stay tuned for more
+                        </p>
+                    </div>
+
+                    {/* Right — CTA buttons */}
+                    <div className="flex items-center gap-3 flex-shrink-0">
+                        <a
+                            href="https://luma.com/1m7455h8"
+                            className="flex items-center gap-2 bg-[#00DEEE] text-black text-xs font-bold uppercase px-3 py-2.5 rounded hover:bg-[#00D4FF]/10 transition-colors"
+                        >
+                            <FaArrowRight /> <span>Register for Free</span>
+                        </a>
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfUe2o5LoHupuqqaMWW7qi7VFplg5Sd_SDBC04O1GOUUgdsMQ/viewform?usp=send_form"
+                            className="flex items-center gap-2 border border-white text-white text-xs font-bold uppercase tracking-widest px-3 py-2.5 rounded hover:bg-white/10 transition-colors"
+                        >
+                            <MdArrowOutward /> <span>Apply to Speak</span>
+                        </a>
+                    </div>
                 </div>
 
-                {/* Right — CTA buttons */}
-                <div className="flex items-center gap-3 flex-shrink-0">
-                    <a
-                        href="https://luma.com/1m7455h8"
-                        className="flex items-center gap-2 bg-[#00DEEE] text-black text-xs font-bold uppercase px-3 py-2.5 rounded hover:bg-[#00D4FF]/10 transition-colors"
+                {/* Speaker grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {SPEAKERS.map((speaker) => (
+                        <SpeakerCard
+                            key={speaker.id}
+                            {...speaker}
+                            onClick={() => setSelectedSpeaker(speaker)}
+                        />
+                    ))}
+                </div>
+
+                {/* View More button */}
+                <div className="flex justify-center mt-12">
+                    <Link
+                        to="/speakers"
+                        className="flex items-center gap-2 border border-white text-white text-xs font-bold uppercase px-8 py-3 hover:bg-white/10 transition-colors"
                     >
-                        <FaArrowRight /> <span>Register for Free</span>
-                    </a>
-                    <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfUe2o5LoHupuqqaMWW7qi7VFplg5Sd_SDBC04O1GOUUgdsMQ/viewform?usp=send_form"
-                        className="flex items-center gap-2 border border-white text-white text-xs font-bold uppercase tracking-widest px-3 py-2.5 rounded hover:bg-white/10 transition-colors"
-                    >
-                        <MdArrowOutward /> <span>Apply to Speak</span>
-                    </a>
+                        View More Speakers <FaArrowRight />
+                    </Link>
                 </div>
             </div>
 
-            {/* Speaker grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {SPEAKERS.map((speaker) => (
-                    <SpeakerCard key={speaker.id} {...speaker} />
-                ))}
-            </div>
-
-            {/* View More button */}
-            <div className="flex justify-center mt-12">
-                <Link
-                    to="/speakers"
-                    className="flex items-center gap-2 border border-white text-white text-xs font-bold uppercase px-8 py-3 hover:bg-white/10 transition-colors"
+            {/* ─── Speaker Modal ──────────────────────────────────────────────── */}
+            {selectedSpeaker && (
+                <div
+                    className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+                    onClick={() => setSelectedSpeaker(null)}
                 >
-                    View More Speakers <FaArrowRight />
-                </Link>
-            </div>
-        </div>
-    </section>
-);
+                    <div
+                        className="w-full max-w-4xl bg-[#00DEEE] flex flex-col md:flex-row overflow-hidden relative shadow-2xl"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        {/* Close Button */}
+                        <button
+                            className="absolute top-4 right-4 text-white z-10 hover:opacity-75 transition-opacity"
+                            onClick={() => setSelectedSpeaker(null)}
+                        >
+                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        {/* Left Image */}
+                        <div className="w-full md:w-[42%] h-[300px] md:h-[480px]">
+                            <img
+                                src={selectedSpeaker.image}
+                                alt={selectedSpeaker.name}
+                                className="w-full h-full object-cover object-top"
+                            />
+                        </div>
+
+                        {/* Right Content */}
+                        <div className="w-full md:w-[58%] p-8 md:p-12 flex flex-col justify-center">
+                            <h2 className="text-3xl font-black text-white uppercase mb-2 tracking-wide">
+                                {selectedSpeaker.name}
+                            </h2>
+                            <h3 className="text-white font-bold uppercase tracking-wider mb-6 text-sm">
+                                {selectedSpeaker.role}
+                            </h3>
+
+                            <p className="text-white/95 leading-relaxed mb-8 font-medium">
+                                {selectedSpeaker.bio || `Join ${selectedSpeaker.name} at APQEC 2026. Bringing extensive experience as ${selectedSpeaker.role}, they will be sharing deep insights into product quality engineering, innovative testing frameworks, and scalable strategies to elevate quality practices across the continent.`}
+                            </p>
+
+                            <div className="flex flex-wrap items-center gap-5 text-white font-bold text-sm">
+                                <a href={selectedSpeaker.linkedin || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">LinkedIn</a>
+                                <a href={selectedSpeaker.x || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">Twitter</a>
+                                <span className="italic sm:ml-auto font-medium text-white/90">The Future of Product Quality Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </section>
+    );
+};
 
 export default SpeakersSection;
