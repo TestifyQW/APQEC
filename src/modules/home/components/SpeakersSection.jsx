@@ -146,7 +146,7 @@ const SpeakersSection = () => (
                         <FaArrowRight /> <span>Register for Free</span>
                     </a>
                     <a
-                        href="#speak"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfUe2o5LoHupuqqaMWW7qi7VFplg5Sd_SDBC04O1GOUUgdsMQ/viewform?usp=send_form"
                         className="flex items-center gap-2 border border-white text-white text-xs font-bold uppercase tracking-widest px-3 py-2.5 rounded hover:bg-white/10 transition-colors"
                     >
                         <MdArrowOutward /> <span>Apply to Speak</span>

@@ -179,7 +179,7 @@ const SessionSpeakerCard = ({ name, role, image, flag, ig = '#', x = '#', linked
                 background: 'linear-gradient(to top, rgba(5,20,60,0.95) 0%, rgba(5,20,60,0.1) 40%, rgba(5,20,60,0.5) 100%)',
             }}
         />
-        
+
         {/* Role at top left */}
         <div className="absolute top-0 left-0 px-3 py-3 w-full">
             <p className="text-white text-[8px] sm:text-[9px] uppercase font-bold leading-tight line-clamp-2 pr-4 tracking-wider">
@@ -273,7 +273,7 @@ const SpeakersPage = () => {
                         testers, and change-makers leading the charge in product quality, engineering, and innovation.
                     </p>
                     <a
-                        href="#register"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfUe2o5LoHupuqqaMWW7qi7VFplg5Sd_SDBC04O1GOUUgdsMQ/viewform?usp=send_form"
                         className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-6 py-3 rounded hover:bg-cyan-300 transition-colors"
                         onClick={e => e.preventDefault()}
                     >
@@ -330,7 +330,7 @@ const SpeakersPage = () => {
                         scroll, register, join the sessions, ask questions, and let's grow together.
                     </p>
                     <a
-                        href="#register"
+                        href="https://luma.com/1m7455h8"
                         className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors"
                         onClick={e => e.preventDefault()}
                     >
@@ -342,12 +342,12 @@ const SpeakersPage = () => {
             {/* ─── Speaker Modal ──────────────────────────────────────────────── */}
             {selectedSpeaker && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedSpeaker(null)}>
-                    <div 
-                        className="w-full max-w-4xl bg-[#00DEEE] flex flex-col md:flex-row overflow-hidden relative shadow-2xl" 
+                    <div
+                        className="w-full max-w-4xl bg-[#00DEEE] flex flex-col md:flex-row overflow-hidden relative shadow-2xl"
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Close Button */}
-                        <button 
+                        <button
                             className="absolute top-4 right-4 text-white z-10 hover:opacity-75 transition-opacity"
                             onClick={() => setSelectedSpeaker(null)}
                         >
@@ -355,7 +355,7 @@ const SpeakersPage = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                        
+
                         {/* Left Image */}
                         <div className="w-full md:w-[42%] h-[300px] md:h-[480px]">
                             <img src={selectedSpeaker.image} alt={selectedSpeaker.name} className="w-full h-full object-cover" />
@@ -369,11 +369,11 @@ const SpeakersPage = () => {
                             <h3 className="text-white font-bold uppercase tracking-wider mb-6 text-sm">
                                 {getCountryName(selectedSpeaker.flag)} | {selectedSpeaker.role}
                             </h3>
-                            
+
                             <p className="text-white/95 leading-relaxed mb-8 font-medium">
                                 {selectedSpeaker.bio || `Join ${selectedSpeaker.name} at APQEC 2026. Bringing extensive experience as ${selectedSpeaker.role}, they will be sharing deep insights into product quality engineering, innovative testing frameworks, and scalable strategies to elevate quality practices across the continent.`}
                             </p>
-                            
+
                             <div className="flex flex-wrap items-center gap-5 text-white font-bold text-sm">
                                 <a href={selectedSpeaker.linkedin || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">LinkedIn</a>
                                 <a href={selectedSpeaker.x || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">Twitter</a>

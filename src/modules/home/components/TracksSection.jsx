@@ -35,7 +35,7 @@ const TRACKS = [
         body: 'This track focuses on storytelling formats, distribution strategies, and monetisation with content creators, filmmakers, podcasters, and influencers redefining digital media across Africa.',
         bg: '#F5C842',
         textColor: '#0A2540',
-        hoverBg: '#D80027',
+        hoverBg: '#af860cff',
         featured: true,
     },
     {
@@ -44,7 +44,7 @@ const TRACKS = [
         body: 'Learn how software quality impacts revenue, user retention, and the overall business bottom line.',
         bg: '#F0F0F0',
         textColor: '#0A2540',
-        hoverBg: '#0635C9',
+        hoverBg: '#c5c2c2ff',
     },
     {
         num: '03',
@@ -52,7 +52,7 @@ const TRACKS = [
         body: 'Integrate security protocols smoothly into your testing pipelines to prevent modern cyber threats.',
         bg: '#D6F0EE',
         textColor: '#0A2540',
-        hoverBg: '#1352A1',
+        hoverBg: '#4d9a92',
     },
     {
         num: '04',
@@ -60,7 +60,7 @@ const TRACKS = [
         body: 'Explore how Artificial Intelligence and Machine Learning are shaping the next generation of product quality.',
         bg: '#D6F0EE',
         textColor: '#0A2540',
-        hoverBg: '#07C983',
+        hoverBg: '#4d9a92',
     },
     {
         num: '05',
@@ -68,7 +68,7 @@ const TRACKS = [
         body: 'Build scalable platforms that enhance developer productivity and reduce time-to-market.',
         bg: '#FFF9E6',
         textColor: '#0A2540',
-        hoverBg: '#FF6B35',
+        hoverBg: '#bfae7e',
     },
     {
         num: '06',
@@ -76,7 +76,7 @@ const TRACKS = [
         body: 'Engineer delightful customer experiences by correlating user behavior with technical quality metrics.',
         bg: '#F0F0F0',
         textColor: '#0A2540',
-        hoverBg: '#0A2540',
+        hoverBg: '#c5c2c2ff',
     },
 ];
 
