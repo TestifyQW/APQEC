@@ -71,7 +71,7 @@ const TIMELINE = [
 
 /* ─── Main Component ─────────────────────────────────────────────────────── */
 const SelectionProcessTab = () => (
-    <div className="max-w-5xl mx-auto flex flex-col gap-14">
+    <div className="max-w-7xl mx-auto flex flex-col gap-14">
 
         {/* ── 1. Eligibility Requirements ── */}
         <div>

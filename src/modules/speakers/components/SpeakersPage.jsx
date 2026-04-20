@@ -43,6 +43,7 @@ import simisoKheswa from '../../../assets/simisoKheswa.jpg';
 import syrineHali from '../../../assets/syrineHali.jpg';
 import temitopeOnakoya from '../../../assets/temitopeOnakoya.jpg';
 import georgeKibe from '../../../assets/georgeKibe.png';
+import AfricanMap from '../../../assets/african-map.png';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
 const IGIcon = () => (
@@ -245,6 +246,17 @@ const SpeakersPage = () => {
             <section
                 className="w-full pt-20 relative overflow-hidden bg-[#124da0]"
             >
+                {/* African Map Background */}
+                <div
+                    className="absolute left-1/2 -translate-x-1/2 top-0 w-full max-w-[600px] h-full opacity-[0.8] pointer-events-none"
+                    style={{
+                        backgroundImage: `url(${AfricanMap})`,
+                        backgroundSize: 'contain',
+                        backgroundPosition: 'center top',
+                        backgroundRepeat: 'no-repeat',
+                    }}
+                />
+
                 {/* Decorative dots grid */}
                 <div
                     className="absolute inset-0 opacity-10"
@@ -343,7 +355,12 @@ const SpeakersPage = () => {
             {selectedSpeaker && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedSpeaker(null)}>
                     <div
-                        className="w-full max-w-4xl bg-[#00DEEE] flex flex-col md:flex-row overflow-hidden relative shadow-2xl"
+                        className="w-full max-w-4xl flex flex-col md:flex-row overflow-hidden relative shadow-2xl"
+                        style={{
+                            backgroundColor: ['#00DEEE', '#e6b63b', '#296ab9'][
+                                SESSION_SPEAKERS.findIndex(s => s.id === selectedSpeaker.id) % 3
+                            ]
+                        }}
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Close Button */}

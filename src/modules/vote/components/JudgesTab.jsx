@@ -81,7 +81,7 @@ const JudgeCard = ({ judge }) => (
 
 // ─── Judges Tab ───────────────────────────────────────────────────────────────
 const JudgesTab = () => (
-    <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+    <div className='max-w-7xl mx-auto'>
 
         {/* Description */}
         <p style={{

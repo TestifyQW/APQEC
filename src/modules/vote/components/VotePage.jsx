@@ -284,7 +284,7 @@ const VotePage = () => {
                     {/* CTAs */}
                     <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
                         <a
-                            href="#register"
+                            href="https://luma.com/1m7455h8"
                             onClick={e => e.preventDefault()}
                             className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-xs md:text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors shadow-lg"
                         >
@@ -310,12 +310,12 @@ const VotePage = () => {
                 {/* Sticky tab bar */}
                 <div className="sticky top-16 z-40 bg-white border-b border-gray-200 shadow-sm">
                     <div className="max-w-7xl mx-auto px-6 md:px-12">
-                        <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide">
+                        <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide w-full">
                             {TABS.map((tab, i) => (
                                 <button
                                     key={i}
                                     onClick={() => setActiveTab(i)}
-                                    className={`relative shrink-0 px-6 py-4 text-sm font-bold uppercase tracking-wider transition-colors duration-200
+                                    className={`relative shrink-0 py-4 text-sm w-[30%] font-bold uppercase tracking-wider transition-colors duration-200
                                         ${activeTab === i
                                             ? 'text-[#0A1A3A]'
                                             : 'text-gray-400 hover:text-gray-600'

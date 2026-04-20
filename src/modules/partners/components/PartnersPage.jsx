@@ -4,6 +4,7 @@ import { FaArrowRight, FaCheck } from 'react-icons/fa6';
 import partnerBadge from '../../../assets/partnerBadge.svg';
 
 import ourPartners from '../../../assets/ourPartners.png';
+import AfricanMap from '../../../assets/african-map.png';
 
 /* ─── Ticker ─────────────────────────────────────────────────────────────── */
 const TICKER_ITEMS = ['PARTNER WITH US', '#APQEC26'];
@@ -271,6 +272,17 @@ const PartnersPage = () => {
 
             {/* ─── Hero Banner ──────────────────────────────────────────── */}
             <section className="w-full pt-20 relative overflow-hidden bg-[#124da0]">
+                {/* African Map Background */}
+                <div
+                    className="absolute left-1/2 -translate-x-1/2 top-0 w-full max-w-[600px] h-full opacity-[0.8] pointer-events-none"
+                    style={{
+                        backgroundImage: `url(${AfricanMap})`,
+                        backgroundSize: 'contain',
+                        backgroundPosition: 'center top',
+                        backgroundRepeat: 'no-repeat',
+                    }}
+                />
+
                 {/* Dot grid background */}
                 <div
                     className="absolute inset-0 opacity-10"

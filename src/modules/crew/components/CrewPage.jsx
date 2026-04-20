@@ -8,6 +8,7 @@ import mosunmolaImg from '../../../assets/mosunmolaOlabello.jpg';
 import ayubaImg from '../../../assets/ayubaJohnson.jpg';
 import joshuaImg from '../../../assets/joshuaOlanrewaju.jpg';
 import oladeindeImg from '../../../assets/oladeindeDeborah.png';
+import AfricanMap from '../../../assets/african-map.png';
 
 /* ─── Filter categories ─────────────────────────────────────────────────── */
 const CATEGORIES = [
@@ -48,7 +49,7 @@ const TitleUnderline = () => (
 
 const TICKER_ITEMS = [
     '#APQEC26',
-    'JUNE 4TH - 7TH, 2026',
+    'JUNE 4TH - 6TH, 2026',
     'ONLINE CONFERENCE'
 ];
 
@@ -110,6 +111,17 @@ const CrewPage = () => {
         <main className="pt-16">
             {/* ─── Hero ───────────────────────────────────────────────────── */}
             <section className="w-full pt-20 relative overflow-hidden bg-[#114ca0]">
+                {/* African Map Background */}
+                <div
+                    className="absolute left-1/2 -translate-x-1/2 top-0 w-full max-w-[600px] h-full opacity-[0.8] pointer-events-none"
+                    style={{
+                        backgroundImage: `url(${AfricanMap})`,
+                        backgroundSize: 'contain',
+                        backgroundPosition: 'center top',
+                        backgroundRepeat: 'no-repeat',
+                    }}
+                />
+
                 {/* Cross Grid Pattern */}
                 <div
                     className="absolute inset-0 opacity-15"

@@ -188,7 +188,12 @@ const SpeakersSection = () => {
                     onClick={() => setSelectedSpeaker(null)}
                 >
                     <div
-                        className="w-full max-w-4xl bg-[#00DEEE] flex flex-col md:flex-row overflow-hidden relative shadow-2xl"
+                        className="w-full max-w-4xl flex flex-col md:flex-row overflow-hidden relative shadow-2xl"
+                        style={{ 
+                            backgroundColor: ['#00DEEE', '#e6b63b', '#296ab9'][
+                                SPEAKERS.findIndex(s => s.id === selectedSpeaker.id) % 3
+                            ] 
+                        }}
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Close Button */}
