@@ -292,6 +292,7 @@ const VotePage = () => {
                         </a>
                         <a
                             href="#categories"
+                            onClick={() => setActiveTab(0)}
                             className="inline-flex items-center gap-2 border border-white/60 text-white text-xs md:text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-white/10 transition-colors"
                         >
                             View Categories

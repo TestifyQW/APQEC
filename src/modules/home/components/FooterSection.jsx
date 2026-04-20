@@ -3,6 +3,11 @@ import { FaInstagram } from "react-icons/fa";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import logo from '../../../assets/apqec-logo.png'
+import apqecA from '../../../assets/apqec-A.png'
+import apqecP from '../../../assets/apqec-P.png'
+import apqecQ from '../../../assets/apqec-Q.png'
+import apqecE from '../../../assets/apqec-E.png'
+import apqecC from '../../../assets/apqec-C.png'
 
 /* ─── Nav data ───────────────────────────────────────────────────────────── */
 const QUICK_LINKS = [
@@ -105,9 +110,39 @@ const FooterSection = () => (
         </div>
 
         {/* ── Large APQEC watermark — white background ── */}
-        <div className="bg-white w-full overflow-hidden leading-none select-none my-5">
-            <img src={logo} alt="" className='w-[85%] mx-auto' />
+        <div className="bg-white w-full overflow-hidden flex items-center justify-center leading-none select-none my-5 py-6">
+            <img src={apqecA} alt="" className='w-[18%] h-[300px] object-fill' />
+            <img src={apqecP} alt="" className='w-[18%] h-[300px] object-fill' />
+            <img src={apqecQ} alt="" className='w-[18%] h-[300px] object-fill' />
+            <img src={apqecE} alt="" className='w-[18%] h-[300px] object-fill' />
+            <img src={apqecC} alt="" className='w-[18%] h-[300px] object-fill' />
         </div>
+        {/* <div className="bg-white w-full overflow-hidden flex items-center justify-center leading-none select-none my-5 py-6 h-24 md:h-40 lg:h-52">
+            <style>{`
+                @keyframes stretchA {
+                    0%, 100% { width: 20%; }
+                    33% { width: 40%; }
+                    66% { width: 15%; }
+                }
+                @keyframes stretchP {
+                    0%, 100% { width: 20%; }
+                    33% { width: 15%; }
+                    66% { width: 40%; }
+                }
+                @keyframes stretchRest {
+                    0%, 100% { width: 20%; }
+                    33%, 66% { width: 15%; }
+                }
+                .animate-stretch-a { animation: stretchA 3s ease-in-out infinite; }
+                .animate-stretch-p { animation: stretchP 3s ease-in-out infinite; }
+                .animate-stretch-rest { animation: stretchRest 3s ease-in-out infinite; }
+            `}</style>
+            <img src={apqecA} alt="" className='animate-stretch-a h-full object-fill' />
+            <img src={apqecP} alt="" className='animate-stretch-p h-full object-fill' />
+            <img src={apqecQ} alt="" className='animate-stretch-rest h-full object-fill' />
+            <img src={apqecE} alt="" className='animate-stretch-rest h-full object-fill' />
+            <img src={apqecC} alt="" className='animate-stretch-rest h-full object-fill' />
+        </div> */}
 
     </footer>
 );
