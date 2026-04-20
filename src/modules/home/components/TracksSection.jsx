@@ -33,50 +33,50 @@ const TRACKS = [
         num: '01',
         title: 'The Quality Leadership and Culture Lab',
         body: 'This track focuses on storytelling formats, distribution strategies, and monetisation with content creators, filmmakers, podcasters, and influencers redefining digital media across Africa.',
-        bg: '#F5C842',
+        bg: '#E6B73B',
         textColor: '#0A2540',
-        hoverBg: '#af860cff',
+        hoverBg: '#e6b73b',
         featured: true,
     },
     {
         num: '02',
         title: 'The Quality Bottom Line',
         body: 'Learn how software quality impacts revenue, user retention, and the overall business bottom line.',
-        bg: '#F0F0F0',
+        bg: '#333333',
         textColor: '#0A2540',
-        hoverBg: '#c5c2c2ff',
+        hoverBg: '#333333',
     },
     {
         num: '03',
         title: 'Cyber-Resilient Quality (DevSecOps)',
         body: 'Integrate security protocols smoothly into your testing pipelines to prevent modern cyber threats.',
-        bg: '#D6F0EE',
+        bg: '#07EE9E',
         textColor: '#0A2540',
-        hoverBg: '#4d9a92',
+        hoverBg: '#07EE9E',
     },
     {
         num: '04',
         title: 'The AI Frontier',
         body: 'Explore how Artificial Intelligence and Machine Learning are shaping the next generation of product quality.',
-        bg: '#D6F0EE',
+        bg: '#07EE9E',
         textColor: '#0A2540',
-        hoverBg: '#4d9a92',
+        hoverBg: '#07EE9E',
     },
     {
         num: '05',
         title: 'Platform Engineering and Elastic Infrastructure',
         body: 'Build scalable platforms that enhance developer productivity and reduce time-to-market.',
-        bg: '#FFF9E6',
+        bg: '#333333',
         textColor: '#0A2540',
-        hoverBg: '#bfae7e',
+        hoverBg: '#333333',
     },
     {
         num: '06',
         title: 'CX Engineering',
         body: 'Engineer delightful customer experiences by correlating user behavior with technical quality metrics.',
-        bg: '#F0F0F0',
+        bg: '#E6B73B',
         textColor: '#0A2540',
-        hoverBg: '#c5c2c2ff',
+        hoverBg: '#e6b73b',
     },
 ];
 
@@ -99,16 +99,32 @@ const FeatureCard = ({ icon, title, body }) => (
     </div>
 );
 
-const TrackCard = ({ num, title, body, bg, textColor, featured, hoverBg }) => {
+const hexToRgba = (hex, alpha) => {
+    if (!hex) return 'transparent';
+    let r = 0, g = 0, b = 0;
+    const cleanHex = hex.replace('#', '');
+    if (cleanHex.length === 3) {
+        r = parseInt(cleanHex[0] + cleanHex[0], 16);
+        g = parseInt(cleanHex[1] + cleanHex[1], 16);
+        b = parseInt(cleanHex[2] + cleanHex[2], 16);
+    } else {
+        r = parseInt(cleanHex.substring(0, 2), 16);
+        g = parseInt(cleanHex.substring(2, 4), 16);
+        b = parseInt(cleanHex.substring(4, 6), 16);
+    }
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
+const TrackCard = ({ num, title, body, bg, textColor, featured }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <div
             className="rounded-2xl p-6 flex flex-col min-h-[220px] overflow-hidden cursor-pointer"
             style={{
-                background: isHovered ? hoverBg : bg,
+                background: isHovered ? bg : hexToRgba(bg, 0.1),
                 color: isHovered ? 'white' : textColor,
-                transition: 'all 1s ease'
+                transition: 'all 0.5s ease'
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
