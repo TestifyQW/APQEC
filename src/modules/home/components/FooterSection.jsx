@@ -110,7 +110,7 @@ const FooterSection = () => (
         </div>
 
         {/* ── Large APQEC watermark — white background ── */}
-        <div className="bg-white w-full overflow-hidden flex items-center justify-center leading-none select-none my-5 py-6">
+        <div className="bg-white hidden sm:flex w-full overflow-hidden flex items-center justify-center leading-none select-none my-5 py-6">
             <img src={apqecA} alt="" className='w-[18%] h-[300px] object-fill' />
             <img src={apqecP} alt="" className='w-[18%] h-[300px] object-fill' />
             <img src={apqecQ} alt="" className='w-[18%] h-[300px] object-fill' />

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { MdArrowOutward } from "react-icons/md";
+import { MdArrowOutward, MdMenu, MdClose } from "react-icons/md";
 import logo from '../../../assets/apqec-logo-white.png';
 
 const NAV_LINKS = [
@@ -14,13 +14,17 @@ const NAV_LINKS = [
 
 const Header = () => {
     const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const closeMenu = () => setIsMenuOpen(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#114ca0] px-10">
-            <div className="px-4 md:px-8 flex items-center justify-between h-16">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-[#114ca0] md:px-10 px-4">
+            <div className="flex items-center justify-between h-16 max-w-7xl mx-auto">
                 {/* Logo */}
                 <a href="/" className="flex items-center shrink-0">
-                    <img src={logo} alt="" className='w-30' />
+                    <img src={logo} alt="" className='w-24 md:w-30' />
                 </a>
 
                 {/* Desktop Nav */}
@@ -53,11 +57,46 @@ const Header = () => {
                 </a>
 
                 {/* Mobile Hamburger */}
-                <button className="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
-                    <span className="block w-6 h-0.5 bg-white" />
-                    <span className="block w-6 h-0.5 bg-white" />
-                    <span className="block w-6 h-0.5 bg-white" />
+                <button 
+                    className="md:hidden flex items-center justify-center p-2 text-white" 
+                    onClick={toggleMenu}
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                >
+                    {isMenuOpen ? <MdClose className="text-3xl" /> : <MdMenu className="text-3xl" />}
                 </button>
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            <div 
+                className={`fixed inset-0 top-16 bg-[#114ca0] z-40 transition-transform duration-300 ease-in-out md:hidden
+                    ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+            >
+                <nav className="flex flex-col items-center gap-8 pt-12">
+                    {NAV_LINKS.map((link) => {
+                        const isActive = location.pathname === link.href || (location.pathname + location.hash) === link.href;
+                        
+                        return (
+                            <a
+                                key={link.label}
+                                href={link.href}
+                                onClick={closeMenu}
+                                className={`text-white text-xl font-bold uppercase tracking-widest transition-all duration-200
+                                    ${isActive ? 'opacity-100' : 'opacity-80 hover:opacity-100'}`}
+                            >
+                                {link.label}
+                            </a>
+                        );
+                    })}
+                    
+                    <a
+                        href="https://calendly.com/ibironke-1/apqec2026"
+                        onClick={closeMenu}
+                        className="mt-4 flex items-center gap-2 border border-white/60 text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:bg-white/10"
+                    >
+                        <MdArrowOutward className='text-xl' />
+                        Become a Sponsor
+                    </a>
+                </nav>
             </div>
         </header>
     );

@@ -18,7 +18,7 @@ const AwardSection = () => (
         />
 
         {/* Content */}
-        <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center gap-6">
+        <div className="relative z-10 mx-auto flex flex-col items-center gap-6 px-6 md:px-12">
             {/* Heading */}
             <div className='flex flex-col'>
                 <h2
