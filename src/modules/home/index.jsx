@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '../../components/layouts/Header';
 import HeroSection from './components/HeroSection';
 import PartnersSection from './components/PartnersSection';
@@ -13,6 +14,17 @@ import FAQSection from './components/FAQSection';
 import FooterSection from './components/FooterSection';
 
 const HomePage = () => {
+    const { state } = useLocation();
+
+    useEffect(() => {
+        if (state?.scrollTo) {
+            const el = document.getElementById(state.scrollTo);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    }, [state]);
+
     return (
         <>
             <Header />

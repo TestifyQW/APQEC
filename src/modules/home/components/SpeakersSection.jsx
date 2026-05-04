@@ -172,12 +172,12 @@ const SpeakersSection = () => {
 
                 {/* View More button */}
                 <div className="flex justify-center mt-12">
-                    <Link
-                        to="/speakers"
+                    <a
+                        href="/speakers"
                         className="flex items-center gap-2 border border-white text-white text-xs font-bold uppercase px-8 py-3 hover:bg-white/10 transition-colors"
                     >
                         View More Speakers <FaArrowRight />
-                    </Link>
+                    </a>
                 </div>
             </div>
 
@@ -189,10 +189,10 @@ const SpeakersSection = () => {
                 >
                     <div
                         className="w-full max-w-4xl flex flex-col md:flex-row overflow-hidden relative shadow-2xl"
-                        style={{ 
+                        style={{
                             backgroundColor: ['#00DEEE', '#e6b63b', '#296ab9'][
                                 SPEAKERS.findIndex(s => s.id === selectedSpeaker.id) % 3
-                            ] 
+                            ]
                         }}
                         onClick={e => e.stopPropagation()}
                     >

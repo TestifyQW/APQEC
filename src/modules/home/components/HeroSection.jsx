@@ -67,7 +67,7 @@ const HeroSection = () => {
                 @keyframes fallTags {
                     0% { transform: translateY(-100px); opacity: 0; }
                     20% { opacity: 1; }
-                    100% { transform: translateY(calc(100vh - 250px)); opacity: 1; }
+                    100% { transform: translateY(calc(100vh - 37vh)); opacity: 1; }
                 }
             `}</style>
             {/* African Map Background */}
@@ -123,7 +123,7 @@ const HeroSection = () => {
                 {/* CTA */}
                 <a
                     href="https://luma.com/1m7455h8"
-                    className="mt-10 inline-flex items-center gap-3 border border-[#00deee] hover:bg-[#00D4FF]/30 text-white text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group pointer-events-auto"
+                    className="mt-10 mb-10 inline-flex items-center gap-3 border border-[#00deee] hover:bg-[#00D4FF]/30 text-white text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group pointer-events-auto"
                 >
                     <span className="text-white group-hover:translate-x-1 transition-transform duration-200">→</span>
                     Claim Your Free Pass—Limited Spots for the Live Interactive Sessions.

@@ -8,23 +8,27 @@ import apqecP from '../../../assets/apqec-P.png'
 import apqecQ from '../../../assets/apqec-Q.png'
 import apqecE from '../../../assets/apqec-E.png'
 import apqecC from '../../../assets/apqec-C.png'
+import { useHashNav } from '../../../hooks/useHashNav';
 
 /* ─── Nav data ───────────────────────────────────────────────────────────── */
 const QUICK_LINKS = [
-    { label: 'Content Tracks', href: '#content-tracks' },
-    { label: 'Speakers', href: '#speakers' },
-    { label: 'Schedule', href: '#schedule' },
-    { label: 'Partners', href: '#partners' },
-    { label: 'Company', href: '#company' },
+    { label: 'Content Tracks', href: '/#tracks' },
+    { label: 'Speakers', href: '/#speakers' },
+    { label: 'Schedule', href: '/#schedule' },
+    { label: 'Partners', href: '/partners' },
+    { label: 'Company', href: '/#company' },
 ];
 
 const SUPPORT_LINKS = [
-    { label: 'FAQ', href: '#faq' },
+    { label: 'FAQ', href: '/#faq' },
     { label: 'Contact', href: '#contact' },
 ];
 
 /* ─── Main Footer ────────────────────────────────────────────────────────── */
-const FooterSection = () => (
+const FooterSection = () => {
+    const handleNav = useHashNav();
+
+    return (
     <footer className="w-full">
 
         {/* ── Dark upper section ── */}
@@ -71,7 +75,11 @@ const FooterSection = () => (
                             <ul className="flex flex-col gap-4">
                                 {QUICK_LINKS.map(({ label, href }) => (
                                     <li key={label}>
-                                        <a href={href} className="text-white/60 text-sm hover:text-white transition-colors">
+                                        <a
+                                            href={href}
+                                            onClick={(e) => handleNav(e, href)}
+                                            className="text-white/60 text-sm hover:text-white transition-colors"
+                                        >
                                             {label}
                                         </a>
                                     </li>
@@ -87,7 +95,11 @@ const FooterSection = () => (
                             <ul className="flex flex-col gap-4">
                                 {SUPPORT_LINKS.map(({ label, href }) => (
                                     <li key={label}>
-                                        <a href={href} className="text-white/60 text-sm hover:text-white transition-colors">
+                                        <a
+                                            href={href}
+                                            onClick={(e) => handleNav(e, href)}
+                                            className="text-white/60 text-sm hover:text-white transition-colors"
+                                        >
                                             {label}
                                         </a>
                                     </li>
@@ -111,11 +123,12 @@ const FooterSection = () => (
 
         {/* ── Large APQEC watermark — white background ── */}
         <div className="bg-white hidden sm:flex w-full overflow-hidden flex items-center justify-center leading-none select-none my-5 py-6">
-            <img src={apqecA} alt="" className='w-[18%] h-[300px] object-fill' />
+            {/* <img src={apqecA} alt="" className='w-[18%] h-[300px] object-fill' />
             <img src={apqecP} alt="" className='w-[18%] h-[300px] object-fill' />
             <img src={apqecQ} alt="" className='w-[18%] h-[300px] object-fill' />
             <img src={apqecE} alt="" className='w-[18%] h-[300px] object-fill' />
-            <img src={apqecC} alt="" className='w-[18%] h-[300px] object-fill' />
+            <img src={apqecC} alt="" className='w-[18%] h-[300px] object-fill' /> */}
+            <img src={logo} alt="" className='w-full h-[200px] object-contain' />
         </div>
         {/* <div className="bg-white w-full overflow-hidden flex items-center justify-center leading-none select-none my-5 py-6 h-24 md:h-40 lg:h-52">
             <style>{`
@@ -145,6 +158,7 @@ const FooterSection = () => (
         </div> */}
 
     </footer>
-);
+    );
+};
 
 export default FooterSection;
