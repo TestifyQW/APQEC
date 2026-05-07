@@ -6,8 +6,6 @@ import Flag from 'react-world-flags';
 
 /* ─── Speaker images ────────────────────────────────────────────────────────── */
 import ibironkeImg from '../../../assets/ibironkeImg.png';
-import philipImg from '../../../assets/philipImg.jpg';
-import emmaPaul2 from '../../../assets/emmaPaul2.jpg';
 import UnyimeTommy from '../../../assets/UnyimeTommy.jpg';
 import abimbolaBabalola from '../../../assets/abimbolaBabalola.jpg';
 import akramMukasa from '../../../assets/akramMukasa.png';
@@ -44,6 +42,9 @@ import syrineHali from '../../../assets/syrineHali.jpg';
 import temitopeOnakoya from '../../../assets/temitopeOnakoya.jpg';
 import georgeKibe from '../../../assets/georgeKibe.png';
 import AfricanMap from '../../../assets/african-map.png';
+import MichaelBolton from '../../../assets/michealBolton.jpg';
+import omotayo from '../../../assets/olubukolaOmotayo.jpg';
+import jamesBach from '../../../assets/jamesBach.jpg'
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
 const IGIcon = () => (
@@ -68,23 +69,30 @@ const LinkedInIcon = () => (
 const KEYNOTE_SPEAKERS = [
     {
         id: 1,
-        name: 'Ibironke Yekinni',
+        name: 'IBIRONKE YEKINNI',
         role: 'CONVENER',
         image: ibironkeImg,
         ig: '#', x: '#', linkedin: '#',
     },
     {
         id: 2,
-        name: 'Larry Goddard',
+        name: 'MICHAEL BOLTON',
         role: 'Keynote Speaker',
-        image: larryGoddard,
+        image: MichaelBolton,
         ig: '#', x: '#', linkedin: '#',
     },
     {
         id: 3,
-        name: 'Naveen Khunteta',
+        name: 'OLUBUKOLA OMOTAYO',
         role: 'Keynote Speaker',
-        image: naveenKhunteta,
+        image: omotayo,
+        ig: '#', x: '#', linkedin: '#',
+    },
+    {
+        id: 4,
+        name: 'JAMES BACH',
+        role: 'Keynote Speaker',
+        image: jamesBach,
         ig: '#', x: '#', linkedin: '#',
     },
 ];
@@ -148,7 +156,7 @@ const KeynoteSpeakerCard = ({ name, role, image, ig, x, linkedin }) => (
         {/* Info bar */}
         <div className="absolute bottom-0 left-0 right-0 px-5 py-5 flex items-end justify-between">
             <div>
-                <p className="text-white font-black text-base tracking-wide leading-tight">{name}</p>
+                <p className="text-white text-sm font-semibold mb-3">{name}</p>
                 <p className="text-white text-xs tracking-widest mt-1">{role}</p>
             </div>
             <div className="flex items-center gap-2.5 text-white/70">
@@ -302,7 +310,7 @@ const SpeakersPage = () => {
                 {/* ─── Keynote Speakers ──────────────────────────────────────── */}
                 <div className="mb-16">
                     <h1 className='text-4xl text-[#0F2745] font-bold uppercase text-center mb-10'>Keynote Speakers</h1>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {KEYNOTE_SPEAKERS.map(speaker => (
                             <KeynoteSpeakerCard key={speaker.id} {...speaker} />
                         ))}
