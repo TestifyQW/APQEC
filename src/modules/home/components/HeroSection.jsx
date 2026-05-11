@@ -123,10 +123,10 @@ const HeroSection = () => {
                 {/* CTA */}
                 <a
                     href="https://luma.com/u82wf6na"
-                    className="mt-10 mb-10 inline-flex items-center gap-3 border border-[#00deee] hover:bg-[#00D4FF]/30 text-white text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group pointer-events-auto"
+                    className="mt-10 mb-10 inline-flex items-center gap-3 bg-[#00deee] hover:bg-[#00deee]/80 text-black text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group pointer-events-auto"
                 >
-                    <span className="text-white group-hover:translate-x-1 transition-transform duration-200">→</span>
-                    Claim Your Free Pass—Limited Spots for the Live Interactive Sessions.
+                    <span className="text-black group-hover:translate-x-1 transition-transform duration-200">→</span>
+                    Claim Your Free Pass—Limited Spots for the Live Interactive Sessions
                 </a>
             </div>
 
