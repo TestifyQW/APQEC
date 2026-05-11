@@ -319,14 +319,14 @@ const SpeakersPage = () => {
 
                 {/* ─── Session Speakers ──────────────────────────────────────── */}
                 <div className="mb-16 mt-20">
-                    <h2 className="text-[#0F2745] mb-20 text-center text-2xl md:text-3xl font-black uppercase">
+                    {/* <h2 className="text-[#0F2745] mb-20 text-center text-2xl md:text-3xl font-black uppercase">
                         Session Speakers
-                    </h2>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    </h2> */}
+                    {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                         {SESSION_SPEAKERS.map(speaker => (
                             <SessionSpeakerCard key={speaker.id} {...speaker} onClick={() => setSelectedSpeaker(speaker)} />
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
