@@ -72,28 +72,28 @@ const KEYNOTE_SPEAKERS = [
         name: 'IBIRONKE YEKINNI',
         role: 'CONVENER',
         image: ibironkeImg,
-        ig: '#', x: '#', linkedin: '#',
+        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/ibironke-yekinni/',
     },
     {
         id: 2,
         name: 'MICHAEL BOLTON',
         role: 'Keynote Speaker',
         image: MichaelBolton,
-        ig: '#', x: '#', linkedin: '#',
+        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/michael-bolton-08847/',
     },
     {
         id: 3,
         name: 'OLUBUKOLA OMOTAYO',
         role: 'Keynote Speaker',
         image: omotayo,
-        ig: '#', x: '#', linkedin: '#',
+        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/olubukola-omotayo/',
     },
     {
         id: 4,
         name: 'JAMES BACH',
         role: 'Keynote Speaker',
         image: jamesBach,
-        ig: '#', x: '#', linkedin: '#',
+        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/james-bach-6188a811/',
     },
 ];
 

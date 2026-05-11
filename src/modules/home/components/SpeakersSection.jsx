@@ -9,6 +9,10 @@ import johnDavid1 from '../../../assets/johnDavid1.jpg';
 import philipImg from '../../../assets/philipImg.jpg';
 import johnDavid2 from '../../../assets/johnDavid.jpg';
 import emmaPaul2 from '../../../assets/emmaPaul2.jpg';
+import MichaelBolton from '../../../assets/michealBolton.jpg';
+import omotayo from '../../../assets/olubukolaOmotayo.jpg';
+import jamesBach from '../../../assets/jamesBach.jpg';
+import adea from '../../../assets/adeaNatch.jpg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
 const IGIcon = () => (
@@ -36,43 +40,43 @@ const SPEAKERS = [
         name: 'Ibiroke Yekinni',
         role: 'Convener',
         image: ibironkeImg,
-        ig: '#', x: '#', linkedin: '#',
+        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/ibironke-yekinni/',
     },
     {
         id: 2,
-        name: 'Emmaunel Paul',
-        role: 'QA Engineer',
-        image: emmaPaul1,
-        ig: '#', x: '#', linkedin: '#',
+        name: 'Michael Bolton',
+        role: 'Keynote Speaker',
+        image: MichaelBolton,
+        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/michael-bolton-08847/',
     },
     {
         id: 3,
-        name: 'John David',
-        role: 'Software Dev',
-        image: johnDavid1,
-        ig: '#', x: '#', linkedin: '#',
+        name: 'Olubukola Omotayo',
+        role: 'Keynote Speaker',
+        image: omotayo,
+        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/olubukola-omotayo/',
     },
     {
         id: 4,
-        name: 'Philip Adejide',
-        role: 'Product Manager',
-        image: philipImg,
-        ig: '#', x: '#', linkedin: '#',
+        name: 'James Bach',
+        role: 'Keynote Speaker',
+        image: jamesBach,
+        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/james-bach-6188a811/',
     },
     {
         id: 5,
-        name: 'John David',
-        role: 'Software Dev',
-        image: johnDavid2,
-        ig: '#', x: '#', linkedin: '#',
+        name: 'Adea Natchiah-Blay',
+        role: 'Keynote Speaker',
+        image: adea,
+        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/adea-natchiah-blay/',
     },
-    {
-        id: 6,
-        name: 'Emmaunel Paul',
-        role: 'QA Engineer',
-        image: emmaPaul2,
-        ig: '#', x: '#', linkedin: '#',
-    },
+    // {
+    //     id: 6,
+    //     name: 'Emmaunel Paul',
+    //     role: 'QA Engineer',
+    //     image: emmaPaul2,
+    //     ig: '#', x: '#', linkedin: '#',
+    // },
 ];
 
 /* ─── Speaker Card ────────────────────────────────────────────────────────── */
