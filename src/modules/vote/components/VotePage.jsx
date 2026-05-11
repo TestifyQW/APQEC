@@ -284,7 +284,7 @@ const VotePage = () => {
                     {/* CTAs */}
                     <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
                         <a
-                            href="https://luma.com/1m7455h8"
+                            href="https://luma.com/u82wf6na"
                             onClick={e => e.preventDefault()}
                             className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-xs md:text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors shadow-lg"
                         >

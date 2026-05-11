@@ -122,7 +122,7 @@ const HeroSection = () => {
 
                 {/* CTA */}
                 <a
-                    href="https://luma.com/1m7455h8"
+                    href="https://luma.com/u82wf6na"
                     className="mt-10 mb-10 inline-flex items-center gap-3 border border-[#00deee] hover:bg-[#00D4FF]/30 text-white text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group pointer-events-auto"
                 >
                     <span className="text-white group-hover:translate-x-1 transition-transform duration-200">→</span>

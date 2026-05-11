@@ -350,7 +350,7 @@ const SpeakersPage = () => {
                         scroll, register, join the sessions, ask questions, and let's grow together.
                     </p>
                     <a
-                        href="https://luma.com/1m7455h8"
+                        href="https://luma.com/u82wf6na"
                         className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors"
                         onClick={e => e.preventDefault()}
                     >
