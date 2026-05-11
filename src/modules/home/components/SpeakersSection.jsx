@@ -66,7 +66,7 @@ const SPEAKERS = [
     {
         id: 5,
         name: 'Adea Natchiah-Blay',
-        role: 'Keynote Speaker',
+        role: 'Speaker',
         image: adea,
         ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/adea-natchiah-blay/',
     },
