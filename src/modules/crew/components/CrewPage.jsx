@@ -13,13 +13,14 @@ import AfricanMap from '../../../assets/african-map.png';
 /* ─── Filter categories ─────────────────────────────────────────────────── */
 const CATEGORIES = [
     'All',
-    'Program Chairs',
-    'Committee Chair',
-    'Program Committee',
-    'Heads LPA Standards',
-    'Program Directors',
-    'Award Team',
+    'Program Director',
+    'Ambassadors',
+    'Content Team',
+    'Community Manager',
+    'Partnership & Sponsorship',
     'Tech Team',
+    'Award Team',
+    'Email & Conversion Team',
 ];
 
 /* ─── Crew data ─────────────────────────────────────────────────────────── */

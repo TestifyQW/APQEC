@@ -45,6 +45,7 @@ const TRACKS = [
         bg: '#333333',
         textColor: '#0A2540',
         hoverBg: '#333333',
+        featured: true,
     },
     {
         num: '03',
@@ -53,6 +54,7 @@ const TRACKS = [
         bg: '#07EE9E',
         textColor: '#0A2540',
         hoverBg: '#07EE9E',
+        featured: true,
     },
     {
         num: '04',
@@ -61,6 +63,7 @@ const TRACKS = [
         bg: '#07EE9E',
         textColor: '#0A2540',
         hoverBg: '#07EE9E',
+        featured: true,
     },
     {
         num: '05',
@@ -69,6 +72,7 @@ const TRACKS = [
         bg: '#333333',
         textColor: '#0A2540',
         hoverBg: '#333333',
+        featured: true,
     },
     {
         num: '06',
@@ -77,6 +81,7 @@ const TRACKS = [
         bg: '#E6B73B',
         textColor: '#0A2540',
         hoverBg: '#e6b73b',
+        featured: true,
     },
 ];
 
@@ -132,7 +137,7 @@ const TrackCard = ({ num, title, body, bg, textColor, featured }) => {
             <span className="text-sm font-semibold opacity-60 mb-auto">{num}</span>
             <div className="flex flex-col justify-end mt-4">
                 <h4
-                    className={`font-semibold uppercase leading-snug ${featured ? 'text-lg' : 'text-sm'}`}
+                    className={`font-semibold uppercase leading-snug ${isHovered ? 'text-lg' : 'text-sm'}`}
                     style={{ transition: 'all 1s ease' }}
                 >
                     {title}

@@ -12,6 +12,11 @@ const DAYS = [
         date: 'Monday, June 4th, 2026',
         track: 'The Foundations of Excellence',
         theme: 'Mastering the Fundamentals & ROI',
+        sessions: [
+            { time: '09:00 AM', speaker: 'Ibironke Yekinni', section: 'Workshop', topic: 'The Quality Leadership and Culture Lab' },
+            { time: '10:30 AM', speaker: 'Ibironke Yekinni', section: 'Seminar', topic: 'The Quality Bottom Line' },
+            { time: '12:00 PM', speaker: 'Ibironke Yekinni', section: 'Workshop', topic: 'Cyber-Resilient Quality (DevSecOps)' },
+        ],
     },
     {
         id: 2,
@@ -104,7 +109,7 @@ const DayRow = ({ day, date, track, theme, sessions, isOpen, onToggle }) => (
                     <span className="text-white/50 text-sm hidden md:block">{theme}</span>
                     <span
                         className="text-white text-lg font-bold transition-transform duration-300"
-                        style={{ display: day === 'Day 1' ? 'none' : 'inline-block', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                        style={{ display: 'inline-block', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
                     >
                         <IoIosArrowUp />
                     </span>
