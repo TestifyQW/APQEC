@@ -1,5 +1,6 @@
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
+import awardBg from '../../../assets/awardBg.png';
 
 /* ─── Activity card data ────────────────────────────────────────────────── */
 const ACTIVITIES = [
@@ -85,7 +86,12 @@ const Activity = () => (
     <section
         className="w-full py-20 relative overflow-hidden"
         id="activities"
-        style={{ background: "#1e3559" }}
+        style={{
+            backgroundImage: `url(${awardBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+        }}
     >
         {/* Dot-grid texture */}
         <div
