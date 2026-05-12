@@ -6,39 +6,6 @@ import Flag from 'react-world-flags';
 
 /* ─── Speaker images ────────────────────────────────────────────────────────── */
 import ibironkeImg from '../../../assets/ibironkeImg.png';
-import UnyimeTommy from '../../../assets/UnyimeTommy.jpg';
-import abimbolaBabalola from '../../../assets/abimbolaBabalola.jpg';
-import akramMukasa from '../../../assets/akramMukasa.png';
-import atwineNickson from '../../../assets/atwineNickson.jpg';
-import cherinetHailu from '../../../assets/cherinetHailu.jpg';
-import chibuzorObilom from '../../../assets/chibuzorObilom.png';
-import christianaAjalah from '../../../assets/christianaAjalah.jpg';
-import demolaAdesina from '../../../assets/demolaAdesina.jpg';
-import diptiJoshi from '../../../assets/diptiJoshi.jpg';
-import emmanuelAni from '../../../assets/emmanuelAni.jpg';
-import jaquelineKavula from '../../../assets/jaquelineKavula.png';
-import joanMaina from '../../../assets/joanMaina.png';
-import korkorMensah from '../../../assets/korkorMensah.jpg';
-import lilianAnyango from '../../../assets/lilianAnyango.jpg';
-import louisTakow from '../../../assets/louisTakow.jpg';
-import lucksonMakatu from '../../../assets/lucksonMakatu.jpg';
-import mariemSafi from '../../../assets/mariemSafi.jpg';
-import merewaSalh from '../../../assets/merewaSalh.jpg';
-import mikeAtara from '../../../assets/mikeAtara.jpg';
-import mosesMuenma from '../../../assets/mosesMuenma.png';
-import muhammedBurahaba from '../../../assets/muhammedBurahaba.jpg';
-import olaoluwaOladokun from '../../../assets/olaoluwaOladokun.png';
-import omolaraOsiyemi from '../../../assets/omolaraOsiyemi.jpg';
-import patrickMigot from '../../../assets/patrickMigot.png';
-import rekikKidane from '../../../assets/rekikKidane.jpg';
-import sabineJoyce from '../../../assets/sabineJoyce.jpg';
-import safaaIsmail from '../../../assets/safaaIsmail.png';
-import selphaAtemba from '../../../assets/selphaAtemba.png';
-import sheyCamille from '../../../assets/sheyCamille.png';
-import simisoKheswa from '../../../assets/simisoKheswa.jpg';
-import syrineHali from '../../../assets/syrineHali.jpg';
-import temitopeOnakoya from '../../../assets/temitopeOnakoya.jpg';
-import georgeKibe from '../../../assets/georgeKibe.png';
 import AfricanMap from '../../../assets/african-map.png';
 import MichaelBolton from '../../../assets/michealBolton.jpg';
 import omotayo from '../../../assets/olubukolaOmotayo.jpg';
@@ -46,17 +13,17 @@ import jamesBach from '../../../assets/jamesBach.jpg';
 import adea from '../../../assets/adeaNatch.jpg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
-const IGIcon = () => (
-    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
-    </svg>
-);
+// const IGIcon = () => (
+//     <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg">
+//         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+//     </svg>
+// );
 
-const XIcon = () => (
-    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-);
+// const XIcon = () => (
+//     <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg">
+//         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+//     </svg>
+// );
 
 const LinkedInIcon = () => (
     <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg">
@@ -71,28 +38,28 @@ const KEYNOTE_SPEAKERS = [
         name: 'IBIRONKE YEKINNI',
         role: 'CONVENER',
         image: ibironkeImg,
-        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/ibironke-yekinni/',
+        linkedin: 'https://www.linkedin.com/in/ibironke-yekinni/',
     },
     {
         id: 2,
         name: 'MICHAEL BOLTON',
         role: 'Keynote Speaker',
         image: MichaelBolton,
-        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/michael-bolton-08847/',
+        linkedin: 'https://www.linkedin.com/in/michael-bolton-08847/',
     },
     {
         id: 3,
         name: 'OLUBUKOLA OMOTAYO',
         role: 'Keynote Speaker',
         image: omotayo,
-        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/olubukola-omotayo/',
+        linkedin: 'https://www.linkedin.com/in/olubukola-omotayo/',
     },
     {
         id: 4,
         name: 'JAMES BACH',
         role: 'Keynote Speaker',
         image: jamesBach,
-        ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/james-bach-6188a811/',
+        linkedin: 'https://www.linkedin.com/in/james-bach-6188a811/',
     },
 ];
 
@@ -104,44 +71,11 @@ const TICKER_ITEMS = [
 
 /* ─── Session Speakers data ──────────────────────────────────────────────── */
 const SESSION_SPEAKERS = [
-    { id: 36, name: 'Safaa Ismail', image: safaaIsmail, flag: 'EG', role: 'SENIOR QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 1, name: 'Adea Natchiah-Blay', role: 'Speaker', image: adea, ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/adea-natchiah-blay/', },
-    { id: 2, name: 'Mariem Safi', image: mariemSafi, flag: 'TN', role: 'QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 3, name: 'Syrine Hali', image: syrineHali, flag: 'TN', role: 'QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 4, name: 'Olaoluwa Oladokun', image: olaoluwaOladokun, flag: 'NG', role: 'SENIOR TESTOPS ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 5, name: 'Simiso Kheswa', image: simisoKheswa, flag: 'ZA', role: 'QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 6, name: 'Unyime Tommy', image: UnyimeTommy, flag: 'NG', role: 'MANAGING PARTNER AT ASSURDLY', ig: '#', x: '#', linkedin: '#' },
-    { id: 7, name: 'Temitope Onakoya', image: temitopeOnakoya, flag: 'NG', role: 'MANAGER, IT TESTING SHIVICKS', ig: '#', x: '#', linkedin: '#' },
-    { id: 8, name: 'Chibuzor Obilom', image: chibuzorObilom, flag: 'NG', role: 'SOFTWARE QUALITY LEAD', ig: '#', x: '#', linkedin: '#' },
-    { id: 9, name: 'Dipti Joshi', image: diptiJoshi, flag: 'ZA', role: 'SENIOR AUTOMATION TEST ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 10, name: 'Cherinet Hailu', image: cherinetHailu, flag: 'ET', role: 'BACKEND ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 11, name: 'Joan Maina', image: joanMaina, flag: 'KE', role: 'QUALITY ASSURANCE ENGINEER LEAD', ig: '#', x: '#', linkedin: '#' },
-    { id: 12, name: 'Abimbola Babalola', image: abimbolaBabalola, flag: 'NG', role: 'HEAD, AGILE SOLUTIONS PRACTICE CENTRE', ig: '#', x: '#', linkedin: '#' },
-    { id: 13, name: 'Louis Takow', image: louisTakow, flag: 'CM', role: 'SENIOR QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 14, name: 'Sabine Joyce', image: sabineJoyce, flag: 'CM', role: 'QUALITY ASSURANCE ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 15, name: 'Shey Camille', image: sheyCamille, flag: 'CM', role: 'QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 16, name: 'Merewa Salh', image: merewaSalh, flag: 'ET', role: 'QUALITY ASSURANCE ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 17, name: 'Akram Mukasa', image: akramMukasa, flag: 'UG', role: 'QUALITY ASSURANCE ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 18, name: 'Korkor Mensah', image: korkorMensah, flag: 'GH', role: 'QUALITY ASSURANCE MANAGER', ig: '#', x: '#', linkedin: '#' },
-    { id: 19, name: 'Moses Muenma', image: mosesMuenma, flag: 'KE', role: 'QUALITY ASSURANCE AND TESTING TEAM LEAD', ig: '#', x: '#', linkedin: '#' },
-    { id: 20, name: 'George Kibe', image: georgeKibe, flag: 'KE', role: 'SENIOR SOFTWARE QA', ig: '#', x: '#', linkedin: '#' },
-    { id: 21, name: 'Selpha Atemba', image: selphaAtemba, flag: 'KE', role: 'QUALITY ENGINEERING MANAGER', ig: '#', x: '#', linkedin: '#' },
-    { id: 22, name: 'Jaqueline Kavula', image: jaquelineKavula, flag: 'KE', role: 'BUSINESS DEVELOPMENT MANAGER AND CO-FOUNDER', ig: '#', x: '#', linkedin: '#' },
-    { id: 23, name: 'Patrick Migot', image: patrickMigot, flag: 'KE', role: 'LEAD QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 24, name: 'Christiana Ajalah', image: christianaAjalah, flag: 'GB', role: 'SENIOR QA ANALYST', ig: '#', x: '#', linkedin: '#' },
-    { id: 25, name: 'Muhammed Burahaba', image: muhammedBurahaba, flag: 'ET', role: 'SENIOR QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 26, name: 'Atwine Nickson', image: atwineNickson, flag: 'UG', role: 'QUALITY ASSURANCE ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 27, name: 'Omolara Osiyemi', image: omolaraOsiyemi, flag: 'RW', role: 'FOUNDER, THE PRODUCT MUSE', ig: '#', x: '#', linkedin: '#' },
-    { id: 28, name: 'Luckson Makatu', image: lucksonMakatu, flag: 'ZA', role: 'SOFTWARE QUALITY ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 29, name: 'Demola Adesina', image: demolaAdesina, flag: 'NG', role: 'PRESIDENT, ASSOCIATION OF NIGERIA SOFTWARE TESTERS', ig: '#', x: '#', linkedin: '#' },
-    { id: 30, name: 'Rekik Kidane', image: rekikKidane, flag: 'ET', role: 'SOFTWARE ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 31, name: 'Emmanuel Ani', image: emmanuelAni, flag: 'GH', role: 'HEAD OF PAYMENTS AND VAS OPERATIONS', ig: '#', x: '#', linkedin: '#' },
-    { id: 32, name: 'Mike Atara', image: mikeAtara, flag: 'GH', role: 'SOFTWARE ENGINEER', ig: '#', x: '#', linkedin: '#' },
-    { id: 33, name: 'Lilian Anyango', image: lilianAnyango, flag: 'KE', role: 'CHAIRPERSON', ig: '#', x: '#', linkedin: '#' },
+    { id: 1, name: 'Adea Natchiah-Blay', role: 'Speaker', image: adea, flag: 'GH', linkedin: 'https://www.linkedin.com/in/adea-natchiah-blay/' },
 ];
 
 /* ─── Keynote Speaker Card ────────────────────────────────────────────────── */
-const KeynoteSpeakerCard = ({ name, role, image, ig, x, linkedin }) => (
+const KeynoteSpeakerCard = ({ name, role, image, linkedin }) => (
     <div className="relative rounded-2xl overflow-hidden group cursor-pointer" style={{ aspectRatio: '4/4.8' }}>
         <img
             src={image}
@@ -161,13 +95,7 @@ const KeynoteSpeakerCard = ({ name, role, image, ig, x, linkedin }) => (
                 <p className="text-white text-xs tracking-widest mt-1">{role}</p>
             </div>
             <div className="flex items-center gap-2.5 text-white/70">
-                <a href={ig} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
-                    <IGIcon />
-                </a>
-                <a href={x} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
-                    <XIcon />
-                </a>
-                <a href={linkedin} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
+                <a href={linkedin} target="_blank" className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
                     <LinkedInIcon />
                 </a>
             </div>
@@ -205,13 +133,7 @@ const SessionSpeakerCard = ({ name, role, image, flag, ig = '#', x = '#', linked
                     <Flag code={flag || 'NG'} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex items-center gap-1.5 text-white/70">
-                    <a href={ig} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
-                        <IGIcon />
-                    </a>
-                    <a href={x} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
-                        <XIcon />
-                    </a>
-                    <a href={linkedin} className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
+                    <a href={linkedin} target="_blank" className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
                         <LinkedInIcon />
                     </a>
                 </div>
@@ -320,14 +242,14 @@ const SpeakersPage = () => {
 
                 {/* ─── Session Speakers ──────────────────────────────────────── */}
                 <div className="mb-16 mt-20">
-                    {/* <h2 className="text-[#0F2745] mb-20 text-center text-2xl md:text-3xl font-black uppercase">
+                    <h2 className="text-[#0F2745] mb-20 text-center text-2xl md:text-3xl font-black uppercase">
                         Session Speakers
-                    </h2> */}
-                    {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                         {SESSION_SPEAKERS.map(speaker => (
                             <SessionSpeakerCard key={speaker.id} {...speaker} onClick={() => setSelectedSpeaker(speaker)} />
                         ))}
-                    </div> */}
+                    </div>
                 </div>
             </div>
 

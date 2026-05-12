@@ -16,7 +16,7 @@ const FAQS = [
     },
     {
         q: 'What are the Dates again?',
-        a: "The event runs from June 5th to 7th, 2025. That’s Thursday to Saturday, so no weekday excuses",
+        a: "The event runs from June 4th to 6th, 2026. That’s Thursday to Saturday, so no weekday excuses",
     },
     {
         q: 'Who can attend this conference?',
