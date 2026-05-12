@@ -40,9 +40,9 @@ const ActivityCard = ({ title, body, ctas }) => (
         className="flex-1 min-w-0 rounded-2xl p-8 md:p-10 flex flex-col gap-6"
         style={{
             background: "rgba(255,255,255,0.07)",
+            backdropFilter: 'blur(14px)',
+            WebkitBackdropFilter: 'blur(14px)',
             border: "1px solid rgba(255,255,255,0.12)",
-            backdropFilter: "blur(10px)",
-            WebkitBackdropFilter: "blur(10px)",
         }}
     >
         {/* Title — preserve newlines */}
@@ -85,7 +85,7 @@ const Activity = () => (
     <section
         className="w-full py-20 relative overflow-hidden"
         id="activities"
-        style={{ background: "#0D1B3E" }}
+        style={{ background: "#1e3559" }}
     >
         {/* Dot-grid texture */}
         <div

@@ -106,7 +106,7 @@ const HeroSection = () => {
                 <div className='flex flex-col pointer-events-auto'>
                     <Countdown
                         date={new Date('2026-06-04T00:00:00')}
-                        renderer={({ days, hours, minutes }) => (
+                        renderer={({ days, hours, minutes, seconds }) => (
                             <div
                                 className="flex items-center w-fit mx-auto gap-10 px-6 py-3 rounded-2xl"
                                 style={{
@@ -141,6 +141,16 @@ const HeroSection = () => {
                                 <div className="flex flex-col items-center min-w-[52px]">
                                     <span className="text-4xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(minutes).padStart(2, '0')}</span>
                                     <span className="text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Minutes</span>
+                                </div>
+                                {/* Separator */}
+                                <div className="flex flex-col gap-1.5 pb-4">
+                                    <span className="block w-1 h-1 rounded-full bg-white/60"></span>
+                                    <span className="block w-1 h-1 rounded-full bg-white/60"></span>
+                                </div>
+                                {/* Seconds */}
+                                <div className="flex flex-col items-center min-w-[52px]">
+                                    <span className="text-4xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(seconds).padStart(2, '0')}</span>
+                                    <span className="text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Seconds</span>
                                 </div>
                             </div>
                         )}
