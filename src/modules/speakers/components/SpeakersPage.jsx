@@ -19,7 +19,6 @@ import emmanuelAni from '../../../assets/emmanuelAni.jpg';
 import jaquelineKavula from '../../../assets/jaquelineKavula.png';
 import joanMaina from '../../../assets/joanMaina.png';
 import korkorMensah from '../../../assets/korkorMensah.jpg';
-import larryGoddard from '../../../assets/larryGoddard.jpg';
 import lilianAnyango from '../../../assets/lilianAnyango.jpg';
 import louisTakow from '../../../assets/louisTakow.jpg';
 import lucksonMakatu from '../../../assets/lucksonMakatu.jpg';
@@ -28,7 +27,6 @@ import merewaSalh from '../../../assets/merewaSalh.jpg';
 import mikeAtara from '../../../assets/mikeAtara.jpg';
 import mosesMuenma from '../../../assets/mosesMuenma.png';
 import muhammedBurahaba from '../../../assets/muhammedBurahaba.jpg';
-import naveenKhunteta from '../../../assets/naveenKhunteta.jpg';
 import olaoluwaOladokun from '../../../assets/olaoluwaOladokun.png';
 import omolaraOsiyemi from '../../../assets/omolaraOsiyemi.jpg';
 import patrickMigot from '../../../assets/patrickMigot.png';
@@ -44,7 +42,8 @@ import georgeKibe from '../../../assets/georgeKibe.png';
 import AfricanMap from '../../../assets/african-map.png';
 import MichaelBolton from '../../../assets/michealBolton.jpg';
 import omotayo from '../../../assets/olubukolaOmotayo.jpg';
-import jamesBach from '../../../assets/jamesBach.jpg'
+import jamesBach from '../../../assets/jamesBach.jpg';
+import adea from '../../../assets/adeaNatch.jpg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
 const IGIcon = () => (
@@ -105,7 +104,8 @@ const TICKER_ITEMS = [
 
 /* ─── Session Speakers data ──────────────────────────────────────────────── */
 const SESSION_SPEAKERS = [
-    { id: 1, name: 'Safaa Ismail', image: safaaIsmail, flag: 'EG', role: 'SENIOR QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 36, name: 'Safaa Ismail', image: safaaIsmail, flag: 'EG', role: 'SENIOR QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
+    { id: 1, name: 'Adea Natchiah-Blay', role: 'Speaker', image: adea, ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/adea-natchiah-blay/', },
     { id: 2, name: 'Mariem Safi', image: mariemSafi, flag: 'TN', role: 'QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
     { id: 3, name: 'Syrine Hali', image: syrineHali, flag: 'TN', role: 'QA ENGINEER', ig: '#', x: '#', linkedin: '#' },
     { id: 4, name: 'Olaoluwa Oladokun', image: olaoluwaOladokun, flag: 'NG', role: 'SENIOR TESTOPS ENGINEER', ig: '#', x: '#', linkedin: '#' },

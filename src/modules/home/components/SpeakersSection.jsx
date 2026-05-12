@@ -4,11 +4,6 @@ import { FaArrowRight } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
 
 import ibironkeImg from '../../../assets/ibironkeImg.png';
-import emmaPaul1 from '../../../assets/emmaPaul1.jpg';
-import johnDavid1 from '../../../assets/johnDavid1.jpg';
-import philipImg from '../../../assets/philipImg.jpg';
-import johnDavid2 from '../../../assets/johnDavid.jpg';
-import emmaPaul2 from '../../../assets/emmaPaul2.jpg';
 import MichaelBolton from '../../../assets/michealBolton.jpg';
 import omotayo from '../../../assets/olubukolaOmotayo.jpg';
 import jamesBach from '../../../assets/jamesBach.jpg';
@@ -79,6 +74,28 @@ const SPEAKERS = [
     // },
 ];
 
+const TICKER_ITEMS = [
+    'APPLY TO SPEAK NOW',
+    'CALL FOR SPEAKERS CLOSES MAY 18TH',
+];
+
+const Ticker = () => {
+    const repeated = [...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS];
+
+    return (
+        <a href='https://docs.google.com/forms/d/e/1FAIpQLSfUe2o5LoHupuqqaMWW7qi7VFplg5Sd_SDBC04O1GOUUgdsMQ/viewform?usp=send_form' className="bg-[#00deee] border-t border-white/10 py-5 overflow-hidden relative">
+            <div className="flex whitespace-nowrap animate-marquee">
+                {repeated.map((item, i) => (
+                    <span key={i} className="text-white text-xs font-bold uppercase tracking-widest mx-6 flex items-center gap-6">
+                        {item}
+                        <span className="text-[#FFD600]">●</span>
+                    </span>
+                ))}
+            </div>
+        </a>
+    );
+};
+
 /* ─── Speaker Card ────────────────────────────────────────────────────────── */
 const SpeakerCard = ({ name, role, image, ig, x, linkedin, onClick }) => (
     <div
@@ -130,9 +147,12 @@ const SpeakersSection = () => {
 
     return (
         <section id='speakers'
-            className="w-full py-16"
+            className="w-full pb-16"
             style={{ background: '#071330' }}
         >
+            <div className="relative mb-16 z-10 bg-[#00deee] h-10 flex items-center justify-center mt-auto">
+                <Ticker />
+            </div>
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 {/* Header row */}
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-10">
