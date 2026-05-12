@@ -11,6 +11,8 @@ import AwardSection from './components/AwardSection';
 import AboutSection from './components/AboutSection';
 import OurPartnersSection from './components/OurPartnersSection';
 import FAQSection from './components/FAQSection';
+import Activity from './components/Activity';
+import TestimonialsSection from './components/TestimonialsSection';
 import FooterSection from './components/FooterSection';
 
 const HomePage = () => {
@@ -34,7 +36,9 @@ const HomePage = () => {
             <TracksSection />
             <SpeakersSection />
             <ScheduleSection />
-            <AwardSection />
+            <Activity />
+            {/* <AwardSection /> */}
+            <TestimonialsSection />
             <OurPartnersSection />
             <AboutSection />
             <FAQSection />

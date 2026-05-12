@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaWhatsappSquare } from "react-icons/fa";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import logo from '../../../assets/apqec-logo.png'
@@ -61,6 +61,9 @@ const FooterSection = () => {
                                     </a>
                                     <a href="https://x.com/testarsquarterr?s=21&t=iuzV7iaYXyNyF-BtdYEAuQ" aria-label="X / Twitter" className="hover:text-white transition-colors">
                                         <FaXTwitter />
+                                    </a>
+                                    <a href="https://wa.me/2349079440516" aria-label="Whatsapp" className="hover:text-white transition-colors">
+                                        <FaWhatsappSquare />
                                     </a>
                                 </div>
                             </div>

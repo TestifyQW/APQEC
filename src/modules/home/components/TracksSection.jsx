@@ -31,8 +31,8 @@ const FEATURES = [
 const TRACKS = [
     {
         num: '01',
-        title: 'The Quality Leadership and Culture Lab',
-        body: 'This track focuses on storytelling formats, distribution strategies, and monetisation with content creators, filmmakers, podcasters, and influencers redefining digital media across Africa.',
+        title: 'AI for Quality Engineering',
+        body: "This track explores how artificial intelligence is reshaping every layer of the quality engineering stack from test case generation and intelligent automation to AI-assisted exploratory testing and self-healing pipelines. We'll examine what works, what fails, and what's still hype, with practical demonstrations from teams already shipping AI-augmented quality at scale. For African product teams navigating limited resources and complex contexts, this track is the bridge between global AI capability and continental reality.",
         bg: '#E6B73B',
         textColor: '#0A2540',
         hoverBg: '#e6b73b',
@@ -40,8 +40,8 @@ const TRACKS = [
     },
     {
         num: '02',
-        title: 'The Quality Bottom Line',
-        body: 'Learn how software quality impacts revenue, user retention, and the overall business bottom line.',
+        title: 'Security',
+        body: 'In an era where every product is a target and every release is an attack surface, security can no longer live downstream of quality engineering the two are inseparable. This track explores threat modelling for product teams, security testing in modern architectures, vulnerability discovery as part of the QE workflow, and how African teams are building secure products in fintech, healthtech, and public infrastructure. Practical, defensive, and rooted in the realities of building for high-stakes African markets.',
         bg: '#333333',
         textColor: '#0A2540',
         hoverBg: '#333333',
@@ -50,7 +50,7 @@ const TRACKS = [
     {
         num: '03',
         title: 'Cyber-Resilient Quality (DevSecOps)',
-        body: 'Integrate security protocols smoothly into your testing pipelines to prevent modern cyber threats.',
+        body: 'This track tackles the operational reality of embedding quality and security into continuous delivery pipelines. From shift-left testing strategies and pipeline observability to infrastructure-as-code validation and automated compliance, we\'ll cover how high-performing engineering teams are building quality into the very fabric of how software ships. Expect hands-on patterns, tooling deep-dives, and frameworks that translate across team sizes from two-person startups to enterprise platforms.',
         bg: '#07EE9E',
         textColor: '#0A2540',
         hoverBg: '#07EE9E',
@@ -58,8 +58,8 @@ const TRACKS = [
     },
     {
         num: '04',
-        title: 'The AI Frontier',
-        body: 'Explore how Artificial Intelligence and Machine Learning are shaping the next generation of product quality.',
+        title: 'Customer Experience Engineering',
+        body: 'This track reframes quality engineering through the lens of customer experience moving the conversation from bug counts to user outcomes, from test coverage to experience integrity. We\'ll explore CX-driven testing methodologies, accessibility engineering, localisation testing for multilingual African markets, and the emerging discipline of experience observability. For product builders serving diverse, demanding, and underserved users across the continent, this track makes the case that CX is the next frontier of quality.',
         bg: '#07EE9E',
         textColor: '#0A2540',
         hoverBg: '#07EE9E',
@@ -67,8 +67,8 @@ const TRACKS = [
     },
     {
         num: '05',
-        title: 'Platform Engineering and Elastic Infrastructure',
-        body: 'Build scalable platforms that enhance developer productivity and reduce time-to-market.',
+        title: 'Cyber Resilience',
+        body: 'Beyond preventing breaches, modern quality engineering must build products that survive them. This track explores chaos engineering, disaster recovery testing, business continuity validation, and the principles of designing systems that fail gracefully and recover fast. From financial systems that cannot afford downtime to public-facing platforms serving millions of African users, we\'ll examine how resilience becomes a measurable property of product quality not just an IT afterthought.',
         bg: '#333333',
         textColor: '#0A2540',
         hoverBg: '#333333',
@@ -76,8 +76,8 @@ const TRACKS = [
     },
     {
         num: '06',
-        title: 'CX Engineering',
-        body: 'Engineer delightful customer experiences by correlating user behavior with technical quality metrics.',
+        title: 'Quality Leadership & Culture',
+        body: 'This track is for the testers becoming managers, the managers becoming leaders, and the leaders building quality-first organisations. We\'ll cover building and scaling QE teams, navigating the politics of quality in fast-moving companies, the metrics that actually matter, and how to embed a quality mindset across product, engineering, and executive layers. With a specific focus on the African context where quality leaders often have to fight for budget, recognition, and seat at the table, this track gives you the playbook for leading the work, not just doing it.',
         bg: '#E6B73B',
         textColor: '#0A2540',
         hoverBg: '#e6b73b',
@@ -129,7 +129,7 @@ const TrackCard = ({ num, title, body, bg, textColor, featured }) => {
             style={{
                 background: isHovered ? bg : hexToRgba(bg, 0.1),
                 color: isHovered ? 'white' : textColor,
-                transition: 'all 0.5s ease'
+                transition: 'all 0.5s ease',
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

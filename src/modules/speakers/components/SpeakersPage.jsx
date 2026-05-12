@@ -98,8 +98,9 @@ const KEYNOTE_SPEAKERS = [
 ];
 
 const TICKER_ITEMS = [
-    'APPLY TO SPEAK',
+    'APPLY TO SPEAK NOW',
     '#APQEC26',
+    'CALL FOR SPEAKERS CLOSES 18TH OF MAY',
 ];
 
 /* ─── Session Speakers data ──────────────────────────────────────────────── */

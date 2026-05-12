@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdArrowOutward } from 'react-icons/md';
 
 import ourPartners from '../../../assets/ourPartners.png';
 
@@ -10,14 +11,24 @@ const OurPartnersSection = () => (
 
             {/* Heading */}
             <h2 className="text-center text-[#0F2745] text-4xl font-bold uppercase mb-12">
-                Our Partners
+                Our Sponsors from Last Year
             </h2>
 
             {/* Logo row */}
             <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
                 <img src={ourPartners} alt="Our Partners" className="w-full h-auto" />
             </div>
-
+            <div className='flex justify-center mt-8'>
+                <a
+                    href="https://calendly.com/ibironke-1/apqec2026"
+                    className="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-widest px-5 py-4 rounded transition-colors"
+                    style={{ background: '#0A2540' }}
+                    onMouseOver={e => (e.currentTarget.style.background = '#162F5A')}
+                    onMouseOut={e => (e.currentTarget.style.background = '#0A2540')}
+                >
+                    <MdArrowOutward /> <span>Become a Sponsor</span>
+                </a>
+            </div>
         </div>
     </section>
 );
