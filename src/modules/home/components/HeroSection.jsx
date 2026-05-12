@@ -108,7 +108,7 @@ const HeroSection = () => {
                         date={new Date('2026-06-04T00:00:00')}
                         renderer={({ days, hours, minutes, seconds }) => (
                             <div
-                                className="flex items-center w-fit mx-auto gap-10 px-6 py-3 rounded-2xl"
+                                className="flex items-center w-fit mx-auto gap-4 sm:gap-6 md:gap-10 px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-2xl"
                                 style={{
                                     background: 'rgba(255,255,255,0.08)',
                                     backdropFilter: 'blur(14px)',
@@ -118,39 +118,39 @@ const HeroSection = () => {
                                 }}
                             >
                                 {/* Days */}
-                                <div className="flex flex-col items-center min-w-[52px]">
-                                    <span className="text-4xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(days).padStart(2, '0')}</span>
-                                    <span className="text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Days</span>
+                                <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
+                                    <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(days).padStart(2, '0')}</span>
+                                    <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Days</span>
                                 </div>
                                 {/* Separator */}
-                                <div className="flex flex-col gap-1.5 pb-4">
+                                <div className="flex flex-col gap-1.5 pb-3 sm:pb-4">
                                     <span className="block w-1 h-1 rounded-full bg-white/60"></span>
                                     <span className="block w-1 h-1 rounded-full bg-white/60"></span>
                                 </div>
                                 {/* Hours */}
-                                <div className="flex flex-col items-center min-w-[52px]">
-                                    <span className="text-4xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(hours).padStart(2, '0')}</span>
-                                    <span className="text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Hours</span>
+                                <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
+                                    <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(hours).padStart(2, '0')}</span>
+                                    <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Hours</span>
                                 </div>
                                 {/* Separator */}
-                                <div className="flex flex-col gap-1.5 pb-4">
+                                <div className="flex flex-col gap-1.5 pb-3 sm:pb-4">
                                     <span className="block w-1 h-1 rounded-full bg-white/60"></span>
                                     <span className="block w-1 h-1 rounded-full bg-white/60"></span>
                                 </div>
                                 {/* Minutes */}
-                                <div className="flex flex-col items-center min-w-[52px]">
-                                    <span className="text-4xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(minutes).padStart(2, '0')}</span>
-                                    <span className="text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Minutes</span>
+                                <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
+                                    <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(minutes).padStart(2, '0')}</span>
+                                    <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Minutes</span>
                                 </div>
                                 {/* Separator */}
-                                <div className="flex flex-col gap-1.5 pb-4">
+                                <div className="flex flex-col gap-1.5 pb-3 sm:pb-4">
                                     <span className="block w-1 h-1 rounded-full bg-white/60"></span>
                                     <span className="block w-1 h-1 rounded-full bg-white/60"></span>
                                 </div>
                                 {/* Seconds */}
-                                <div className="flex flex-col items-center min-w-[52px]">
-                                    <span className="text-4xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(seconds).padStart(2, '0')}</span>
-                                    <span className="text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Seconds</span>
+                                <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
+                                    <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(seconds).padStart(2, '0')}</span>
+                                    <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Seconds</span>
                                 </div>
                             </div>
                         )}
@@ -179,7 +179,8 @@ const HeroSection = () => {
                     className="mt-10 mb-10 inline-flex items-center gap-3 bg-[#00deee] hover:bg-[#00deee]/80 text-black text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group pointer-events-auto"
                 >
                     <span className="text-black group-hover:translate-x-1 transition-transform duration-200">→</span>
-                    Claim Your Free Pass—Limited Spots for the Live Interactive Sessions
+                    <span className='hidden lg:inline-block'>Claim Your Free Pass—Limited Spots for the Live Interactive Sessions</span>
+                    <span className='lg:hidden'>Claim Your Free Pass</span>
                 </a>
             </div>
 
