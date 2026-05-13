@@ -127,7 +127,7 @@ const SpeakerCard = ({ name, role, image, linkedin, onClick }) => (
 
             {/* Social icons — stop propagation so clicks don't trigger the modal */}
             <div className="flex items-center justify-center text-white/70">
-                <a href={linkedin} className="hover:text-white transition-colors" onClick={e => e.stopPropagation()}>
+                <a href={linkedin} target='_blank' className="hover:text-white transition-colors" onClick={e => e.stopPropagation()}>
                     <LinkedInIcon />
                 </a>
             </div>

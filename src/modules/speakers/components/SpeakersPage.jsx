@@ -10,6 +10,7 @@ import AfricanMap from '../../../assets/african-map.png';
 import MichaelBolton from '../../../assets/michealBolton.jpg';
 import omotayo from '../../../assets/olubukolaOmotayo.jpg';
 import jamesBach from '../../../assets/jamesBach.jpg';
+import sessionSpeaker2 from '../../../assets/sessionSpeaker2.jpeg';
 import adea from '../../../assets/adeaNatch.jpg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
@@ -72,11 +73,12 @@ const TICKER_ITEMS = [
 /* ─── Session Speakers data ──────────────────────────────────────────────── */
 const SESSION_SPEAKERS = [
     { id: 1, name: 'Adea Natchiah-Blay', role: 'Speaker', image: adea, flag: 'GH', linkedin: 'https://www.linkedin.com/in/adea-natchiah-blay/' },
+    { id: 2, name: 'Dennis Nyabuti', role: 'Speaker', image: sessionSpeaker2, flag: 'RW', linkedin: 'https://www.linkedin.com/in/dmnyabuti' },
 ];
 
 /* ─── Keynote Speaker Card ────────────────────────────────────────────────── */
-const KeynoteSpeakerCard = ({ name, role, image, linkedin }) => (
-    <div className="relative rounded-2xl overflow-hidden group cursor-pointer" style={{ aspectRatio: '4/4.8' }}>
+const KeynoteSpeakerCard = ({ name, role, image, linkedin, onClick }) => (
+    <div className="relative rounded-2xl overflow-hidden group cursor-pointer" style={{ aspectRatio: '4/4.8' }} onClick={onClick}>
         <img
             src={image}
             alt={name}
@@ -95,7 +97,7 @@ const KeynoteSpeakerCard = ({ name, role, image, linkedin }) => (
                 <p className="text-white text-xs tracking-widest mt-1">{role}</p>
             </div>
             <div className="flex items-center gap-2.5 text-white/70">
-                <a href={linkedin} target="_blank" className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
+                <a href={linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex shrink-0" onClick={e => e.stopPropagation()}>
                     <LinkedInIcon />
                 </a>
             </div>
@@ -133,7 +135,7 @@ const SessionSpeakerCard = ({ name, role, image, flag, ig = '#', x = '#', linked
                     <Flag code={flag || 'NG'} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex items-center gap-1.5 text-white/70">
-                    <a href={linkedin} target="_blank" className="hover:text-white transition-colors flex shrink-0" onClick={e => e.preventDefault()}>
+                    <a href={linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex shrink-0" onClick={e => e.stopPropagation()}>
                         <LinkedInIcon />
                     </a>
                 </div>
@@ -235,7 +237,7 @@ const SpeakersPage = () => {
                     <h1 className='text-4xl text-[#0F2745] font-bold uppercase text-center mb-10'>Keynote Speakers</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {KEYNOTE_SPEAKERS.map(speaker => (
-                            <KeynoteSpeakerCard key={speaker.id} {...speaker} />
+                            <KeynoteSpeakerCard key={speaker.id} {...speaker} onClick={() => setSelectedSpeaker(speaker)} />
                         ))}
                     </div>
                 </div>
@@ -289,7 +291,7 @@ const SpeakersPage = () => {
                         className="w-full max-w-4xl flex flex-col md:flex-row overflow-hidden relative shadow-2xl"
                         style={{
                             backgroundColor: ['#00DEEE', '#e6b63b', '#296ab9'][
-                                SESSION_SPEAKERS.findIndex(s => s.id === selectedSpeaker.id) % 3
+                                (selectedSpeaker.id || 0) % 3
                             ]
                         }}
                         onClick={e => e.stopPropagation()}

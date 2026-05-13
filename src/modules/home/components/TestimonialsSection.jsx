@@ -1,99 +1,115 @@
 import React from "react";
-import testimonial1 from "../../../assets/testimonial1.png"
-import testimonial2 from "../../../assets/testimonial2.png"
-import testimonial3 from "../../../assets/testimonial3.png"
-import testimonial4 from "../../../assets/testimonial4.png"
-import testimonial5 from "../../../assets/testimonial5.png"
+import testi1 from "../../../assets/testi_1.jpg";
+import testi2 from "../../../assets/testi_2.jpg";
+import testi3 from "../../../assets/test_3.jpg";
+import testi4 from "../../../assets/testi_4.jpg";
+import testi5 from "../../../assets/testi_5.jpg";
+import testi6 from "../../../assets/testi_6.jpg";
+import testi7 from "../../../assets/testi_7.jpg";
+import testi8 from "../../../assets/testi_8.jpg";
+import testi9 from "../../../assets/testi_9.jpg";
+import testi10 from "../../../assets/testi_10.jpeg";
+import Flag from "react-world-flags";
 
 /* ─── Testimonial data ──────────────────────────────────────────────────── */
 const ROW_ONE = [
     {
         id: 1,
-        name: "Emma Johnson",
-        role: "Product Manager",
-        avatar: testimonial1,
+        name: "Oluwaseye Aibinuomo",
+        role: "Quality & Sustainability Professional",
+        avatar: testi5,
+        flag: "NG",
         quote:
-            "APQEC was one of the most impactful conferences I attended. The sessions were insightful and impactful.",
+            "My experience at APQEC 2025 reinforced how Quality Engineering has evolved beyond testing into resilience, security, inclusiveness, scalability, and user-centered design. One of my biggest takeaways was that quality is a shared responsibility, powered by collaboration, innovation, and a strong culture of continuous improvement.",
     },
     {
         id: 2,
-        name: "John Doe",
-        role: "DevOps",
-        avatar: testimonial2,
+        name: "Joshua Kolawole",
+        role: "QA Engineer",
+        avatar: testi9,
+        flag: "NG",
         quote:
-            "The conference created the perfect space for learning, networking, and innovation. I can't wait for APQEC 2.0 GUYS.",
+            "APQEC 2025 completely changed the way I see quality engineering. The sessions went beyond testing and focused on strategy, accessibility, performance, ethics, and user trust. I also gained valuable insights into how AI is transforming QA while still recognizing the importance of human creativity and collaboration.What stood out most for me was the strong sense of community, mentorship, and innovation across Africa’s QA space. It was inspiring to see industry leaders, developers, and testers all aligned around one goal — building better products and raising the standard of quality engineering together."
     },
     {
         id: 3,
-        name: "Emily Johnson",
-        role: "Q.A Testers",
-        avatar: testimonial3,
+        name: "Isioma Ogbechie-Ogana",
+        role: "QA Professional",
+        avatar: testi10,
+        flag: "NG",
         quote:
-            "APQEC exceeded my expectations with its quality speakers and engaging discussions.",
+            "Quality goes beyond finding bugs, it’s about understanding user needs, asking the right questions early, and driving excellence throughout development. The APQEC experience gave me practical insights, confidence, and a stronger commitment to continuous improvement in quality engineering.",
     },
     {
         id: 4,
-        name: "Michael Brown",
-        role: "Product Designer",
-        avatar: testimonial4,
+        name: "Patrick Chioma",
+        role: "Software Quality Assurance Professional",
+        avatar: testi6,
+        flag: "NG",
         quote:
-            "Attending APQEC helped me better understand the future of product quality engineering in Africa.",
+            "APQEC 2025 expanded my perspective on the future of Quality Assurance. From AI-driven testing and automation to ethics, accessibility, and long-term quality improvement. One of my biggest takeaways was that AI is not replacing testers, but empowering us to focus on more strategic and high-value work.",
     },
     {
         id: 5,
-        name: "Amara Diallo",
-        role: "QA Lead",
-        avatar: testimonial5,
+        name: " Louis Takow",
+        role: "QA Engineer",
+        avatar: testi1,
+        flag: "CM",
         quote:
-            "Every session was packed with actionable insights. APQEC truly elevates Africa's quality engineering community.",
+            "Leading a hands-on session on mobile automation testing at APQEC 2025 was an incredible experience. The energy, collaboration, and exchange of knowledge throughout the conference showed the strength and future of Quality Engineering across Africa. More than an event, it was a movement focused on raising standards, building talent, and advancing testing excellence across the continent.",
     },
 ];
 
 const ROW_TWO = [
     {
         id: 6,
-        name: "David Wilson",
-        role: "CTO, TECHY",
-        avatar: testimonial1,
+        name: "Moses Muema",
+        role: "QA Engineer",
+        avatar: testi2,
+        flag: "KE",
         quote:
-            "I connected with amazing professionals and gained valuable industry knowledge at APQEC 2025.",
+            "Being a speaker at APQEC’25 was a major milestone in my career. The conference created a powerful space for collaboration, knowledge sharing, and meaningful conversations around the future of software quality engineering in Africa. I’m grateful to have contributed alongside passionate test leaders driving excellence and innovation across the industry.",
     },
     {
         id: 7,
-        name: "Laura Martinez",
-        role: "AI Engineer",
-        avatar: testimonial2,
+        name: "Emmanuel Ani Offei",
+        role: "Product & Operations Professional",
+        avatar: testi3,
+        flag: "GH",
         quote:
-            "I left APQEC with fresh ideas, meaningful connections, and practical insights I could immediately apply.",
+            "Speaking at APQEC 2025 gave me the opportunity to spark meaningful conversations around product management, QA, speed, safety, and software excellence across Africa. More than a speaking engagement, it was a chance to connect, learn, and contribute to the growing movement for quality leadership in African tech.",
     },
     {
         id: 8,
-        name: "James Taylor",
-        role: "Q.A Engineer",
-        avatar: testimonial3,
+        name: "Esther Onyekwere",
+        role: "QA Professional",
+        avatar: testi8,
+        flag: "NG",
         quote:
-            "APQEC brought together some of the brightest minds in quality engineering. It was truly inspiring.",
+            "APQEC 2025 was an inspiring experience filled with valuable insights, innovation, and meaningful conversations about the future of Quality Engineering. Connecting with passionate testers and learning from industry leaders left me more informed, motivated, and excited to keep growing in Software Quality Assurance.",
     },
     {
         id: 9,
-        name: "Olivia Chen",
-        role: "Software Engineer",
-        avatar: testimonial4,
+        name: "Akullu Edith",
+        role: "Product Growth Strategist",
+        avatar: testi4,
+        flag: "UG",
         quote:
-            "From the panel sessions, every moment was worth it. APQEC is a must-attend.",
+            "Collaboration, innovation, and shared purpose were at the heart of my APQEC 2025 experience. Engaging with professionals from across Africa reinforced that product quality is not owned by one team — it’s a collective effort driven by people, technology, and continuous learning. The conversations around AI, automation, and career growth in Quality Engineering were especially impactful.",
     },
     {
         id: 10,
-        name: "Kwame Asante",
-        role: "Scrum Master",
-        avatar: testimonial5,
+        name: "Safaa Ashraf",
+        role: "Senior Software Quality Assurance Engineer",
+        avatar: testi7,
+        flag: "EG",
         quote:
-            "The blend of workshops, talks, and networking made APQEC an unforgettable experience.",
+            "Sharing insights as a speaker at APQEC and connecting with professionals passionate about software quality and innovation made this a truly rewarding experience. I’m grateful for the opportunity to learn, contribute, and be part of a community committed to growth and excellence in quality engineering.",
     },
 ];
 
 /* ─── Single testimonial card ───────────────────────────────────────────── */
-const TestimonialCard = ({ name, role, avatar, quote }) => (
+const TestimonialCard = ({ name, role, avatar, quote, flag }) => (
     <div
         className="flex-shrink-0 w-[260px] md:w-[300px] bg-white rounded-2xl p-5 flex flex-col gap-3 mx-3"
         style={{
@@ -111,15 +127,12 @@ const TestimonialCard = ({ name, role, avatar, quote }) => (
             />
             <div>
                 <p className="text-[#0D1B3E] text-sm font-bold leading-tight">{name}</p>
-                <p className="text-gray-400 text-xs leading-tight">{role}</p>
+                <p className="text-gray-400 text-[10px] leading-tight">{role}</p>
             </div>
-            {/* Quote mark */}
-            <span
-                className="ml-auto rotate-180 text-3xl mb-7 font-black leading-none"
-                style={{ lineHeight: 1 }}
-            >
-                ❝
-            </span>
+            {/* Flag */}
+            <div className="ml-auto flex-shrink-0 w-6 h-4 overflow-hidden rounded-[2px] border border-gray-200">
+                <Flag code={flag || 'NG'} className="w-full h-full object-cover" />
+            </div>
         </div>
 
         {/* Quote text */}
