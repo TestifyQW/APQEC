@@ -3,42 +3,43 @@ import { MdArrowOutward } from 'react-icons/md';
 import { FaArrowRight } from 'react-icons/fa6';
 
 /* ─── Crew images ────────────────────────────────────────────────────────── */
-import ibironkeImg from '../../../assets/ibironkeImg.png';
+import ibironkeImg from '../../../assets/ibironkeCrew.jpg';
 import mosunmolaImg from '../../../assets/mosunmolaOlabello.jpg';
 import ayubaImg from '../../../assets/ayubaJohnson.jpg';
 import joshuaImg from '../../../assets/joshuaOlanrewaju.jpg';
 import oladeindeImg from '../../../assets/oladeindeDeborah.png';
 import AfricanMap from '../../../assets/african-map.png';
+import moyoImg from '../../../assets/myProfPic_cropped.jpg';
+import tosinImg from '../../../assets/tosin-headshot.png';
+import tonyImg from '../../../assets/tonyCrew.png';
 
 /* ─── Filter categories ─────────────────────────────────────────────────── */
 const CATEGORIES = [
     'All',
     'Program Director',
-    'Ambassadors',
-    'Content Team',
-    'Community Manager',
-    'Partnership & Sponsorship',
-    'Tech Team',
-    'Award Team',
-    'Email & Conversion Team',
+    'Content & Community Manager',
+    'Tech & Events Lead',
+    'Awards Director',
 ];
 
 /* ─── Crew data ─────────────────────────────────────────────────────────── */
 const rowTemplate = [
-    { name: 'Ibironke Yekinni', role: 'Convener', category: 'Program Chairs', photo: ibironkeImg },
-    { name: 'Mosunmola Olabello', role: 'Award Director', category: 'Award Team', photo: mosunmolaImg },
-    { name: 'Ayuba Johnson', role: 'Program Manager', category: 'Tech Team', photo: ayubaImg },
-    { name: 'Joshua Olanrewaju', role: 'Tech Team', category: 'Tech Team', photo: joshuaImg },
-    { name: 'Oladeinde Deborah', role: 'Award Team', category: 'Award Team', photo: oladeindeImg },
-    { name: 'Ayuba Johnson', role: 'Program Manager', category: 'Tech Team', photo: ayubaImg }, // Sixth col same as third
+    { name: 'Ibironke Yekinni', role: 'Convener', category: 'Program Director', photo: ibironkeImg },
+
+    { name: 'Ayuba Johnson', role: 'Program Manager', category: 'Program Director', photo: ayubaImg },
+
+    { name: 'Mosunmola Olabello', role: 'Award Director', category: 'Content & Community Manager', photo: mosunmolaImg },
+    { name: 'Tony Dike', role: 'Content Manager', category: 'Content & Community Manager', photo: tonyImg },
+    { name: 'Oluwatosin Afolabi', role: 'Content Manager', category: 'Content & Community Manager', photo: tosinImg },
+
+    { name: 'Dammy', role: 'Tech Team', category: 'Tech & Events Lead', photo: joshuaImg },
+    { name: 'Ojo Moyosorejesu', role: 'Tech Team', category: 'Tech & Events Lead', photo: moyoImg },
+
+    { name: 'Oladeinde Deborah', role: 'Award Team', category: 'Awards Director', photo: oladeindeImg },
 ];
 
 const CREW = [
     ...rowTemplate,
-    ...rowTemplate,
-    ...rowTemplate,
-    rowTemplate[0], // Last row has 2 columns
-    rowTemplate[1],
 ];
 const TitleUnderline = () => (
     <section className="flex w-full h-1 mb-3">

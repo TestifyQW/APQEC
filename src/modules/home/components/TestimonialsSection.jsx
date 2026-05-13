@@ -20,7 +20,7 @@ const ROW_ONE = [
         avatar: testi5,
         flag: "NG",
         quote:
-            "My experience at APQEC 2025 reinforced how Quality Engineering has evolved beyond testing into resilience, security, inclusiveness, scalability, and user-centered design. One of my biggest takeaways was that quality is a shared responsibility, powered by collaboration, innovation, and a strong culture of continuous improvement.",
+            "My biggest takeaway from APQEC 2025: quality is a shared responsibility. It is driven by innovation, inclusion, and a strong culture of collaboration across every team.",
     },
     {
         id: 2,
@@ -29,7 +29,7 @@ const ROW_ONE = [
         avatar: testi9,
         flag: "NG",
         quote:
-            "APQEC 2025 completely changed the way I see quality engineering. The sessions went beyond testing and focused on strategy, accessibility, performance, ethics, and user trust. I also gained valuable insights into how AI is transforming QA while still recognizing the importance of human creativity and collaboration.What stood out most for me was the strong sense of community, mentorship, and innovation across Africa’s QA space. It was inspiring to see industry leaders, developers, and testers all aligned around one goal — building better products and raising the standard of quality engineering together."
+            "Seeing how AI and human creativity work together was a major highlight of APQEC 2025. I’m excited to see how we continue building on these innovations and raising the bar for the industry at APQEC 2.0."
     },
     {
         id: 3,
@@ -38,7 +38,7 @@ const ROW_ONE = [
         avatar: testi10,
         flag: "NG",
         quote:
-            "Quality goes beyond finding bugs, it’s about understanding user needs, asking the right questions early, and driving excellence throughout development. The APQEC experience gave me practical insights, confidence, and a stronger commitment to continuous improvement in quality engineering.",
+            "APQEC was a masterclass in the true meaning of quality: understanding user needs and asking the right questions early. I left with practical insights and a renewed confidence in my role as a Quality Engineer.",
     },
     {
         id: 4,
@@ -47,7 +47,7 @@ const ROW_ONE = [
         avatar: testi6,
         flag: "NG",
         quote:
-            "APQEC 2025 expanded my perspective on the future of Quality Assurance. From AI-driven testing and automation to ethics, accessibility, and long-term quality improvement. One of my biggest takeaways was that AI is not replacing testers, but empowering us to focus on more strategic and high-value work.",
+            "My perspective on QA expanded through insights on AI-driven testing, accessibility, ethics, and the future of strategic quality engineering.",
     },
     {
         id: 5,
@@ -56,7 +56,7 @@ const ROW_ONE = [
         avatar: testi1,
         flag: "CM",
         quote:
-            "Leading a hands-on session on mobile automation testing at APQEC 2025 was an incredible experience. The energy, collaboration, and exchange of knowledge throughout the conference showed the strength and future of Quality Engineering across Africa. More than an event, it was a movement focused on raising standards, building talent, and advancing testing excellence across the continent.",
+            "Leading a hands-on mobile automation session highlighted the strong collaboration, innovation, and growing future of Quality Engineering across Africa.",
     },
 ];
 
@@ -68,7 +68,7 @@ const ROW_TWO = [
         avatar: testi2,
         flag: "KE",
         quote:
-            "Being a speaker at APQEC’25 was a major milestone in my career. The conference created a powerful space for collaboration, knowledge sharing, and meaningful conversations around the future of software quality engineering in Africa. I’m grateful to have contributed alongside passionate test leaders driving excellence and innovation across the industry.",
+            "Speaking at APQEC’25 was a rewarding experience filled with collaboration, knowledge sharing, and inspiring conversations on the future of software quality engineering in Africa.",
     },
     {
         id: 7,
@@ -77,7 +77,7 @@ const ROW_TWO = [
         avatar: testi3,
         flag: "GH",
         quote:
-            "Speaking at APQEC 2025 gave me the opportunity to spark meaningful conversations around product management, QA, speed, safety, and software excellence across Africa. More than a speaking engagement, it was a chance to connect, learn, and contribute to the growing movement for quality leadership in African tech.",
+            "Speaking at APQEC 2025 sparked meaningful conversations on product quality, speed, safety, and the future of software excellence across Africa.",
     },
     {
         id: 8,
@@ -86,7 +86,7 @@ const ROW_TWO = [
         avatar: testi8,
         flag: "NG",
         quote:
-            "APQEC 2025 was an inspiring experience filled with valuable insights, innovation, and meaningful conversations about the future of Quality Engineering. Connecting with passionate testers and learning from industry leaders left me more informed, motivated, and excited to keep growing in Software Quality Assurance.",
+            "Innovation, expert insights, and meaningful conversations at APQEC 2025 left me inspired to keep growing in Software Quality Assurance.",
     },
     {
         id: 9,
@@ -95,7 +95,7 @@ const ROW_TWO = [
         avatar: testi4,
         flag: "UG",
         quote:
-            "Collaboration, innovation, and shared purpose were at the heart of my APQEC 2025 experience. Engaging with professionals from across Africa reinforced that product quality is not owned by one team — it’s a collective effort driven by people, technology, and continuous learning. The conversations around AI, automation, and career growth in Quality Engineering were especially impactful.",
+            "APQEC 2025 reinforced that product quality is a collective effort driven by people and technology. After an impactful year of discussing AI and automation, I’m ready to take those conversations to the next level at APQEC 2.0.",
     },
     {
         id: 10,
@@ -104,7 +104,7 @@ const ROW_TWO = [
         avatar: testi7,
         flag: "EG",
         quote:
-            "Sharing insights as a speaker at APQEC and connecting with professionals passionate about software quality and innovation made this a truly rewarding experience. I’m grateful for the opportunity to learn, contribute, and be part of a community committed to growth and excellence in quality engineering.",
+            "A rewarding experience contributing as a speaker to a community passionate about software quality. APQEC set the stage for growth; now, we level up for APQEC 2.0!",
     },
 ];
 
