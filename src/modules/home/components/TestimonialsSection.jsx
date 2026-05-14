@@ -9,6 +9,7 @@ import testi7 from "../../../assets/testi_7.jpg";
 import testi8 from "../../../assets/testi_8.jpg";
 import testi9 from "../../../assets/testi_9.jpg";
 import testi10 from "../../../assets/testi_10.jpeg";
+import user from "../../../assets/user.png"
 import Flag from "react-world-flags";
 
 /* ─── Testimonial data ──────────────────────────────────────────────────── */
@@ -25,7 +26,7 @@ const ROW_ONE = [
     {
         id: 2,
         name: "Joshua Kolawole",
-        role: "QA Engineer",
+        role: "QA Expert",
         avatar: testi9,
         flag: "NG",
         quote:
@@ -52,11 +53,47 @@ const ROW_ONE = [
     {
         id: 5,
         name: " Louis Takow",
-        role: "QA Engineer",
+        role: "QA Expert",
         avatar: testi1,
         flag: "CM",
         quote:
             "Leading a hands-on mobile automation session highlighted the strong collaboration, innovation, and growing future of Quality Engineering across Africa.",
+    },
+    {
+        id: 11,
+        name: "Ogbechie Isioma",
+        role: "APQEC'25 Attendee",
+        avatar: user,
+        flag: "NG",
+        quote:
+            "It was a power-packed and insightful 3-day conference - I'm glad I attended!",
+    },
+    {
+        id: 12,
+        name: "Meseret Akalu",
+        role: "APQEC'25 Attendee",
+        avatar: user,
+        flag: "SA",
+        quote:
+            "What an incredible APQEC 2025! Proud to be a software tester and even more passionate about raising QA awareness for teams that still don't have one.",
+    },
+    {
+        id: 13,
+        name: "Selpha Atemba",
+        role: "APQEC'25 Attendee",
+        avatar: user,
+        flag: "KE",
+        quote:
+            "It was timely and very educative. I learnt a lot.",
+    },
+    {
+        id: 14,
+        name: "Ajidagba Rasheedat",
+        role: "APQEC'25 Attendee",
+        avatar: user,
+        flag: "NG",
+        quote:
+            "It was fantastic.",
     },
 ];
 
@@ -64,7 +101,7 @@ const ROW_TWO = [
     {
         id: 6,
         name: "Moses Muema",
-        role: "QA Engineer",
+        role: "QA Professional",
         avatar: testi2,
         flag: "KE",
         quote:
@@ -106,6 +143,24 @@ const ROW_TWO = [
         quote:
             "A rewarding experience contributing as a speaker to a community passionate about software quality. APQEC set the stage for growth; now, we level up for APQEC 2.0!",
     },
+    {
+        id: 15,
+        name: "Abidemi Adeloye",
+        role: "APQEC'25 Attendee",
+        avatar: user,
+        flag: "NG",
+        quote:
+            "It was an amazing conference; a  'Learnathon' from which I have gained many takeaways as a QA. Thank you Testars Quarter.",
+    },
+    {
+        id: 16,
+        name: "Rozina Meresa",
+        role: "APQEC'25 Attendee",
+        avatar: user,
+        flag: "SA",
+        quote:
+            "It was a good conference. I have learned a lot. Keep it up.",
+    },
 ];
 
 /* ─── Single testimonial card ───────────────────────────────────────────── */
@@ -141,7 +196,7 @@ const TestimonialCard = ({ name, role, avatar, quote, flag }) => (
 );
 
 /* ─── Marquee row ───────────────────────────────────────────────────────── */
-const MarqueeRow = ({ items, direction = "left", speed = 40 }) => {
+const MarqueeRow = ({ items, direction = "left", speed = 1300 }) => {
     // Duplicate for seamless loop
     const repeated = [...items, ...items, ...items];
     const animClass =
@@ -178,10 +233,10 @@ const TestimonialsSection = () => (
                 100% { transform: translateX(0); }
             }
             .animate-marquee-left {
-                animation: marquee-left var(--marquee-speed, 40s) linear infinite;
+                animation: marquee-left var(--marquee-speed, 500s) linear infinite;
             }
             .animate-marquee-right {
-                animation: marquee-right var(--marquee-speed, 44s) linear infinite;
+                animation: marquee-right var(--marquee-speed, 500s) linear infinite;
             }
             .animate-marquee-left:hover,
             .animate-marquee-right:hover {
@@ -205,11 +260,11 @@ const TestimonialsSection = () => (
 
         {/* Row 1 — scrolls left */}
         <div className="mb-4">
-            <MarqueeRow items={ROW_ONE} direction="left" speed={38} />
+            <MarqueeRow items={ROW_ONE} direction="left" speed={19} />
         </div>
 
         {/* Row 2 — scrolls right */}
-        <MarqueeRow items={ROW_TWO} direction="right" speed={44} />
+        <MarqueeRow items={ROW_TWO} direction="right" speed={19} />
     </section>
 );
 

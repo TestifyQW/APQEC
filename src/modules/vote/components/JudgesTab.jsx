@@ -10,10 +10,10 @@ import oladeindeImg from '../../../assets/oladeindeDeborah.png';
 // ─── Judge data ───────────────────────────────────────────────────────────────
 const JUDGES = [
     { name: 'Ibiranke Yekinni', role: 'Chairman', photo: ibironkeImg },
-    { name: 'Mosunmola Olabello', role: 'Award Director', photo: mosunmolaImg },
-    { name: 'Ayuba Johnson', role: 'Program Manager', photo: ayubaImg },
-    { name: 'Joshua Olanrewaju', role: 'Tech Team', photo: joshuaImg },
-    { name: 'Oladeinde Deborah', role: 'Award Team', photo: oladeindeImg },
+    // { name: 'Mosunmola Olabello', role: 'Award Director', photo: mosunmolaImg },
+    // { name: 'Ayuba Johnson', role: 'Program Manager', photo: ayubaImg },
+    // { name: 'Joshua Olanrewaju', role: 'Tech Team', photo: joshuaImg },
+    // { name: 'Oladeinde Deborah', role: 'Award Team', photo: oladeindeImg },
 ];
 
 // ─── Judge Card ───────────────────────────────────────────────────────────────
@@ -104,7 +104,7 @@ const JudgesTab = () => (
                 gap: '14px',
             }}
         >
-            {[...JUDGES, ...JUDGES, ...JUDGES].map((judge, i) => (
+            {[...JUDGES].map((judge, i) => (
                 <JudgeCard key={i} judge={judge} />
             ))}
         </div>
