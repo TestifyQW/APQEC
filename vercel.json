@@ -1,0 +1,15 @@
+{
+
+  "rewrites": [
+
+    {
+
+      "source": "/hackathon/:path*",
+
+      "destination": "apqechackathon-en7tkta6n-testifylimiteds-projects.vercel.app:path*"
+
+    }
+
+  ]
+
+}
