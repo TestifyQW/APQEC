@@ -6,7 +6,7 @@
 
       "source": "/hackathon/:path*",
 
-      "destination": "https://apqechackathon.vercel.app:path*"
+     "destination": "https://apqechackathon.vercel.app/:path*"
 
     }
 
