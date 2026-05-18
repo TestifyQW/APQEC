@@ -1,5 +1,12 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/hackathon",
+      "destination": "https://apechackathon2026.lovable.app/hackathon"
+    },
+    {
+      "source": "/hackathon/:path*",
+      "destination": "https://apechackathon2026.lovable.app/hackathon/:path*"
+    }
   ]
 }
