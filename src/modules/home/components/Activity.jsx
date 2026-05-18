@@ -28,7 +28,7 @@ const ACTIVITIES = [
         ctas: [
             {
                 label: "Apply",
-                href: "https://luma.com/u82wf6na",
+                href: "https://apechackathon2026.lovable.app/apply",
                 variant: "filled",
             },
         ],
