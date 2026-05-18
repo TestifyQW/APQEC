@@ -53,7 +53,9 @@ const Header = () => {
 
                 {/* CTA */}
                 <a
-                    href="https://calendly.com/ibironke-1/apqec2026"
+                    href="https://drive.google.com/file/d/1QyugTFhAj1L7N-_p3S2Wi3MS9tUv2qI3/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hidden md:flex items-center gap-2 border border-white/60 hover:border-white text-white text-xs font-bold uppercase tracking-widest px-2 py-2 rounded transition-all duration-200 hover:bg-white/10"
                 >
                     <MdArrowOutward className='text-lg' />
@@ -61,8 +63,8 @@ const Header = () => {
                 </a>
 
                 {/* Mobile Hamburger */}
-                <button 
-                    className="md:hidden flex items-center justify-center p-2 text-white" 
+                <button
+                    className="md:hidden flex items-center justify-center p-2 text-white"
                     onClick={toggleMenu}
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 >
@@ -71,7 +73,7 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div 
+            <div
                 className={`fixed inset-0 top-16 bg-[#114ca0] z-40 transition-transform duration-300 ease-in-out md:hidden
                     ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
             >
@@ -91,9 +93,11 @@ const Header = () => {
                             </a>
                         );
                     })}
-                    
+
                     <a
-                        href="https://calendly.com/ibironke-1/apqec2026"
+                        href="https://drive.google.com/file/d/1QyugTFhAj1L7N-_p3S2Wi3MS9tUv2qI3/view?usp=drive_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         onClick={closeMenu}
                         className="mt-4 flex items-center gap-2 border border-white/60 text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:bg-white/10"
                     >

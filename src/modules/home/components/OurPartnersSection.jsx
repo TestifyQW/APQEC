@@ -20,7 +20,10 @@ const OurPartnersSection = () => (
             </div>
             <div className='flex justify-center mt-8'>
                 <a
-                    href="https://calendly.com/ibironke-1/apqec2026"
+                    // href="https://calendly.com/ibironke-1/apqec2026"
+                    href="https://drive.google.com/file/d/1QyugTFhAj1L7N-_p3S2Wi3MS9tUv2qI3/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-widest px-5 py-4 rounded transition-colors"
                     style={{ background: '#0A2540' }}
                     onMouseOver={e => (e.currentTarget.style.background = '#162F5A')}
