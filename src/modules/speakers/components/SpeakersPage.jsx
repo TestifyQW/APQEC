@@ -10,7 +10,7 @@ import AfricanMap from '../../../assets/african-map.png';
 import MichaelBolton from '../../../assets/michealBolton.jpg';
 import omotayo from '../../../assets/olubukolaOmotayo.jpg';
 import jamesBach from '../../../assets/jamesBach.jpg';
-import sessionSpeaker2 from '../../../assets/sessionSpeaker2.jpeg';
+import sessionSpeaker2 from '../../../assets/sessionSpeakerV2.jpeg';
 import adea from '../../../assets/adeaNatch.jpg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
