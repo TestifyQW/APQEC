@@ -76,7 +76,7 @@ const SPEAKERS = [
 
 const TICKER_ITEMS = [
     'APPLY TO SPEAK NOW',
-    'CALL FOR SPEAKERS CLOSES MAY 18TH',
+    'CALL FOR SPEAKERS CLOSES MAY 25TH',
 ];
 
 const Ticker = () => {
