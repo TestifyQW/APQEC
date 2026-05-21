@@ -11,6 +11,16 @@ import MichaelBolton from '../../../assets/michealBolton.jpg';
 import omotayo from '../../../assets/olubukolaOmotayo.jpg';
 import jamesBach from '../../../assets/jamesBach.jpg';
 import sessionSpeaker2 from '../../../assets/sessionSpeakerV2.jpeg';
+import sessionSpeaker3 from '../../../assets/sessionSpeaker3.jpg';
+import sessionSpeaker4 from '../../../assets/sessionSpeaker4.jpg';
+import sessionSpeaker5 from '../../../assets/sessionSpeaker5.jpg';
+import sessionSpeaker6 from '../../../assets/sessionSpeaker6.jpg';
+import sessionSpeaker7 from '../../../assets/sessionSpeaker7.jpg';
+import sessionSpeaker8 from '../../../assets/sessionSpeaker8.jpeg';
+import sessionSpeaker12 from '../../../assets/sessionSpeaker12.jpeg';
+import sessionSpeaker9 from '../../../assets/sessionSpeaker9.jpg';
+import sessionSpeaker11 from '../../../assets/sessionSpeaker11.jpg';
+import sessionSpeaker10 from '../../../assets/sessionSpeaker10.png';
 import adea from '../../../assets/adeaNatch.jpg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
@@ -74,6 +84,16 @@ const TICKER_ITEMS = [
 const SESSION_SPEAKERS = [
     { id: 1, name: 'Adea Natchiah-Blay', role: 'Speaker', image: adea, flag: 'GH', linkedin: 'https://www.linkedin.com/in/adea-natchiah-blay/' },
     { id: 2, name: 'Dennis Nyabuti', role: 'Speaker', image: sessionSpeaker2, flag: 'RW', linkedin: 'https://www.linkedin.com/in/dmnyabuti' },
+    { id: 3, name: 'Doho Séverin', role: 'Speaker', image: sessionSpeaker11, flag: 'CM', linkedin: 'https://www.linkedin.com/in/severin-doho/' },
+    { id: 4, name: 'Christianah Ajala', role: 'Speaker', image: sessionSpeaker3, flag: 'GB', linkedin: 'https://www.linkedin.com/in/ajala-christianah-eniola' },
+    { id: 5, name: 'Nikhil Bhandari', role: 'Speaker', image: sessionSpeaker4, flag: '', linkedin: 'https://www.linkedin.com/in/nikhilbhandari/' },
+    { id: 6, name: 'Omowumi Oladele', role: 'Speaker', image: sessionSpeaker5, flag: 'NG', linkedin: 'https://www.linkedin.com/in/omowumi-oladele/' },
+    { id: 7, name: 'Samuel Afolabi', role: 'Speaker', image: sessionSpeaker6, flag: 'NG', linkedin: 'https://www.linkedin.com/in/lordsamafolabi/' },
+    { id: 8, name: 'Shashank Parmar', role: 'Speaker', image: sessionSpeaker7, flag: '', linkedin: 'https://www.linkedin.com/in/dearshashank/' },
+    { id: 9, name: 'Mary Onuorah', role: 'Speaker', image: sessionSpeaker8, flag: 'NG', linkedin: 'https://www.linkedin.com/in/onuorahmary' },
+    { id: 10, name: 'Matachi Ononuju', role: 'Speaker', image: sessionSpeaker9, flag: 'NG', linkedin: 'https://www.linkedin.com/in/matachi-ononuju/' },
+    { id: 10, name: 'Sally Sedky', role: 'Speaker', image: sessionSpeaker10, flag: 'EG', linkedin: 'https://www.linkedin.com/in/sally-sedky-sdet-associate-manager/' },
+    { id: 10, name: 'Udeme Jalekun', role: 'Speaker', image: sessionSpeaker12, flag: 'GB', linkedin: 'http://www.linkedin.com/in/udeme-jalekun' },
 ];
 
 /* ─── Keynote Speaker Card ────────────────────────────────────────────────── */
