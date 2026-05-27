@@ -22,6 +22,10 @@ import sessionSpeaker9 from '../../../assets/sessionSpeaker9.jpg';
 import sessionSpeaker11 from '../../../assets/sessionSpeaker11.jpg';
 import sessionSpeaker10 from '../../../assets/sessionSpeaker10.png';
 import adea from '../../../assets/adeaNatch.jpg';
+import sessionSpeaker13 from '../../../assets/Ikenna_Gen.png';
+import sessionSpeaker14 from '../../../assets/Adedolapo.jpeg';
+import sessionSpeaker15 from '../../../assets/harmony.jpg';
+import sessionSpeaker16 from '../../../assets/georgeKibe.jpeg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
 // const IGIcon = () => (
@@ -92,8 +96,12 @@ const SESSION_SPEAKERS = [
     { id: 8, name: 'Shashank Parmar', role: 'Speaker', image: sessionSpeaker7, flag: 'IN', linkedin: 'https://www.linkedin.com/in/dearshashank/' },
     { id: 9, name: 'Mary Onuorah', role: 'Speaker', image: sessionSpeaker8, flag: 'NG', linkedin: 'https://www.linkedin.com/in/onuorahmary' },
     { id: 10, name: 'Matachi Ononuju', role: 'Speaker', image: sessionSpeaker9, flag: 'NG', linkedin: 'https://www.linkedin.com/in/matachi-ononuju/' },
-    { id: 10, name: 'Sally Sedky', role: 'Speaker', image: sessionSpeaker10, flag: 'EG', linkedin: 'https://www.linkedin.com/in/sally-sedky-sdet-associate-manager/' },
-    { id: 10, name: 'Udeme Jalekun', role: 'Speaker', image: sessionSpeaker12, flag: 'GB', linkedin: 'http://www.linkedin.com/in/udeme-jalekun' },
+    { id: 11, name: 'Sally Sedky', role: 'Speaker', image: sessionSpeaker10, flag: 'EG', linkedin: 'https://www.linkedin.com/in/sally-sedky-sdet-associate-manager/' },
+    { id: 12, name: 'Udeme Jalekun', role: 'Speaker', image: sessionSpeaker12, flag: 'GB', linkedin: 'http://www.linkedin.com/in/udeme-jalekun' },
+    { id: 13, name: 'Ikenna Okafor', role: 'Speaker', image: sessionSpeaker13, flag: 'GH', linkedin: 'https://linkedin.com/in/ikennasylvestreokafor' },
+    { id: 14, name: 'Adedolapo Oguntayo-Willian', role: 'Speaker', image: sessionSpeaker14, flag: 'NG', linkedin: 'https://linkedin.com/in/adedolapo-oguntayo-williams' },
+    { id: 15, name: 'Harmony Elendu', role: 'Speaker', image: sessionSpeaker15, flag: 'NG', linkedin: 'https://www.linkedin.com/in/harmonyelendu/' },
+    { id: 16, name: 'George Kibe', role: 'Speaker', image: sessionSpeaker16, flag: 'KE', linkedin: 'https://www.linkedin.com/in/georgekibe/' },
 ];
 
 /* ─── Keynote Speaker Card ────────────────────────────────────────────────── */

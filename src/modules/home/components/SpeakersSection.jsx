@@ -144,9 +144,9 @@ const SpeakersSection = () => {
             className="w-full pb-16"
             style={{ background: '#071330' }}
         >
-            <div className="relative mb-16 z-10 bg-[#00deee] h-10 flex items-center justify-center mt-auto">
+            {/* <div className="relative mb-16 z-10 bg-[#00deee] h-10 flex items-center justify-center mt-auto">
                 <Ticker />
-            </div>
+            </div> */}
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 {/* Header row */}
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-10">

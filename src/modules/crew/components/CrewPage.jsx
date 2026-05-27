@@ -28,13 +28,13 @@ const rowTemplate = [
 
     { name: 'Ayuba Johnson', role: 'Program Manager', category: 'Program Director', photo: ayubaImg },
 
-    { name: 'Mosunmola Olabello', role: 'Award Director', category: 'Content & Community Manager', photo: mosunmolaImg },
+    { name: 'Mosunmola Olabello', role: 'Community Manager', category: 'Content & Community Manager', photo: mosunmolaImg },
     { name: 'Tony Dike', role: 'Content Manager', category: 'Content & Community Manager', photo: tonyImg },
     { name: 'Oluwatosin Afolabi', role: 'Content Manager', category: 'Content & Community Manager', photo: tosinImg },
 
-    { name: 'Dammy', role: 'Tech Team', category: 'Tech & Events Lead', photo: joshuaImg },
+    // { name: 'Dammy', role: 'Tech Team', category: 'Tech & Events Lead', photo: joshuaImg },
     { name: 'Ojo Moyosorejesu', role: 'Tech Team', category: 'Tech & Events Lead', photo: moyoImg },
-
+    { name: 'Mosunmola Olabello', role: 'Award Director', category: 'Awards Director', photo: mosunmolaImg },
     { name: 'Oladeinde Deborah', role: 'Award Team', category: 'Awards Director', photo: oladeindeImg },
 ];
 
@@ -193,7 +193,7 @@ const CrewPage = () => {
                     </div>
 
                     {/* Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                         {filtered.map((member, i) => (
                             <CrewCard key={`${member.name}-${i}`} member={member} />
                         ))}
