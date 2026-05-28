@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa6';
+import RegisterLink from '../../../components/RegisterLink';
 import { MdArrowOutward } from 'react-icons/md';
 import Flag from 'react-world-flags';
 
@@ -226,7 +227,7 @@ const SpeakersPage = () => {
                         backgroundSize: '30px 30px',
                     }}
                 />
-                <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
+                <div className="max-w-7xl pb-15 mx-auto px-6 md:px-12 text-center relative z-10">
                     <p className="text-[#00DEEE] border border-[#00DEEE] w-fit flex mx-auto rounded-full p-2 text-sm font-bold uppercase mb-4">
                         meet the experts
                     </p>
@@ -254,9 +255,9 @@ const SpeakersPage = () => {
                         Apply to Speak
                     </a>
                 </div>
-                <div className="relative z-10 mt-25">
+                {/* <div className="relative z-10 mt-25">
                     <Ticker />
-                </div>
+                </div> */}
             </section>
 
             <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
@@ -302,13 +303,12 @@ const SpeakersPage = () => {
                         These speakers have already raised the bar. Now they're here to help you do the same. Don't just <br />
                         scroll, register, join the sessions, ask questions, and let's grow together.
                     </p>
-                    <a
-                        href="https://luma.com/u82wf6na"
+                    <RegisterLink
                         className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors"
                         onClick={e => e.preventDefault()}
                     >
                         <FaArrowRight /> claim your seat
-                    </a>
+                    </RegisterLink>
                 </div>
             </section>
 

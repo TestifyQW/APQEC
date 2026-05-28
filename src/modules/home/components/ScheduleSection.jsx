@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaArrowRight } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
+import RegisterLink from '../../../components/RegisterLink';
 import { IoIosArrowUp } from "react-icons/io";
 
 
@@ -175,12 +176,11 @@ const ScheduleSection = () => {
 
                     {/* Right — CTA buttons */}
                     <div className="flex items-center gap-3 flex-shrink-0">
-                        <a
-                            href="https://luma.com/u82wf6na"
+                        <RegisterLink
                             className="flex items-center gap-2 bg-[#00DEEE] text-black text-xs font-bold uppercase px-5 py-2.5 rounded hover:bg-[#00D4FF]/10 transition-colors"
                         >
                             <FaArrowRight /> <span>Register for Free</span>
-                        </a>
+                        </RegisterLink>
                         <a
                             href="https://drive.google.com/file/d/1QyugTFhAj1L7N-_p3S2Wi3MS9tUv2qI3/view?usp=drive_link"
                             target="_blank"

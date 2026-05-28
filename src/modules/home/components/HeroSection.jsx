@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import AfricanMap from '../../../assets/african-map.png';
+import RegisterLink from '../../../components/RegisterLink';
 import Countdown from 'react-countdown';
 
 // Floating role pill tags
@@ -174,14 +175,13 @@ const HeroSection = () => {
                 </p>
 
                 {/* CTA */}
-                <a
-                    href="https://luma.com/u82wf6na"
+                <RegisterLink
                     className="mt-10 mb-10 inline-flex items-center gap-3 bg-[#00deee] hover:bg-[#00deee]/80 text-black text-xs md:text-sm font-bold uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 backdrop-blur-sm group pointer-events-auto"
                 >
                     <span className="text-black group-hover:translate-x-1 transition-transform duration-200">→</span>
                     <span className='hidden lg:inline-block'>Claim Your Free Pass—Limited Spots for the Live Interactive Sessions</span>
                     <span className='lg:hidden'>Claim Your Free Pass</span>
-                </a>
+                </RegisterLink>
             </div>
 
             {/* Floating tags — bottom */}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa6";
+import RegisterLink from '../../../components/RegisterLink';
 import { MdArrowOutward } from "react-icons/md";
 
 import ibironkeImg from '../../../assets/ibironkeImg.png';
@@ -141,7 +142,7 @@ const SpeakersSection = () => {
 
     return (
         <section id='speakers'
-            className="w-full pb-16"
+            className="w-full pb-16 pt-10"
             style={{ background: '#071330' }}
         >
             {/* <div className="relative mb-16 z-10 bg-[#00deee] h-10 flex items-center justify-center mt-auto">
@@ -162,12 +163,11 @@ const SpeakersSection = () => {
 
                     {/* Right — CTA buttons */}
                     <div className="flex items-center gap-3 flex-shrink-0">
-                        <a
-                            href="https://luma.com/u82wf6na"
+                        <RegisterLink
                             className="flex items-center gap-2 bg-[#00DEEE] text-black text-xs font-bold uppercase px-3 py-2.5 rounded hover:bg-[#00D4FF]/10 transition-colors"
                         >
                             <FaArrowRight /> <span>Register for Free</span>
-                        </a>
+                        </RegisterLink>
                         <a
                             href="https://docs.google.com/forms/d/e/1FAIpQLSfUe2o5LoHupuqqaMWW7qi7VFplg5Sd_SDBC04O1GOUUgdsMQ/viewform?usp=send_form"
                             className="flex items-center gap-2 border border-white text-white text-xs font-bold uppercase tracking-widest px-3 py-2.5 rounded hover:bg-white/10 transition-colors"

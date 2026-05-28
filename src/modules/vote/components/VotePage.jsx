@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaCheck, FaArrowRight, FaTrophy, FaStar, FaLightbulb, FaUsers, FaRocket, FaGlobe, FaHeart, FaMedal } from 'react-icons/fa6';
 import { MdArrowOutward, MdClose } from 'react-icons/md';
+import RegisterLink from '../../../components/RegisterLink';
 import logo from '../../../assets/apqec-logo-white.png';
 import voteBgImg from '../../../assets/voteBgImg.png';
 import SelectionProcessTab from './SelectionProcessTab';
@@ -283,13 +284,12 @@ const VotePage = () => {
 
                     {/* CTAs */}
                     <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
-                        <a
-                            href="https://luma.com/u82wf6na"
+                        <RegisterLink
                             onClick={e => e.preventDefault()}
                             className="inline-flex items-center gap-2 bg-[#00DEEE] text-black text-xs md:text-sm font-bold uppercase px-8 py-3.5 rounded hover:bg-cyan-300 transition-colors shadow-lg"
                         >
                             <FaArrowRight className="text-sm" /> Register for Free
-                        </a>
+                        </RegisterLink>
                         <a
                             href="#categories"
                             onClick={() => setActiveTab(0)}

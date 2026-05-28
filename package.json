@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@adkit.so/meta-pixel": "^1.1.5",
     "@tailwindcss/vite": "^4.2.1",
     "react": "^19.2.4",
     "react-countdown": "^2.3.6",

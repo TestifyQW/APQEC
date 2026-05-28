@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { MdArrowOutward, MdMenu, MdClose } from "react-icons/md";
 import logo from '../../../assets/apqec-logo-white.png';
 import { useHashNav } from '../../../hooks/useHashNav';
+import META from '@adkit.so/meta-pixel';
 
 const NAV_LINKS = [
     { label: 'Content Tracks', href: '/#tracks' },
