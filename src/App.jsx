@@ -5,6 +5,7 @@ import SpeakersModule from './modules/speakers';
 import PartnersModule from './modules/partners';
 import VoteModule from './modules/vote';
 import CrewModule from './modules/crew';
+import AgendaModule from './modules/agenda';
 import META from '@adkit.so/meta-pixel';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/partners" element={<PartnersModule />} />
         <Route path="/vote" element={<VoteModule />} />
         <Route path="/ourcrew" element={<CrewModule />} />
+        <Route path="/agenda" element={<AgendaModule />} />
       </Routes>
     </BrowserRouter>
   );
