@@ -24,7 +24,7 @@ import sessionSpeaker11 from '../../../assets/sessionSpeaker11.jpg';
 import sessionSpeaker10 from '../../../assets/sessionSpeaker10.png';
 import adea from '../../../assets/adeaNatch.jpg';
 import sessionSpeaker13 from '../../../assets/Ikenna_Gen.png';
-import sessionSpeaker14 from '../../../assets/Adedolapo.jpeg';
+import sessionSpeaker14 from '../../../assets/Adedolapo.JPEG';
 import sessionSpeaker15 from '../../../assets/harmony.jpg';
 import sessionSpeaker16 from '../../../assets/georgeKibe.jpeg';
 
