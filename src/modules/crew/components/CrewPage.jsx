@@ -14,7 +14,7 @@ import moyoImg from '../../../assets/myProfPic_cropped.jpg';
 import tosinImg from '../../../assets/tosin-headshot.png';
 import tonyImg from '../../../assets/tonyCrew.png';
 import ateniolaImg from '../../../assets/ateniImg.png';
-import iseoluwaImg from '../../../assets/iseImg.jpg';
+import iseoluwaImg from '../../../assets/iseImg2.png';
 import thandiweImg from '../../../assets/thandiweImg.jpg';
 
 /* ─── Filter categories ─────────────────────────────────────────────────── */
