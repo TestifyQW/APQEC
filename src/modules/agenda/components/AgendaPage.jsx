@@ -36,7 +36,7 @@ const DAYS = [
             {
                 time: '11:45 am – 12:00 pm',
                 format: 'Icebreaker Game',
-                session: '⚡ "Spot the Bug" Interactive Trivia',
+                session: '⚡ Spot the Bug Interactive Trivia',
                 // description: 'A fast-paced, live community game with prizes to re-energize the audience.',
                 who: ['Host / Emcee'],
             },
@@ -76,7 +76,7 @@ const DAYS = [
             {
                 time: '14:45 pm – 14:55 pm',
                 format: 'Final-Day Resess',
-                session: '🎮 "Two Truths & An AI Lie" Game',
+                session: '🎮 Two Truths & An AI Lie Game',
                 // description: 'Audience engagement poll separating real tech capabilities from AI hype.',
                 who: ['Host / Emcee'],
             },
@@ -127,7 +127,7 @@ const DAYS = [
             {
                 time: '11:55 am – 12:10 pm',
                 format: 'Icebreaker',
-                session: '🧩 "The Mind Bug" Live Riddle',
+                session: '🧩 The Mind Bug Live Riddle',
                 // description: 'A quick, lateral-thinking puzzle game to challenge the audience\'s testing mindset.',
                 who: ['Host / MC'],
             },
@@ -218,7 +218,7 @@ const DAYS = [
                 format: 'Fireside Chat',
                 session: 'The CTO\'s View on Quality',
                 // description: 'Strategic executive insights from a notable African CTO on aligning QA with business growth.',
-                who: ['MJ'],
+                who: ['Mujib Ishola'],
             },
             {
                 time: '12:15 pm – 12:40 pm',
@@ -230,7 +230,7 @@ const DAYS = [
             {
                 time: '12:45 pm – 13:00 pm',
                 format: 'Icebreaker Game',
-                session: '💡 The "Executive Bug" Simulation',
+                session: '💡 The Executive Bug Simulation',
                 // description: 'A live, text-based interactive roleplay game. Attendees vote on how to handle a critical production bug right before a major product launch.',
                 who: ['Host / MC with All Attendees'],
             },
@@ -316,7 +316,7 @@ const SessionTable = ({ day }) => (
                             className="py-3 px-4 text-left text-xs font-black uppercase tracking-widest"
                             style={{
                                 color: '#00DEEE',
-                                width: i === 0 ? 130 : i === 1 ? 200 : i === 3 ? 200 : 'auto',
+                                width: i === 0 ? 130 : i === 1 ? 200 : i === 3 ? 350 : 'auto',
                                 borderBottom: '1px solid #e5e7eb',
                             }}
                         >
@@ -449,8 +449,13 @@ const AgendaPage = () => {
                             <MdArrowOutward /> <span>Become a Sponsor</span>
                         </a>
                     </div>
+                    <p className="text-start text-lg my-6 italic text-white">
+                        All times are in West Africa Time <b>(WAT)</b> · Schedule subject to change
+                    </p>
                 </div>
             </div>
+
+            
 
             {/* ── Day tabs ── */}
             <div style={{ background: '#0D1B3E', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
