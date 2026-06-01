@@ -85,6 +85,20 @@ const KEYNOTE_SPEAKERS = [
         image: jamesBach,
         linkedin: 'https://www.linkedin.com/in/james-bach-6188a811/',
     },
+    {
+        id: 5,
+        name: 'LARRY GODDARD',
+        role: 'Keynote Speaker',
+        image: sessionSpeaker23,
+        linkedin: 'https://www.linkedin.com/in/larryg/',
+    },
+    {
+        id: 6,
+        name: 'MUJIB ISHOLA',
+        role: 'Keynote Speaker',
+        image: sessionSpeaker22,
+        linkedin: 'https://www.linkedin.com/in/mujibishola/',
+    },
 ];
 
 const TICKER_ITEMS = [
