@@ -29,6 +29,12 @@ import sessionSpeaker15 from '../../../assets/harmony.jpg';
 import sessionSpeaker16 from '../../../assets/georgeKibe.jpeg';
 import sessionSpeaker17 from '../../../assets/sessionSpeaker17.jpg';
 import sessionSpeaker18 from '../../../assets/sessionSpeaker18.jpg';
+import sessionSpeaker20 from '../../../assets/iseImg2.png';
+import sessionSpeaker21 from '../../../assets/mosunmolaOlabello.jpg';
+import sessionSpeaker19 from '../../../assets/chibuzorImg.jpg';
+import sessionSpeaker22 from '../../../assets/mujibImg.jpg';
+import sessionSpeaker23 from '../../../assets/larryImg.jpg';
+import sessionSpeaker24 from '../../../assets/olamideImg.jpg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
 // const IGIcon = () => (
@@ -107,6 +113,12 @@ const SESSION_SPEAKERS = [
     { id: 16, name: 'George Kibe', role: 'Speaker', image: sessionSpeaker16, flag: 'KE', linkedin: 'https://www.linkedin.com/in/georgekibe/' },
     { id: 17, name: 'Oluwatobi Fagbohungbe', role: 'Speaker', image: sessionSpeaker17, flag: 'NG', linkedin: 'https://www.linkedin.com/in/tobyfagboh/' },
     { id: 18, name: 'Harsha Issur Luckoo', role: 'Speaker', image: sessionSpeaker18, flag: 'MU', linkedin: 'https://www.linkedin.com/in/harsha-issur-luckoo-77b6b7b6' },
+    { id: 19, name: 'Chibuzor Obilom', role: 'Speaker', image: sessionSpeaker19, flag: 'NG', linkedin: 'https://www.linkedin.com/in/chibuzorobilom/' },
+    { id: 20, name: 'Iseoluwa Adelowo', role: 'Speaker', image: sessionSpeaker20, flag: 'NG', linkedin: 'https://www.linkedin.com/in/connectwithiseoluwaadelowo/' },
+    { id: 21, name: 'Mosunmola Olabello', role: 'Speaker', image: sessionSpeaker21, flag: 'NG', linkedin: 'https://www.linkedin.com/in/mosunmola-olabello/' },
+    { id: 22, name: 'Muji Ishola', role: 'Speaker', image: sessionSpeaker22, flag: 'NG', linkedin: 'https://www.linkedin.com/in/mujibishola/' },
+    { id: 23, name: 'Larry Goddard', role: 'Speaker', image: sessionSpeaker23, flag: 'GB', linkedin: 'https://www.linkedin.com/in/larryg/' },
+    { id: 24, name: 'Olamide Faleke', role: 'Speaker', image: sessionSpeaker24, flag: 'NG', linkedin: 'https://www.linkedin.com/in/olamide-faleke-978173125/' },
 ];
 
 /* ─── Keynote Speaker Card ────────────────────────────────────────────────── */

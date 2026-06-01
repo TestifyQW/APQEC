@@ -160,7 +160,7 @@ const DAYS = [
             {
                 time: '14:25 pm – 14:55 pm',
                 format: 'Solo Talk',
-                // session: 'The Product Quality Engineer\'s Toolkit: Building Systems That Score, Triage, and Ship with Confidence',
+                session: 'The Product Quality Engineer\'s Toolkit',
                 who: ['Nikhil Bhandari'],
             },
             {
