@@ -8,7 +8,8 @@ import ibironkeImg from '../../../assets/ibironkeImg.png';
 import MichaelBolton from '../../../assets/michealBolton.jpg';
 import omotayo from '../../../assets/olubukolaOmotayo.jpg';
 import jamesBach from '../../../assets/jamesBach.jpg';
-import adea from '../../../assets/adeaNatch.jpg';
+import sessionSpeaker22 from '../../../assets/mujibImg.jpg';
+import sessionSpeaker23 from '../../../assets/larryImg.jpg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
 // const IGIcon = () => (
@@ -61,11 +62,18 @@ const SPEAKERS = [
     },
     {
         id: 5,
-        name: 'Adea Natchiah-Blay',
+        name: 'Larry Goddard',
         role: 'Speaker',
-        image: adea,
-        linkedin: 'https://www.linkedin.com/in/adea-natchiah-blay/',
+        image: sessionSpeaker23,
+        linkedin: 'https://www.linkedin.com/in/larryg/',
     },
+    {
+        id:6,
+        name: 'Mujib Ishola',
+        role: 'Speaker',
+        image: sessionSpeaker22,
+        linkedin: 'https://www.linkedin.com/in/mujibishola/',
+    }
     // {
     //     id: 6,
     //     name: 'Emmaunel Paul',HopMHHPfSV2kWQLghKt6xR1oWbPRLA2UyxnKGoPpump
