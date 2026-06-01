@@ -13,6 +13,9 @@ import AfricanMap from '../../../assets/african-map.png';
 import moyoImg from '../../../assets/myProfPic_cropped.jpg';
 import tosinImg from '../../../assets/tosin-headshot.png';
 import tonyImg from '../../../assets/tonyCrew.png';
+import ateniolaImg from '../../../assets/ateniImg.png';
+import iseoluwaImg from '../../../assets/iseImg.jpg';
+import thandiweImg from '../../../assets/thandiweImg.jpg';
 
 /* ─── Filter categories ─────────────────────────────────────────────────── */
 const CATEGORIES = [
@@ -29,14 +32,16 @@ const rowTemplate = [
 
     { name: 'Ayuba Johnson', role: 'Program Manager', category: 'Program Director', photo: ayubaImg },
 
-    { name: 'Mosunmola Olabello', role: 'Community Manager', category: 'Content & Community Manager', photo: mosunmolaImg },
-    { name: 'Tony Dike', role: 'Content Manager', category: 'Content & Community Manager', photo: tonyImg },
+    { name: 'Mosunmola Olabello', role: 'Community Director', category: 'Content & Community Manager', photo: mosunmolaImg },
+    { name: 'Tony Dike', role: 'Social Media Manager', category: 'Content & Community Manager', photo: tonyImg },
     { name: 'Oluwatosin Afolabi', role: 'Content Manager', category: 'Content & Community Manager', photo: tosinImg },
+    { name: 'Ateniola Taye', role: 'Virtual Room Manager', category: 'Content & Community Manager', photo: ateniolaImg },
+    { name: 'Iseoluwa Adelowo', role: 'Email Marketing Manager', category: 'Content & Community Manager', photo: iseoluwaImg },
+    { name: 'Thandiwe', role: 'Speakers Relation & Partnership Manager', category: 'Content & Community Manager', photo: thandiweImg },
 
     // { name: 'Dammy', role: 'Tech Team', category: 'Tech & Events Lead', photo: joshuaImg },
-    { name: 'Ojo Moyosorejesu', role: 'Tech Team', category: 'Tech & Events Lead', photo: moyoImg },
-    { name: 'Mosunmola Olabello', role: 'Award Director', category: 'Awards Director', photo: mosunmolaImg },
-    { name: 'Oladeinde Deborah', role: 'Award Team', category: 'Awards Director', photo: oladeindeImg },
+    { name: 'Ojo Moyosorejesu', role: 'Website Developer', category: 'Tech & Events Lead', photo: moyoImg },
+    { name: 'Oladeinde Deborah', role: 'Website Designer', category: 'Awards Director', photo: oladeindeImg },
 ];
 
 const CREW = [

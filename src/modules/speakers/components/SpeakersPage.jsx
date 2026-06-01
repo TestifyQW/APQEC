@@ -27,6 +27,8 @@ import sessionSpeaker13 from '../../../assets/Ikenna_Gen.png';
 import sessionSpeaker14 from '../../../assets/Adedolapo.JPEG';
 import sessionSpeaker15 from '../../../assets/harmony.jpg';
 import sessionSpeaker16 from '../../../assets/georgeKibe.jpeg';
+import sessionSpeaker17 from '../../../assets/sessionSpeaker17.jpg';
+import sessionSpeaker18 from '../../../assets/sessionSpeaker18.jpg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
 // const IGIcon = () => (
@@ -103,6 +105,8 @@ const SESSION_SPEAKERS = [
     { id: 14, name: 'Adedolapo Oguntayo-Willian', role: 'Speaker', image: sessionSpeaker14, flag: 'NG', linkedin: 'https://linkedin.com/in/adedolapo-oguntayo-williams' },
     { id: 15, name: 'Harmony Elendu', role: 'Speaker', image: sessionSpeaker15, flag: 'NG', linkedin: 'https://www.linkedin.com/in/harmonyelendu/' },
     { id: 16, name: 'George Kibe', role: 'Speaker', image: sessionSpeaker16, flag: 'KE', linkedin: 'https://www.linkedin.com/in/georgekibe/' },
+    { id: 17, name: 'Oluwatobi Fagbohungbe', role: 'Speaker', image: sessionSpeaker17, flag: 'NG', linkedin: 'https://www.linkedin.com/in/tobyfagboh/' },
+    { id: 18, name: 'Harsha Issur Luckoo', role: 'Speaker', image: sessionSpeaker18, flag: 'MU', linkedin: 'https://www.linkedin.com/in/harsha-issur-luckoo-77b6b7b6' },
 ];
 
 /* ─── Keynote Speaker Card ────────────────────────────────────────────────── */

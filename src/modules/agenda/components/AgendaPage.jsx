@@ -20,22 +20,22 @@ const DAYS = [
             },
             {
                 time: '10:30 – 11:00',
-                format: 'Opening Keynote (30 + 15 Q&A)',
+                format: 'Opening Keynote',
                 session: 'The Africa AI Quality Doctrine',
                 who: ['Ibironke Yekinni'],
             },
             {
                 time: '11:00 – 11:45',
-                format: 'Keynote (30 + 15 Q&A)',
+                format: 'Keynote',
                 session: 'In the Loop or Out For Loot: Responsible Use of AI',
                 who: ['James Bach'],
             },
             { time: '11:45 – 12:00', type: 'break', label: 'COMFORT BREAK' },
             {
                 time: '12:00 – 12:45',
-                format: 'Panel (45 min)',
-                session: 'AI in QE: Productivity Boom or Quality Bomb? 4 panelists + moderator',
-                who: ['- Christianah Ajala', '- Omowumi Oladele', '- Sally Sedky'],
+                format: 'Panel',
+                session: 'AI in QE: Productivity Boom or Quality Bomb?',
+                who: ['Christianah Ajala', 'Omowumi Oladele', 'Sally Sedky'],
                 moderator: 'Iseoluwa Adelowo',
             },
             {
@@ -46,13 +46,13 @@ const DAYS = [
             },
             {
                 time: '13:00 – 14:30',
-                format: 'Workshop (90 mins)',
+                format: 'Workshop',
                 session: 'Hands-On: Building AI Test Agents with LLMs',
                 who: ['Shashank Parmar'],
             },
             {
                 time: '14:30 – 15:00',
-                format: 'Solo Talk (30 mins)',
+                format: 'Solo Talk',
                 session: "CX through a Product Manager's Lens",
                 who: ['Harmony Elendu'],
             },
@@ -86,46 +86,46 @@ const DAYS = [
             },
             {
                 time: '10:15 – 11:00',
-                format: 'Opening Keynote (30 + 15 Q&A)',
+                format: 'Opening Keynote',
                 session: 'The Silent Erosion: Engineering Quality in the Age of Speed',
                 who: ['Olubukola Omotola'],
             },
             {
                 time: '11:00 – 11:45',
-                format: 'Solo Talk (30 + 15 Q&A)',
+                format: 'Solo Talk',
                 session: 'What I Learned Training 1,000 African Testers',
                 who: ['Ibironke Yekinni'],
             },
             { time: '11:45 – 12:00', type: 'break', label: 'COMFORT BREAK' },
             {
                 time: '12:00 – 13:00',
-                format: 'Workshop (60 min)',
+                format: 'Workshop',
                 session: 'Exploratory Testing Masterclass — Thinking Like a Tester',
                 who: ['George Kibe Ndung'],
             },
             {
                 time: '13:00 – 13:45',
-                format: 'Panel (45 min)',
+                format: 'Panel',
                 session: 'From Tester to Quality Strategist: Career Paths in African QE',
-                who: ['- Séverin Doho', '- Mary Onuorah', '- Matachi Ononuju', '- Adedolapo Oguntayo-Williams'],
+                who: ['Séverin Doho', 'Mary Onuorah', 'Matachi Ononuju', 'Adedolapo Oguntayo-Williams'],
                 moderator: 'Mosunmola Olabello',
             },
             {
                 time: '13:45 – 14:15',
-                format: 'Solo Talk (30 min)',
+                format: 'Solo Talk',
                 session: "Security is a Quality Problem: A Tester's Guide to Owning the Pipeline",
                 who: ['Samuel Afolabi'],
             },
             { time: '14:15 – 14:30', type: 'break', label: 'COMFORT BREAK' },
             {
                 time: '14:30 – 15:00',
-                format: 'Fireside Chat (30 min)',
+                format: 'Fireside Chat',
                 session: "The Quality Leader's Playbook — With a senior industry leader",
                 who: ['Larry Goddard'],
             },
             {
                 time: '15:00 – 15:30',
-                format: 'Solo Talk (30 mins)',
+                format: 'Solo Talk',
                 session: 'The Product Quality Engineer\'s Toolkit: Building Systems That Score, Triage and Ship with Confidence',
                 who: ['Nikhil Bhandari'],
             },
@@ -152,66 +152,66 @@ const DAYS = [
             },
             {
                 time: '10:15 – 11:00',
-                format: 'Panel (45 min)',
+                format: 'Panel',
                 session: 'Quality Culture Across Industries — Fintech, HealthTech, Public Sector — 4 industry leaders',
                 who: ['Olubukola Omotola'],
             },
             {
                 time: '11:00 – 11:30',
-                format: 'Fireside Chat (30 min)',
+                format: 'Fireside Chat',
                 session: "The CTO's View on Quality — With a notable African CTO",
-                who: ['-', '-'],
-                moderator: '-',
+                who: ['', ''],
+                moderator: '',
             },
             { time: '11:30 – 11:45', type: 'break', label: 'COMFORT BREAK' },
             {
                 time: '11:45 – 13:00',
-                format: 'Hackathon Demo Day (75 min)',
+                format: 'Hackathon Demo Day',
                 session: 'Top 6 Finalist Pitches — 8 min pitch + 4 min Q&A each',
                 who: ['Finalist'],
             },
             {
                 time: '13:00 – 14:00',
-                format: 'Workshop (60 min)',
+                format: 'Workshop',
                 session: 'Quality Engineering Without the Enterprise Budget',
                 who: ['Dennis Nyabuti'],
             },
             { time: '14:00 – 15:00', type: 'break', label: 'LUNCH BREAK' },
             {
                 time: '15:00 – 15:45',
-                format: 'Keynote (30 + 15 Q&A)',
+                format: 'Keynote',
                 session: 'Quality Engineering Is Not Testing',
                 who: ['Michael Bolton'],
             },
             {
                 time: '15:45 – 16:30',
-                format: 'Panel (45 min)',
+                format: 'Panel',
                 session: 'Quality Leadership: From IC to Head of Engineering — 4 leaders',
-                who: ['-', '-', '-'],
-                moderator: '-',
+                who: ['', '', ''],
+                moderator: '',
             },
             {
                 time: '16:30 – 17:00',
-                format: 'Lightning Talks (3 × 10 min)',
+                format: 'Lightning Talks',
                 session: 'Voices of African Quality Leadership',
-                who: ['- Udeme Jalekun', '-', '-'],
+                who: ['Udeme Jalekun', '', ''],
             },
             { time: '17:00 – 17:15', type: 'break', label: 'COMFORT BREAK' },
             {
                 time: '17:15 – 18:15',
-                format: 'Awards Ceremony (60 min)',
+                format: 'Awards Ceremony',
                 session: 'Africa Quality Industry Awards + Hackathon Winner Announcement',
                 who: ['Ibironke Yekinni'],
             },
             {
                 time: '18:15 – 18:00',
-                format: '-',
-                session: '-',
-                who: ['-'],
+                format: '',
+                session: '',
+                who: [''],
             },
             {
                 time: '18:15 – 18:00',
-                format: 'Closing Keynote (30 + 15 send-off)',
+                format: 'Closing Keynote',
                 session: 'Building the African Quality Stack → APQEC 2027 announcement',
                 who: ['Ibironke Yekinni'],
             },
@@ -437,10 +437,6 @@ const AgendaPage = () => {
                 <div className="rounded-b-xl overflow-hidden shadow-lg" style={{ background: '#fff' }}>
                     <SessionTable day={currentDay} />
                 </div>
-
-                <p className="text-center text-xs mt-6" style={{ color: '#9ca3af' }}>
-                    All times are in West Africa Time (WAT) · Schedule subject to change
-                </p>
             </div>
         </main>
     );
