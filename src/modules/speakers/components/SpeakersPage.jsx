@@ -63,6 +63,7 @@ const KEYNOTE_SPEAKERS = [
         role: 'CONVENER',
         image: ibironkeImg,
         linkedin: 'https://www.linkedin.com/in/ibironke-yekinni/',
+        day: 1,
     },
     {
         id: 2,
@@ -70,6 +71,7 @@ const KEYNOTE_SPEAKERS = [
         role: 'Keynote Speaker',
         image: MichaelBolton,
         linkedin: 'https://www.linkedin.com/in/michael-bolton-08847/',
+        day: 3,
     },
     {
         id: 3,
@@ -77,6 +79,7 @@ const KEYNOTE_SPEAKERS = [
         role: 'Keynote Speaker',
         image: omotayo,
         linkedin: 'https://www.linkedin.com/in/olubukola-omotayo/',
+        day: 2,
     },
     {
         id: 4,
@@ -84,6 +87,7 @@ const KEYNOTE_SPEAKERS = [
         role: 'Keynote Speaker',
         image: jamesBach,
         linkedin: 'https://www.linkedin.com/in/james-bach-6188a811/',
+        day: 1,
     },
     {
         id: 5,
@@ -91,6 +95,7 @@ const KEYNOTE_SPEAKERS = [
         role: 'Keynote Speaker',
         image: sessionSpeaker23,
         linkedin: 'https://www.linkedin.com/in/larryg/',
+        day: 2,
     },
     {
         id: 6,
@@ -98,6 +103,7 @@ const KEYNOTE_SPEAKERS = [
         role: 'Keynote Speaker',
         image: sessionSpeaker22,
         linkedin: 'https://www.linkedin.com/in/mujibishola/',
+        day: 3,
     },
 ];
 
@@ -109,30 +115,30 @@ const TICKER_ITEMS = [
 
 /* ─── Session Speakers data ──────────────────────────────────────────────── */
 const SESSION_SPEAKERS = [
-    { id: 1, name: 'Adea Natchiah-Blay', role: 'Speaker', image: adea, flag: 'GH', linkedin: 'https://www.linkedin.com/in/adea-natchiah-blay/' },
-    { id: 2, name: 'Dennis Nyabuti', role: 'Speaker', image: sessionSpeaker2, flag: 'RW', linkedin: 'https://www.linkedin.com/in/dmnyabuti' },
-    { id: 3, name: 'Doho Séverin', role: 'Speaker', image: sessionSpeaker11, flag: 'CM', linkedin: 'https://www.linkedin.com/in/severin-doho/' },
-    { id: 4, name: 'Christianah Ajala', role: 'Speaker', image: sessionSpeaker3, flag: 'GB', linkedin: 'https://www.linkedin.com/in/ajala-christianah-eniola' },
-    { id: 5, name: 'Nikhil Bhandari', role: 'Speaker', image: sessionSpeaker4, flag: 'IN', linkedin: 'https://www.linkedin.com/in/nikhilbhandari/' },
-    { id: 6, name: 'Omowumi Oladele', role: 'Speaker', image: sessionSpeaker5, flag: 'NG', linkedin: 'https://www.linkedin.com/in/omowumi-oladele/' },
-    { id: 7, name: 'Samuel Afolabi', role: 'Speaker', image: sessionSpeaker6, flag: 'NG', linkedin: 'https://www.linkedin.com/in/lordsamafolabi/' },
-    { id: 8, name: 'Shashank Parmar', role: 'Speaker', image: sessionSpeaker7, flag: 'IN', linkedin: 'https://www.linkedin.com/in/dearshashank/' },
-    { id: 9, name: 'Mary Onuorah', role: 'Speaker', image: sessionSpeaker8, flag: 'NG', linkedin: 'https://www.linkedin.com/in/onuorahmary' },
-    { id: 10, name: 'Matachi Ononuju', role: 'Speaker', image: sessionSpeaker9, flag: 'NG', linkedin: 'https://www.linkedin.com/in/matachi-ononuju/' },
-    { id: 11, name: 'Sally Sedky', role: 'Speaker', image: sessionSpeaker10, flag: 'EG', linkedin: 'https://www.linkedin.com/in/sally-sedky-sdet-associate-manager/' },
-    { id: 12, name: 'Udeme Jalekun', role: 'Speaker', image: sessionSpeaker12, flag: 'GB', linkedin: 'http://www.linkedin.com/in/udeme-jalekun' },
-    { id: 13, name: 'Ikenna Okafor', role: 'Speaker', image: sessionSpeaker13, flag: 'GH', linkedin: 'https://linkedin.com/in/ikennasylvestreokafor' },
-    { id: 14, name: 'Adedolapo Oguntayo-Willian', role: 'Speaker', image: sessionSpeaker14, flag: 'NG', linkedin: 'https://linkedin.com/in/adedolapo-oguntayo-williams' },
-    { id: 15, name: 'Harmony Elendu', role: 'Speaker', image: sessionSpeaker15, flag: 'NG', linkedin: 'https://www.linkedin.com/in/harmonyelendu/' },
-    { id: 16, name: 'George Kibe', role: 'Speaker', image: sessionSpeaker16, flag: 'KE', linkedin: 'https://www.linkedin.com/in/georgekibe/' },
-    { id: 17, name: 'Oluwatobi Fagbohungbe', role: 'Speaker', image: sessionSpeaker17, flag: 'NG', linkedin: 'https://www.linkedin.com/in/tobyfagboh/' },
-    { id: 18, name: 'Harsha Issur Luckoo', role: 'Speaker', image: sessionSpeaker18, flag: 'MU', linkedin: 'https://www.linkedin.com/in/harsha-issur-luckoo-77b6b7b6' },
-    { id: 19, name: 'Chibuzor Obilom', role: 'Speaker', image: sessionSpeaker19, flag: 'NG', linkedin: 'https://www.linkedin.com/in/chibuzorobilom/' },
-    { id: 20, name: 'Iseoluwa Adelowo', role: 'Speaker', image: sessionSpeaker20, flag: 'NG', linkedin: 'https://www.linkedin.com/in/connectwithiseoluwaadelowo/' },
-    { id: 21, name: 'Mosunmola Olabello', role: 'Speaker', image: sessionSpeaker21, flag: 'NG', linkedin: 'https://www.linkedin.com/in/mosunmola-olabello/' },
-    { id: 22, name: 'Muji Ishola', role: 'Speaker', image: sessionSpeaker22, flag: 'NG', linkedin: 'https://www.linkedin.com/in/mujibishola/' },
-    { id: 23, name: 'Larry Goddard', role: 'Speaker', image: sessionSpeaker23, flag: 'GB', linkedin: 'https://www.linkedin.com/in/larryg/' },
-    { id: 24, name: 'Olamide Faleke', role: 'Speaker', image: sessionSpeaker24, flag: 'NG', linkedin: 'https://www.linkedin.com/in/olamide-faleke-978173125/' },
+    { id: 1, name: 'Adea Natchiah-Blay', role: 'Speaker', image: adea, flag: 'GH', linkedin: 'https://www.linkedin.com/in/adea-natchiah-blay/', day: 3 },
+    { id: 2, name: 'Dennis Nyabuti', role: 'Speaker', image: sessionSpeaker2, flag: 'RW', linkedin: 'https://www.linkedin.com/in/dmnyabuti', day: 3 },
+    { id: 3, name: 'Doho Séverin', role: 'Speaker', image: sessionSpeaker11, flag: 'CM', linkedin: 'https://www.linkedin.com/in/severin-doho/', day: 2 },
+    { id: 4, name: 'Christianah Ajala', role: 'Speaker', image: sessionSpeaker3, flag: 'GB', linkedin: 'https://www.linkedin.com/in/ajala-christianah-eniola', day: 1 },
+    { id: 5, name: 'Nikhil Bhandari', role: 'Speaker', image: sessionSpeaker4, flag: 'IN', linkedin: 'https://www.linkedin.com/in/nikhilbhandari/', day: 1 },
+    { id: 6, name: 'Omowumi Oladele', role: 'Speaker', image: sessionSpeaker5, flag: 'NG', linkedin: 'https://www.linkedin.com/in/omowumi-oladele/', day: 1 },
+    { id: 7, name: 'Samuel Afolabi', role: 'Speaker', image: sessionSpeaker6, flag: 'NG', linkedin: 'https://www.linkedin.com/in/lordsamafolabi/', day: 2 },
+    { id: 8, name: 'Shashank Parmar', role: 'Speaker', image: sessionSpeaker7, flag: 'IN', linkedin: 'https://www.linkedin.com/in/dearshashank/', day: 1 },
+    { id: 9, name: 'Mary Onuorah', role: 'Speaker', image: sessionSpeaker8, flag: 'NG', linkedin: 'https://www.linkedin.com/in/onuorahmary', day: 2 },
+    { id: 10, name: 'Matachi Ononuju', role: 'Speaker', image: sessionSpeaker9, flag: 'NG', linkedin: 'https://www.linkedin.com/in/matachi-ononuju/', day: 2 },
+    { id: 11, name: 'Sally Sedky', role: 'Speaker', image: sessionSpeaker10, flag: 'EG', linkedin: 'https://www.linkedin.com/in/sally-sedky-sdet-associate-manager/', day: 1 },
+    { id: 12, name: 'Udeme Jalekun', role: 'Speaker', image: sessionSpeaker12, flag: 'GB', linkedin: 'http://www.linkedin.com/in/udeme-jalekun', day: 3 },
+    { id: 13, name: 'Ikenna Okafor', role: 'Speaker', image: sessionSpeaker13, flag: 'GH', linkedin: 'https://linkedin.com/in/ikennasylvestreokafor', day: 3 },
+    { id: 14, name: 'Adedolapo Oguntayo-Willian', role: 'Speaker', image: sessionSpeaker14, flag: 'NG', linkedin: 'https://linkedin.com/in/adedolapo-oguntayo-williams', day: 2 },
+    { id: 15, name: 'Harmony Elendu', role: 'Speaker', image: sessionSpeaker15, flag: 'NG', linkedin: 'https://www.linkedin.com/in/harmonyelendu/', day: 1 },
+    { id: 16, name: 'George Kibe', role: 'Speaker', image: sessionSpeaker16, flag: 'KE', linkedin: 'https://www.linkedin.com/in/georgekibe/', day: 2 },
+    { id: 17, name: 'Oluwatobi Fagbohungbe', role: 'Speaker', image: sessionSpeaker17, flag: 'NG', linkedin: 'https://www.linkedin.com/in/tobyfagboh/', day: 3 },
+    { id: 18, name: 'Harsha Issur Luckoo', role: 'Speaker', image: sessionSpeaker18, flag: 'MU', linkedin: 'https://www.linkedin.com/in/harsha-issur-luckoo-77b6b7b6', day: 1 },
+    { id: 19, name: 'Chibuzor Obilom', role: 'Speaker', image: sessionSpeaker19, flag: 'NG', linkedin: 'https://www.linkedin.com/in/chibuzorobilom/', day: 3 },
+    { id: 20, name: 'Iseoluwa Adelowo', role: 'Speaker', image: sessionSpeaker20, flag: 'NG', linkedin: 'https://www.linkedin.com/in/connectwithiseoluwaadelowo/', day: 1 },
+    { id: 21, name: 'Mosunmola Olabello', role: 'Speaker', image: sessionSpeaker21, flag: 'NG', linkedin: 'https://www.linkedin.com/in/mosunmola-olabello/', day: 2 },
+    { id: 22, name: 'Muji Ishola', role: 'Speaker', image: sessionSpeaker22, flag: 'NG', linkedin: 'https://www.linkedin.com/in/mujibishola/', day: 3 },
+    { id: 23, name: 'Larry Goddard', role: 'Speaker', image: sessionSpeaker23, flag: 'GB', linkedin: 'https://www.linkedin.com/in/larryg/', day: 2 },
+    { id: 24, name: 'Olamide Faleke', role: 'Speaker', image: sessionSpeaker24, flag: 'NG', linkedin: 'https://www.linkedin.com/in/olamide-faleke-978173125/', day: 1 },
 ];
 
 /* ─── Keynote Speaker Card ────────────────────────────────────────────────── */
@@ -348,15 +354,13 @@ const SpeakersPage = () => {
                     <div
                         className="w-full max-w-4xl flex flex-col md:flex-row overflow-hidden relative shadow-2xl"
                         style={{
-                            backgroundColor: ['#00DEEE', '#e6b63b', '#296ab9'][
-                                (selectedSpeaker.id || 0) % 3
-                            ]
+                            backgroundColor: selectedSpeaker.day === 1 ? '#296ab9' : selectedSpeaker.day === 2 ? '#E5F1FF' : '#e6b63b'
                         }}
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Close Button */}
                         <button
-                            className="absolute top-4 right-4 text-white z-10 hover:opacity-75 transition-opacity"
+                            className={`absolute top-4 right-4 z-10 hover:opacity-75 transition-opacity ${selectedSpeaker.day === 2 ? 'text-[#0F2745]' : 'text-white'}`}
                             onClick={() => setSelectedSpeaker(null)}
                         >
                             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -371,21 +375,21 @@ const SpeakersPage = () => {
 
                         {/* Right Content */}
                         <div className="w-full md:w-[58%] p-8 md:p-12 flex flex-col justify-center">
-                            <h2 className="text-3xl font-black text-white uppercase mb-2 tracking-wide">
+                            <h2 className={`text-3xl font-black uppercase mb-2 tracking-wide ${selectedSpeaker.day === 2 ? 'text-[#0F2745]' : 'text-white'}`}>
                                 {selectedSpeaker.name}
                             </h2>
-                            <h3 className="text-white font-bold uppercase tracking-wider mb-6 text-sm">
+                            <h3 className={`font-bold uppercase tracking-wider mb-6 text-sm ${selectedSpeaker.day === 2 ? 'text-[#0F2745]' : 'text-white'}`}>
                                 {getCountryName(selectedSpeaker.flag)} | {selectedSpeaker.role}
                             </h3>
 
-                            <p className="text-white/95 leading-relaxed mb-8 font-medium">
+                            <p className={`leading-relaxed mb-8 font-medium ${selectedSpeaker.day === 2 ? 'text-[#0F2745]/95' : 'text-white/95'}`}>
                                 {selectedSpeaker.bio || `Join ${selectedSpeaker.name} at APQEC 2026. Bringing extensive experience as ${selectedSpeaker.role}, they will be sharing deep insights into product quality engineering, innovative testing frameworks, and scalable strategies to elevate quality practices across the continent.`}
                             </p>
 
-                            <div className="flex flex-wrap items-center gap-5 text-white font-bold text-sm">
-                                <a href={selectedSpeaker.linkedin || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">LinkedIn</a>
-                                <a href={selectedSpeaker.x || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">Twitter</a>
-                                <span className="italic sm:ml-auto font-medium text-white/90">The Future of Product Quality Engineering</span>
+                            <div className={`flex flex-wrap items-center gap-5 font-bold text-sm ${selectedSpeaker.day === 2 ? 'text-[#0F2745]' : 'text-white'}`}>
+                                <a href={selectedSpeaker.linkedin || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer"> <LinkedInIcon /> </a>
+                                {/* <a href={selectedSpeaker.x || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">Twitter</a> */}
+                                <span className={`italic sm:ml-auto font-medium ${selectedSpeaker.day === 2 ? 'text-[#0F2745]/90' : 'text-white/90'}`}>The Future of Product Quality Engineering</span>
                             </div>
                         </div>
                     </div>

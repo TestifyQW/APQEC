@@ -38,6 +38,7 @@ const SPEAKERS = [
         role: 'Convener',
         image: ibironkeImg,
         ig: '#', x: '#', linkedin: 'https://www.linkedin.com/in/ibironke-yekinni/',
+        day: 1,
     },
     {
         id: 2,
@@ -45,6 +46,7 @@ const SPEAKERS = [
         role: 'Keynote Speaker',
         image: MichaelBolton,
         linkedin: 'https://www.linkedin.com/in/michael-bolton-08847/',
+        day: 3,
     },
     {
         id: 3,
@@ -52,6 +54,7 @@ const SPEAKERS = [
         role: 'Keynote Speaker',
         image: omotayo,
         linkedin: 'https://www.linkedin.com/in/olubukola-omotayo/',
+        day: 2,
     },
     {
         id: 4,
@@ -59,6 +62,7 @@ const SPEAKERS = [
         role: 'Keynote Speaker',
         image: jamesBach,
         linkedin: 'https://www.linkedin.com/in/james-bach-6188a811/',
+        day: 1,
     },
     {
         id: 5,
@@ -66,6 +70,7 @@ const SPEAKERS = [
         role: 'Speaker',
         image: sessionSpeaker23,
         linkedin: 'https://www.linkedin.com/in/larryg/',
+        day: 2,
     },
     {
         id:6,
@@ -73,10 +78,11 @@ const SPEAKERS = [
         role: 'Speaker',
         image: sessionSpeaker22,
         linkedin: 'https://www.linkedin.com/in/mujibishola/',
+        day: 3,
     }
     // {
     //     id: 6,
-    //     name: 'Emmaunel Paul',HopMHHPfSV2kWQLghKt6xR1oWbPRLA2UyxnKGoPpump
+    //     name: 'Emmaunel Paul',
     //     role: 'QA Engineer',
     //     image: emmaPaul2,
     //     ig: '#', x: '#', linkedin: '#',
@@ -216,15 +222,13 @@ const SpeakersSection = () => {
                     <div
                         className="w-full max-w-4xl flex flex-col md:flex-row overflow-hidden relative shadow-2xl"
                         style={{
-                            backgroundColor: ['#00DEEE', '#e6b63b', '#296ab9'][
-                                SPEAKERS.findIndex(s => s.id === selectedSpeaker.id) % 3
-                            ]
+                            backgroundColor: selectedSpeaker.day === 1 ? '#296ab9' : selectedSpeaker.day === 2 ? '#E5F1FF' : '#e6b63b'
                         }}
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Close Button */}
                         <button
-                            className="absolute top-4 right-4 text-white z-10 hover:opacity-75 transition-opacity"
+                            className={`absolute top-4 right-4 z-10 hover:opacity-75 transition-opacity ${selectedSpeaker.day === 2 ? 'text-[#0F2745]' : 'text-white'}`}
                             onClick={() => setSelectedSpeaker(null)}
                         >
                             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -243,21 +247,21 @@ const SpeakersSection = () => {
 
                         {/* Right Content */}
                         <div className="w-full md:w-[58%] p-8 md:p-12 flex flex-col justify-center">
-                            <h2 className="text-3xl font-black text-white uppercase mb-2 tracking-wide">
+                            <h2 className={`text-3xl font-black uppercase mb-2 tracking-wide ${selectedSpeaker.day === 2 ? 'text-[#0F2745]' : 'text-white'}`}>
                                 {selectedSpeaker.name}
                             </h2>
-                            <h3 className="text-white font-bold uppercase tracking-wider mb-6 text-sm">
+                            <h3 className={`font-bold uppercase tracking-wider mb-6 text-sm ${selectedSpeaker.day === 2 ? 'text-[#0F2745]' : 'text-white'}`}>
                                 {selectedSpeaker.role}
                             </h3>
 
-                            <p className="text-white/95 leading-relaxed mb-8 font-medium">
+                            <p className={`leading-relaxed mb-8 font-medium ${selectedSpeaker.day === 2 ? 'text-[#0F2745]/95' : 'text-white/95'}`}>
                                 {selectedSpeaker.bio || `Join ${selectedSpeaker.name} at APQEC 2026. Bringing extensive experience as ${selectedSpeaker.role}, they will be sharing deep insights into product quality engineering, innovative testing frameworks, and scalable strategies to elevate quality practices across the continent.`}
                             </p>
 
-                            <div className="flex flex-wrap items-center gap-5 text-white font-bold text-sm">
-                                <a href={selectedSpeaker.linkedin || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">LinkedIn</a>
-                                <a href={selectedSpeaker.x || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer">Twitter</a>
-                                <span className="italic sm:ml-auto font-medium text-white/90">The Future of Product Quality Engineering</span>
+                            <div className={`flex flex-wrap items-center gap-5 font-bold text-sm ${selectedSpeaker.day === 2 ? 'text-[#0F2745]' : 'text-white'}`}>
+                                <a href={selectedSpeaker.linkedin || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer"> <LinkedInIcon /> </a>
+                                {/* <a href={selectedSpeaker.x || '#'} className="hover:opacity-80 transition-opacity" target="_blank" rel="noreferrer"> <TwitterIcon /> </a> */}
+                                <span className={`italic sm:ml-auto font-medium ${selectedSpeaker.day === 2 ? 'text-[#0F2745]/90' : 'text-white/90'}`}>The Future of Product Quality Engineering</span>
                             </div>
                         </div>
                     </div>
