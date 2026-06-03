@@ -128,7 +128,7 @@ const SESSION_SPEAKERS = [
     { id: 11, name: 'Sally Sedky', role: 'Speaker', image: sessionSpeaker10, flag: 'EG', linkedin: 'https://www.linkedin.com/in/sally-sedky-sdet-associate-manager/', day: 1 },
     { id: 12, name: 'Udeme Jalekun', role: 'Speaker', image: sessionSpeaker12, flag: 'GB', linkedin: 'http://www.linkedin.com/in/udeme-jalekun', day: 3 },
     { id: 13, name: 'Ikenna Okafor', role: 'Speaker', image: sessionSpeaker13, flag: 'GH', linkedin: 'https://linkedin.com/in/ikennasylvestreokafor', day: 3 },
-    { id: 14, name: 'Adedolapo Oguntayo-Williams', role: 'Speaker', image: sessionSpeaker14, flag: 'NG', linkedin: 'https://linkedin.com/in/adedolapo-oguntayo-williams', day: 2 },
+    { id: 14, name: 'Adedolapo Oguntayo-Williams', role: 'Speaker', image: sessionSpeaker14, flag: 'NG', linkedin: 'https://www.linkedin.com/in/adedolapo-oguntayo/', day: 2 },
     { id: 15, name: 'Harmony Elendu', role: 'Speaker', image: sessionSpeaker15, flag: 'NG', linkedin: 'https://www.linkedin.com/in/harmonyelendu/', day: 1 },
     { id: 16, name: 'George Kibe', role: 'Speaker', image: sessionSpeaker16, flag: 'KE', linkedin: 'https://www.linkedin.com/in/georgekibe/', day: 2 },
     { id: 17, name: 'Oluwatobi Fagbohungbe', role: 'Speaker', image: sessionSpeaker17, flag: 'NG', linkedin: 'https://www.linkedin.com/in/tobyfagboh/', day: 3 },
