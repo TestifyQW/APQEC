@@ -44,6 +44,7 @@ const rowTemplate = [
     { name: 'Iseoluwa Adelowo', role: 'Email Marketing Manager', category: 'Content & Community Manager', photo: iseoluwaImg },
     { name: 'Thandiwe', role: 'Speakers Relation & Partnership Manager', category: 'Content & Community Manager', photo: thandiweImg },
     { name: 'Peter Jaaziah', role: 'Content Creator', category: 'Content & Community Manager', photo: peter },
+    { name: 'Favour Amubode', role: 'Spoken Word Artist', category: 'Content & Community Manager', photo: favourImg },
 
     // { name: 'Dammy', role: 'Tech Team', category: 'Tech & Events Lead', photo: joshuaImg },
     { name: 'Ojo Moyosorejesu', role: 'Website Developer', category: 'Tech & Events Lead', photo: moyoImg },
