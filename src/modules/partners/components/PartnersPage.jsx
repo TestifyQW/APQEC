@@ -3,7 +3,10 @@ import { MdArrowOutward } from 'react-icons/md';
 import { FaArrowRight, FaCheck } from 'react-icons/fa6';
 import partnerBadge from '../../../assets/partnerBadge.svg';
 
-import ourPartners from '../../../assets/ourPartners.png';
+// import ourPartners from '../../../assets/ourPartners.png';
+import mkopa from '../../../assets/mkopaLogo.png';
+import interswitch from '../../../assets/interswitchLogo.png';
+import flutterwave from '../../../assets/flutterwaveLogo.png';
 import AfricanMap from '../../../assets/african-map.png';
 
 /* ─── Ticker ─────────────────────────────────────────────────────────────── */
@@ -332,10 +335,13 @@ const PartnersPage = () => {
             <section className="w-full bg-white py-16" id="our-partners">
                 <div className="max-w-7xl mx-auto px-6 md:px-12">
                     <h2 className="text-center text-[#0F2745] text-4xl font-bold uppercase mb-12">
-                        Our Partners
+                        Our Previous Partners
                     </h2>
                     <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
-                        <img src={ourPartners} alt="Our Partners" className="w-full h-auto" />
+                        {/* <img src={ourPartners} alt="Our Partners" className="w-full h-auto" /> */}
+                        <img src={mkopa} alt="Mkopa" className='w-25' />
+                        <img src={interswitch} alt="Interswitch" className='w-25' />
+                        <img src={flutterwave} alt="Flutterwave" className='w-25' />
                     </div>
                 </div>
             </section>

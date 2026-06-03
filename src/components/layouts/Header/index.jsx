@@ -12,6 +12,7 @@ const NAV_LINKS = [
     { label: 'Partners', href: '/partners' },
     { label: 'Company', href: '/#company' },
     { label: 'Our Crew', href: '/ourcrew' },
+    { label: 'Resources', href: '/resources' },
 ];
 
 const Header = () => {

@@ -16,6 +16,10 @@ import tonyImg from '../../../assets/tonyCrew.png';
 import ateniolaImg from '../../../assets/ateniImg.png';
 import iseoluwaImg from '../../../assets/iseImg2.png';
 import thandiweImg from '../../../assets/thandiweImg.jpg';
+import peter from '../../../assets/peterJaaziah.png';
+import constance from '../../../assets/constance.jpg';
+import sessionSpeaker24 from '../../../assets/olamideImg.jpg';
+import favourImg from '../../../assets/favourImg.jpg';
 
 /* ─── Filter categories ─────────────────────────────────────────────────── */
 const CATEGORIES = [
@@ -29,8 +33,9 @@ const CATEGORIES = [
 /* ─── Crew data ─────────────────────────────────────────────────────────── */
 const rowTemplate = [
     { name: 'Ibironke Yekinni', role: 'Convener', category: 'Program Director', photo: ibironkeImg },
-
     { name: 'Ayuba Johnson', role: 'Program Manager', category: 'Program Director', photo: ayubaImg },
+    { name: 'Constance Irimefe', role: 'Director', category: 'Program Director', photo: constance },
+    { name: 'Olamide Faleke', role: 'MC', category: 'Program Director', photo: sessionSpeaker24 },
 
     { name: 'Mosunmola Olabello', role: 'Community Director', category: 'Content & Community Manager', photo: mosunmolaImg },
     { name: 'Tony Dike', role: 'Social Media Manager', category: 'Content & Community Manager', photo: tonyImg },
@@ -38,6 +43,7 @@ const rowTemplate = [
     { name: 'Ateniola Taye', role: 'Virtual Room Manager', category: 'Content & Community Manager', photo: ateniolaImg },
     { name: 'Iseoluwa Adelowo', role: 'Email Marketing Manager', category: 'Content & Community Manager', photo: iseoluwaImg },
     { name: 'Thandiwe', role: 'Speakers Relation & Partnership Manager', category: 'Content & Community Manager', photo: thandiweImg },
+    { name: 'Peter Jaaziah', role: 'Content Creator', category: 'Content & Community Manager', photo: peter },
 
     // { name: 'Dammy', role: 'Tech Team', category: 'Tech & Events Lead', photo: joshuaImg },
     { name: 'Ojo Moyosorejesu', role: 'Website Developer', category: 'Tech & Events Lead', photo: moyoImg },

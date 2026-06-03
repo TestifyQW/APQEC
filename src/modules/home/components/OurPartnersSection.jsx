@@ -1,7 +1,10 @@
 import React from 'react';
 import { MdArrowOutward } from 'react-icons/md';
 
-import ourPartners from '../../../assets/ourPartners.png';
+// import ourPartners from '../../../assets/ourPartners.png';
+import mkopa from '../../../assets/mkopaLogo.png';
+import interswitch from '../../../assets/interswitchLogo.png';
+import flutterwave from '../../../assets/flutterwaveLogo.png';
 
 
 
@@ -16,7 +19,10 @@ const OurPartnersSection = () => (
 
             {/* Logo row */}
             <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
-                <img src={ourPartners} alt="Our Partners" className="w-full h-auto" />
+                {/* <img src={ourPartners} alt="Our Partners" className="w-full h-auto" /> */}
+                <img src={mkopa} alt="Mkopa" className='w-25' />
+                <img src={interswitch} alt="Interswitch" className='w-25' />
+                <img src={flutterwave} alt="Flutterwave" className='w-25' />
             </div>
             <div className='flex justify-center mt-8'>
                 <a
