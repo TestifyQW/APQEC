@@ -213,7 +213,7 @@ const DAYS = [
                 format: 'Panel Discussion',
                 session: 'Quality Culture Across Industries: Fintech, HealthTech, & Public Sector',
                 // description: 'How diverse sectors scale quality engineering frameworks under pressure.',
-                who: ['Ikenna Okafor, Fagbohungbe Tobi, Adea Natchiah-Blay, & Matachi Ononuju'],
+                who: ['Ikenna Okafor, Fagbohungbe Tobi, Adea Natchiah-Blay, & Constance Irimefe'],
             },
             {
                 time: '11:40 am – 12:10 pm',
