@@ -105,56 +105,56 @@ const HeroSection = () => {
             <div className="relative z-10 flex flex-col items-center justify-center -mt-20 flex-1 text-center px-4 md:px-8 py-20 pointer-events-none">
                 {/* Headline */}
                 <div className='flex flex-col pointer-events-auto'>
-                    <Countdown
+                    {/* <Countdown
                         date={new Date('2026-06-04T00:00:00')}
-                        renderer={({ days, hours, minutes, seconds }) => (
-                            <div
-                                className="flex items-center w-fit mx-auto gap-4 sm:gap-6 md:gap-10 px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-2xl"
-                                style={{
-                                    background: 'rgba(255,255,255,0.08)',
-                                    backdropFilter: 'blur(14px)',
-                                    WebkitBackdropFilter: 'blur(14px)',
-                                    border: '1px solid rgba(255,255,255,0.18)',
-                                    boxShadow: '0 4px 32px 0 rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.12)',
-                                }}
-                            >
-                                {/* Days */}
-                                <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
-                                    <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(days).padStart(2, '0')}</span>
-                                    <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Days</span>
-                                </div>
-                                {/* Separator */}
-                                <div className="flex flex-col gap-1.5 pb-3 sm:pb-4">
-                                    <span className="block w-1 h-1 rounded-full bg-white/60"></span>
-                                    <span className="block w-1 h-1 rounded-full bg-white/60"></span>
-                                </div>
-                                {/* Hours */}
-                                <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
-                                    <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(hours).padStart(2, '0')}</span>
-                                    <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Hours</span>
-                                </div>
-                                {/* Separator */}
-                                <div className="flex flex-col gap-1.5 pb-3 sm:pb-4">
-                                    <span className="block w-1 h-1 rounded-full bg-white/60"></span>
-                                    <span className="block w-1 h-1 rounded-full bg-white/60"></span>
-                                </div>
-                                {/* Minutes */}
-                                <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
-                                    <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(minutes).padStart(2, '0')}</span>
-                                    <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Minutes</span>
-                                </div>
-                                {/* Separator */}
-                                <div className="flex flex-col gap-1.5 pb-3 sm:pb-4">
-                                    <span className="block w-1 h-1 rounded-full bg-white/60"></span>
-                                    <span className="block w-1 h-1 rounded-full bg-white/60"></span>
-                                </div>
-                                {/* Seconds */}
-                                <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
-                                    <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(seconds).padStart(2, '0')}</span>
-                                    <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Seconds</span>
-                                </div>
-                            </div>
-                        )}
+                        renderer={({ days, hours, minutes, seconds }) => ( */}
+                            // <div
+                            //     className="flex items-center w-fit mx-auto gap-4 sm:gap-6 md:gap-10 px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-2xl"
+                            //     style={{
+                            //         background: 'rgba(255,255,255,0.08)',
+                            //         backdropFilter: 'blur(14px)',
+                            //         WebkitBackdropFilter: 'blur(14px)',
+                            //         border: '1px solid rgba(255,255,255,0.18)',
+                            //         boxShadow: '0 4px 32px 0 rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.12)',
+                            //     }}
+                            // >
+                            //     {/* Days */}
+                            //     <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
+                            //         <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(days).padStart(2, '0')}</span>
+                            //         <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Days</span>
+                            //     </div>
+                            //     {/* Separator */}
+                            //     <div className="flex flex-col gap-1.5 pb-3 sm:pb-4">
+                            //         <span className="block w-1 h-1 rounded-full bg-white/60"></span>
+                            //         <span className="block w-1 h-1 rounded-full bg-white/60"></span>
+                            //     </div>
+                            //     {/* Hours */}
+                            //     <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
+                            //         <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(hours).padStart(2, '0')}</span>
+                            //         <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Hours</span>
+                            //     </div>
+                            //     {/* Separator */}
+                            //     <div className="flex flex-col gap-1.5 pb-3 sm:pb-4">
+                            //         <span className="block w-1 h-1 rounded-full bg-white/60"></span>
+                            //         <span className="block w-1 h-1 rounded-full bg-white/60"></span>
+                            //     </div>
+                            //     {/* Minutes */}
+                            //     <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
+                            //         <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(minutes).padStart(2, '0')}</span>
+                            //         <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Minutes</span>
+                            //     </div>
+                            //     {/* Separator */}
+                            //     <div className="flex flex-col gap-1.5 pb-3 sm:pb-4">
+                            //         <span className="block w-1 h-1 rounded-full bg-white/60"></span>
+                            //         <span className="block w-1 h-1 rounded-full bg-white/60"></span>
+                            //     </div>
+                            //     {/* Seconds */}
+                            //     <div className="flex flex-col items-center min-w-[36px] sm:min-w-[44px] md:min-w-[52px]">
+                            //         <span className="text-2xl sm:text-3xl md:text-5xl font-black text-[#00deee] leading-none tracking-tight">{String(seconds).padStart(2, '0')}</span>
+                            //         <span className="text-[8px] sm:text-[10px] uppercase tracking-widest text-white/70 mt-1 font-semibold">Seconds</span>
+                            //     </div>
+                            // </div>
+                        // )}
                     />
                     <h1 className="text-3xl mt-3 sm:text-4xl md:text-3xl xl:text-6xl font-black text-white uppercase leading-[1.05]">
                         Master the Future of
