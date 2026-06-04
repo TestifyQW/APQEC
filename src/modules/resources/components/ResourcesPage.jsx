@@ -94,9 +94,7 @@ const ResourceCard = ({ title, author, type, image, link, description }) => (
             <a
                 href={link}
                 target="_blank"
-                rel="noopener noreferrer"
                 className="inline-block w-full text-center bg-[#0F2745] text-white text-sm font-bold uppercase tracking-widest py-3 rounded hover:bg-[#124da0] transition-colors"
-                onClick={e => e.preventDefault()}
             >
                 {type === 'Book' ? 'Buy Now' : 'Visit Website'}
             </a>
