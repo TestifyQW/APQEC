@@ -177,7 +177,7 @@ const DAYS = [
                 format: 'Closing Keynote',
                 session: 'The Silent Erosion: Engineering Quality in the Age of Speed',
                 // description: 'Protecting product integrity while hitting rapid deployment targets (30 mins talk + 15 mins Q&A).',
-                who: ['Olubukola Omotola'],
+                who: ['Olubukola Omotayo'],
             },
             {
                 time: '16:05 pm',

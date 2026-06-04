@@ -6,6 +6,8 @@ import kstgenie from '../../../assets/kstgenie.png';
 import abcTesting from '../../../assets/abcTesting.jpg';
 import takingTests from '../../../assets/takingTests.jpg';
 import webAutomation from '../../../assets/webAutomation.jpg';
+import cycluno from '../../../assets/cyclunoLogo.png';
+import ceqs from '../../../assets/ceqs.png';
 
 const RESOURCES_DATA = [
     {
@@ -53,6 +55,24 @@ const RESOURCES_DATA = [
         link: 'https://ktestgenie.com/',
         description: 'Upload BRDs, user stories, PDFs, Word documents, Confluence exports, or Jira tickets. Klassi Test Genie automatically extracts business requirements, generates clear acceptance criteria, and creates high-quality test cases and Gherkin scenarios ready for your QA workflow.'
     },
+    {
+        id: 6,
+        title: 'Cycluno',
+        author: '',
+        type: 'Product',
+        image: cycluno,
+        link: 'https://cycluno.com/',
+        description: 'Automatically generate test cases, execute text, and provide actionable insight to cut testing time by 90% while improving test coverage using an AI-driven system that helps to drive design, execute and report testing, and provide actionable insight.'
+    },
+    {
+        id: 7,
+        title: 'Customer Experience Quality Score (CEQS) System',
+        author: '',
+        type: 'Product',
+        image: ceqs,
+        link: 'https://www.drainsignal.com/',
+        description: 'Real-time quality scoring for payment flows. Detect issues before they impact revenue, trace customer journeys, and drive quality improvements across every channel.'
+    },
 ];
 
 const ResourceCard = ({ title, author, type, image, link, description }) => (
@@ -61,7 +81,7 @@ const ResourceCard = ({ title, author, type, image, link, description }) => (
             <img
                 src={image}
                 alt={title}
-                className="w-full h-full object-contain object-top transition-transform duration-500 group-hover:scale-105"
+                className={`w-full h-full ${image === ceqs ? 'object-center' : 'object-contain'} transition-transform duration-500 group-hover:scale-105`}
             />
             <div className="absolute top-2 left-2 bg-[#00DEEE] text-[#0F2745] text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
                 {type}
