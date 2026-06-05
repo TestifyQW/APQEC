@@ -205,8 +205,10 @@ const DAYS = [
             {
                 time: '10:20 am – 10:45 am',
                 format: 'Opening Keynote',
-                session: 'Product Demo 1: DrainSignal | Product Demo 2: Test Genie',
-                who: ['Onuorah Mary | Larry Goddard'],
+                session: 'Product Demo 1: DrainSignal',
+                session2: 'Product Demo 2: Test Genie',
+                who: ['Onuorah Mary'],
+                who2: ['Larry Goddard'],
             },
             {
                 time: '10:50 am – 11:35 am',
@@ -390,6 +392,7 @@ const SessionTable = ({ day }) => (
                                 style={{ color: '#374151' }}
                             >
                                 <div className="font-semibold text-gray-900">{s.session}</div>
+                                <div className="font-semibold text-gray-900">{s.session2}</div>
                                 {s.description && (
                                     <div className="mt-1" style={{ color: '#6B7280', lineHeight: '1.4', whiteSpace: 'pre-line' }}>
                                         {s.description}
@@ -403,6 +406,9 @@ const SessionTable = ({ day }) => (
                                 style={{ color: '#374151' }}
                             >
                                 {s.who && s.who.map((w, wi) => (
+                                    <div key={wi}>{w}</div>
+                                ))}
+                                {s.who2 && s.who2.map((w, wi) => (
                                     <div key={wi}>{w}</div>
                                 ))}
                                 {s.moderator && (
