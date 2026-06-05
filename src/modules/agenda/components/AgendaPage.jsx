@@ -120,9 +120,9 @@ const DAYS = [
             {
                 time: '10:50 am – 11:50 am',
                 format: 'Deep-Dive Workshop',
-                session: 'Exploratory Testing Masterclass — Thinking Like a Tester',
+                session: ' Testing Smarter, Not Harder: AI Tactics for High-Scale Systems',
                 // description: 'An immersive, 60-minute practical masterclass.',
-                who: ['George Kibe Ndung'],
+                who: ['Patrick Azu'],
             },
             {
                 time: '11:55 am – 12:10 pm',

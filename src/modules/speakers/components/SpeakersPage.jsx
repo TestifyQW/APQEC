@@ -35,6 +35,7 @@ import sessionSpeaker19 from '../../../assets/chibuzorImg.jpg';
 import sessionSpeaker22 from '../../../assets/mujibImg.jpg';
 import sessionSpeaker23 from '../../../assets/larryImg.jpg';
 import sessionSpeaker24 from '../../../assets/olamideImg.jpg';
+import patrickImg from '../../../assets/patrickImg.jpg';
 
 /* ─── Social icons ────────────────────────────────────────────────────────── */
 // const IGIcon = () => (
@@ -132,13 +133,14 @@ const SESSION_SPEAKERS = [
     { id: 15, name: 'Harmony Elendu', role: 'Speaker', image: sessionSpeaker15, flag: 'NG', linkedin: 'https://www.linkedin.com/in/harmonyelendu/', day: 1, bio: "A Technical Product and Project Manager at Dantown, Harmony oversees a product ecosystem serving 150,000+ users. He is passionate about open-source and serves as Chair of the Technical Writers Focus Group at CHAOSS." },
     { id: 16, name: 'George Kibe', role: 'Speaker', image: sessionSpeaker16, flag: 'KE', linkedin: 'https://www.linkedin.com/in/georgekibe/', day: 2, bio: "George is an ISTQB® Certified Software QA Engineer specializing in APIs, microservices, and Agile delivery. He actively supports aspiring QA professionals and explores the transformative role of AI in modern testing." },
     { id: 17, name: 'Oluwatobi Fagbohungbe', role: 'Speaker', image: sessionSpeaker17, flag: 'NG', linkedin: 'https://www.linkedin.com/in/tobyfagboh/', day: 3, bio: "A QA Lead and Senior QA Engineer with over 11 years of experience across multiple industries. They focus on building AI-augmented QA workflows to improve speed, coverage, and decision-making." },
-    { id: 18, name: 'Harsha Issur Luckoo', role: 'Speaker', image: sessionSpeaker18, flag: 'MU', linkedin: 'https://www.linkedin.com/in/harsha-issur-luckoo-77b6b7b6', day: 1, bio: "Harsha is a Quality Engineering specialist exploring how AI-powered tools and Agentic AI can enhance testing and productivity. She is committed to fostering collaboration and driving a culture of learning." },
+    // { id: 18, name: 'Harsha Issur Luckoo', role: 'Speaker', image: sessionSpeaker18, flag: 'MU', linkedin: 'https://www.linkedin.com/in/harsha-issur-luckoo-77b6b7b6', day: 1, bio: "Harsha is a Quality Engineering specialist exploring how AI-powered tools and Agentic AI can enhance testing and productivity. She is committed to fostering collaboration and driving a culture of learning." },
     { id: 19, name: 'Chibuzor Obilom', role: 'Speaker', image: sessionSpeaker19, flag: 'NG', linkedin: 'https://www.linkedin.com/in/chibuzorobilom/', day: 3, bio: "Chibuzor is a creative technologist with 14+ years in quality engineering across fintech, edtech, and enterprise solutions. He helps companies achieve operational excellence and global standards." },
     { id: 20, name: 'Iseoluwa Adelowo', role: 'Speaker', image: sessionSpeaker20, flag: 'NG', linkedin: 'https://www.linkedin.com/in/connectwithiseoluwaadelowo/', day: 1 },
     { id: 21, name: 'Mosunmola Olabello', role: 'Speaker', image: sessionSpeaker21, flag: 'NG', linkedin: 'https://www.linkedin.com/in/mosunmola-olabello/', day: 2 },
     { id: 22, name: 'Muji Ishola', role: 'Speaker', image: sessionSpeaker22, flag: 'NG', linkedin: 'https://www.linkedin.com/in/mujibishola/', day: 3 },
     { id: 23, name: 'Larry Goddard', role: 'Speaker', image: sessionSpeaker23, flag: 'GB', linkedin: 'https://www.linkedin.com/in/larryg/', day: 2 },
     { id: 24, name: 'Olamide Faleke', role: 'Speaker', image: sessionSpeaker24, flag: 'NG', linkedin: 'https://www.linkedin.com/in/olamide-faleke-978173125/', day: 1 },
+    { id: 25, name: 'Patrick Azu', role: 'Speaker', image: patrickImg, flag: 'NG', linkedin: 'https://www.linkedin.com/in/patrick-azu/', day: 2 },
 ];
 
 /* ─── Keynote Speaker Card ────────────────────────────────────────────────── */
