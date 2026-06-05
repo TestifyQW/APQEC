@@ -205,8 +205,8 @@ const DAYS = [
             {
                 time: '10:20 am – 10:45 am',
                 format: 'Opening Keynote',
-                session: 'Building the African Quality Stack',
-                who: [],
+                session: 'Product Demo 1: DrainSignal | Product Demo 2: Test Genie',
+                who: ['Onuorah Mary | Larry Goddard'],
             },
             {
                 time: '10:50 am – 11:35 am',
