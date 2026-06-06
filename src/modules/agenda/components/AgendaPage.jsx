@@ -253,7 +253,7 @@ const DAYS = [
             {
                 time: '14:20 pm – 14:50 pm',
                 format: 'Solo Talk',
-                session: 'API Testing Framework',
+                session: 'DIADEM: The Golden Standard for API Testing',
                 // description: 'Architectural blueprinting for scalable, high-velocity integration testing.',
                 who: ['Chibuzor Obilom'],
             },
